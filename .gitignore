@@ -1,0 +1,12 @@
+# Ignorer l'environnement virtuel Python
+env/
+venv/
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Autres fichiers à éviter
+*.log
