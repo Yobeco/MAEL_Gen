@@ -24,7 +24,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ---
 
-![](https://github.com/Yobeco/MAEL_Phono_fouille/blob/main/readme_assets/MAEL_Gen.png)
+![](https://github.com/Yobeco/MAEL_Gen/blob/main/readme_assets/MAEL_Gen.png)
 
 
 ## 1- Description
