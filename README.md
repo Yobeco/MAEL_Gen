@@ -1,37 +1,86 @@
-#MAEL Gen
+![MAEL](https://github.com/Yobeco/MAEL_Phono_fouille/blob/main/readme_assets/Logo-MAEL-120.png "Logo du projet MAEL")
 
-[See the website](https://sites.google.com/lvh.edu.ni/mael/projet-mael)
+Une application associée au projet MAEL
 
-##1- Purpose
-Cross-platform desktop application (Linux, MacOS, and Windows) that allows teachers to easily create QR codes containing text for their students to listen to. 
-They can integrate them into their various teaching materials, adding an audio dimension to their paper documents.
+# Phono fouille
 
-QR codes will be scanned by students using the MAEL Scan app (available on Android and coming soon to iOS).
+Copyright (c) 2025 Yonnel Bécognée
 
-![ScreeShot](https://github.com/Yobeco/MAEL_Gen/blob/master/README_pictures/MAEL_Gen.png "Interface MAEL Gen")
+[![License: Libre Non Commerciale](https://img.shields.io/badge/license-Libre%20Non%20Commerciale-blue.svg)](./LICENSE)
+
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](#contributing)
+
+[![Status: Active](https://img.shields.io/badge/status-active-success.svg)]()
+
+:beginner-friendly:
+
+---
+
+**Auteur** : Yonnel Bécognée
+
+**Année** : 2025
+
+---
+
+![](https://github.com/Yobeco/MAEL_Phono_fouille/blob/main/readme_assets/Phonofouille_V01.png)
 
 
-→ Already in operation for over two years.
+## 1- Description
 
-##2- Functions
-- **Read mode**: displays and reads aloud the text contained in the QR code.
-- **Dictation mode**: does not display but reads aloud the text contained in the QR code.
-- **Spell mode**: reads aloud each letter of the text contained in the QR code.
-- **MP3 playback**: File from Google Drive
+**Phono fouille** est une application Python multiplateforme conçue pour aider la recherche de mots dans des bases de données selon différents critères.
 
-##3- Upcoming features
-1- **Dictation mode** → Plans to add punctuation reading aloud
 
-2- **Spell mode** → Add languages. Currently, only FR, EN, and ES are available
+### a- Licence d'utilisation : 
 
-3- **MP3 playback** → Creation of a MAEL Cloud with fewer limitations than Google Drive.
+**Licence Libre Non Commerciale** BY-SA-NC
+---
+### b- Vous êtes autorisé à :
 
-4- Replacing TKinter with **TTKBootstrap**
+- Utiliser ce logiciel librement à des fins personnelles, éducatives ou de recherche.
 
-5- **Move the mode change access buttons** from the “Settings” menu to the slider instead.
+- Copier, modifier et redistribuer ce logiciel sous les mêmes conditions.
 
-##4- To participate in the development
+- Créer drd produits dérivés à condition de conserver cette licence et d'attribuer l'auteur original.
+---
+### c- Conditions :
 
-Write to:
+- Toute utilisation commerciale du logiciel (vente, distribution payante, intégration dans un produit commercial) est strictement interdite sans l'autorisation écrite préalable de l'auteur.
 
-<mael@lvh.edu.ni>
+- Toute redistribution ou script dérivé doit être sous la même licence Libre Non Commerciale BY-SA-NC
+
+- Vous devez conserver le présent avis de copyright et la mention de licence dans toutes les copies ou parties substantielles du logiciel.
+
+---
+
+## 2- Fonctionnalités principales
+
+- Recherche de mots selon :
+
+    . le niveau de défficulté (fréquence dans la langue)
+
+    . les sons contenus
+
+    . les lettres contenus
+
+    . le nombre de syllabes
+
+    . ...
+
+
+- Bases de données actuellement disponibles :
+
+    . MiniLex (Minima Lexical ⟶ Minimum de 1200 mots en fin de Cycle 1. "AMLA nord")
+
+    . Lexique (Plus de 142 000 mots http://www.lexique.org)
+
+---
+
+## 3- Installation
+
+Clonez ce dépôt et exécutez le script :
+
+    git clone https://github.com/toncompte/phono-fouille.git
+    cd phono-fouille
+    python3 monscript.py
