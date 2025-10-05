@@ -2,7 +2,7 @@
 
 Une application associée au projet MAEL
 
-# Phono fouille
+# MAEL Gen
 
 Copyright (c) 2025 Yonnel Bécognée
 
@@ -24,12 +24,15 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ---
 
-![](https://github.com/Yobeco/MAEL_Phono_fouille/blob/main/readme_assets/Phonofouille_V01.png)
+![](https://github.com/Yobeco/MAEL_Phono_fouille/blob/main/readme_assets/MAEL_Gen.png)
 
 
 ## 1- Description
 
-**Phono fouille** est une application Python multiplateforme conçue pour aider la recherche de mots dans des bases de données selon différents critères.
+Cross-platform desktop  application (Linux, MacOS, and Windows) that allows teachers to easily create QR codes containing text for their students to listen to.
+They can integrate them into their various teaching materials, adding an audio dimension to their paper documents.
+
+QR codes will be scanned by students using the MAEL Scan app (available on Android and coming soon to iOS).
 
 
 ### a- Licence d'utilisation : 
@@ -42,7 +45,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 - Copier, modifier et redistribuer ce logiciel sous les mêmes conditions.
 
-- Créer drd produits dérivés à condition de conserver cette licence et d'attribuer l'auteur original.
+- Créer des produits dérivés à condition de conserver cette licence et d'attribuer l'auteur original.
 ---
 ### c- Conditions :
 
@@ -54,26 +57,28 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ---
 
-## 2- Fonctionnalités principales
+## 2- Functions
+- **Read mode**: displays and reads aloud the text contained in the QR code.
+- **Dictation mode**: does not display but reads aloud the text contained in the QR code.
+- **Spell mode**: reads aloud each letter of the text contained in the QR code.
+- **MP3 playback**: File from Google Drive
 
-- Recherche de mots selon :
+##3- Upcoming features
+1- **Dictation mode** → Plans to add punctuation reading aloud and activate play-pause menu (With scroll bar)
 
-    . le niveau de défficulté (fréquence dans la langue)
+2- **Spell mode** → Add languages. Currently, only FR, EN, and ES are available
 
-    . les sons contenus
+3- **MP3 playback** → Creation of a MAEL Cloud with fewer limitations than Google Drive.
 
-    . les lettres contenus
+4- Replacing TKinter with **TTKBootstrap**
 
-    . le nombre de syllabes
+5- **Move the mode change access buttons** from the “Settings” menu to the slider instead.
 
-    . ...
+##4- To participate in the development
 
+Write to:
 
-- Bases de données actuellement disponibles :
-
-    . MiniLex (Minima Lexical ⟶ Minimum de 1200 mots en fin de Cycle 1. "AMLA nord")
-
-    . Lexique (Plus de 142 000 mots http://www.lexique.org)
+<mael@lvh.edu.ni>
 
 ---
 
@@ -81,6 +86,6 @@ Copyright (c) 2025 Yonnel Bécognée
 
 Clonez ce dépôt et exécutez le script :
 
-    git clone https://github.com/toncompte/phono-fouille.git
+    git clone git://github.com/toncompte/MAEL_Gen.git
     cd phono-fouille
     python3 monscript.py
