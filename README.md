@@ -14,7 +14,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-success.svg)]()
 
-:beginner-friendly:
+ :white_check_mark: Beginner friendly :+1:
 
 ---
 
