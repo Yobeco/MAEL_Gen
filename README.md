@@ -16,7 +16,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
  :white_check_mark: Beginner friendly :+1:
 
-[![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-30E830)]()
+[![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-E2B930)]()
 
 
 ---
