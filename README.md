@@ -17,9 +17,7 @@ Copyright (c) 2025 Yonnel Bécognée
 [![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-8A2BE2)]()
 
 
-[![Status: Active](https://img.shields.io/badge/-Python 3.10%2B-F2C01B?logo=python&logoColor=white&style=plastic)]()
-
-![Nom du badge](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
+![Nom du badge](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=yellow)
 
 ---
 
