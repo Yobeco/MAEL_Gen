@@ -44,7 +44,9 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *(Pour aider à la compréhension du code)*
 
-**a- Au premier démarrage, quand on écrit un texte dans l'entrée de texte, la langue par défault est ":fr: français" et le mode par défaut est "Lecture" :**
+**:one: Au premier démarrage
+
+Quand on écrit un texte dans l'entrée de texte, la langue par défault est ":fr: français" et le mode par défaut est "Lecture" :**
 
 1- Le texte subit d'abord un "encryptage" léger.
 
@@ -52,7 +54,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *⟶ MAEL Scan comprendra qu'il est en mode lecture et utilisera la voix de synthèse :fr: française.*
 
-**b- Si vous changez _la langue_ du contenu par exemple _italien_ :**
+**:two: Si vous changez _la langue_ du contenu par exemple _italien_ :**
 
 1- Le texte reçoit un préfixe du type `<it>`
 
@@ -62,7 +64,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
 
-**c- Si vous choisissez le *mode dicter* :**
+**:three: Si vous choisissez le *mode dicter* :**
 
 1- Le texte reçoit un préfixe du type `<it>`
 
