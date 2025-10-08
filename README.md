@@ -14,8 +14,6 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
----
-
 **Auteur** : Yonnel Bécognée   
 **Année** : 2025
 
@@ -33,24 +31,26 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ---
 
-## B- Fonctions
+## B- Fonctionnalités
 
 - **Mode lecture** : affiche et lit à haute voix le texte contenu dans le code QR.
 - **Mode dicter** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
 - **Mode épeler** : lit à haute voix chaque lettre du texte contenu dans le code QR.
 - **Mode MP3** : fichier provenant de Google Drive
 
-## 3- Fonctionnalités à venir
+## 3- Fonctionnalités à développer
 
 1- **Mode dictée** → Ajout prévu de la lecture à voix haute des signes de ponctuation et activation du menu lecture-pause (avec barre de défilement)
 
-2- **Mode épellation** → Ajout de langues. Actuellement, seules les langues FR, EN et ES sont disponibles
+2- **Mode épeler** → Ajout de langues. Actuellement, seules les langues FR, EN et ES sont disponibles
 
-3- **Lecture MP3** → Création d'un MAEL Cloud avec moins de limitations que Google Drive.
+3- **Mode MP3** → Création d'un MAEL Cloud avec moins de limitations que Google Drive.
 
 4- Remplacement de TKinter par **TTKBootstrap**
 
 5- **Déplacement des boutons d'accès au changement de mode** du menu « Paramètres » vers le curseur.
+
+**:heavy_check_mark: Vous pouvez proposer votre aider pour m'aider à developper ces fonctions**
 
 ## 4- Pour participer au développement
 
