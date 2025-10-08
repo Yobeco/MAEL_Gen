@@ -15,10 +15,7 @@ Copyright (c) 2025 Yonnel Bécognée
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
 
-
-<img src="https://img.shields.io/badge/Mon_Profil_GitHub-4078c0?style=for-the-badge&logo=github&logoColor=white" alt="Mon GitHub">
-
-
+<img src="https://cdn.simpleicons.org/react/61DAFB" width="24" height="24" style="vertical-align: middle;" />
 
 ---
 
