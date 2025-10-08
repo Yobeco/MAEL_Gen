@@ -19,7 +19,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/-Python 3.10%2B-F2C01B?logo=python&logoColor=white&style=plastic)]()
 
-![Nom du badge](https://img.shields.io/badge/Python-3.10-yellow?logo=python)
+![Nom du badge](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
 
 ---
 
