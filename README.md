@@ -40,17 +40,23 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ## 3- Fonctionnalités à développer
 
-1- **Mode dictée** → Ajout prévu de la lecture à voix haute des signes de ponctuation et activation du menu lecture-pause (avec barre de défilement)
+1- **Mode dicter**
 
-2- **Mode épeler** → Ajout de langues. Actuellement, seules les langues FR, EN et ES sont disponibles
+Ajout d'un suffixe au coontenu du code QR qui permetrra à MAEL Gen de :
 
-3- **Mode MP3** → Création d'un MAEL Cloud avec moins de limitations que Google Drive.
+- ajouter la lecture à voix haute des signes de ponctuation et
+- afficher le menu lecture-pause (avec barre de défilement)
 
-4- Remplacement de TKinter par **TTKBootstrap**
+2- **Mode MP3**
 
-5- **Déplacement des boutons d'accès au changement de mode** du menu « Paramètres » vers le curseur.
+- Création d'un MAEL Cloud avec moins de limitations que Google Drive.
 
-**:heavy_check_mark: Vous pouvez proposer votre aider pour m'aider à developper ces fonctions**
+3- **Interface**
+
+- Remplacement de TKinter par **TTKBootstrap**
+- **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à la place du curseur.
+
+**:goal_net: Vous pouvez proposer votre aider pour m'aider à developper ces fonctions**
 
 ## 4- Pour participer au développement
 
