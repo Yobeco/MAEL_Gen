@@ -56,7 +56,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - Remplacement de TKinter par **TTKBootstrap**
 - **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à la place du curseur.
 
-**:goal_net: Vous pouvez proposer votre aider pour m'aider à developper ces fonctions**
+**:+1: Vous pouvez proposer votre aider pour developper ces fonctions**
 
 ## 4- Pour participer au développement
 
