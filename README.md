@@ -33,21 +33,21 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ## B- Fonctionnalités
 
-- **Mode lecture** : affiche et lit à haute voix le texte contenu dans le code QR.
-- **Mode dicter** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
-- **Mode épeler** : lit à haute voix chaque lettre du texte contenu dans le code QR.
-- **Mode MP3** : fichier provenant de Google Drive
+- **Mode "lecture"** : affiche et lit à haute voix le texte contenu dans le code QR.
+- **Mode "dicter"** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
+- **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
+- **Mode "MP3"** : fichier provenant de Google Drive
 
 ## 3- Fonctionnalités à développer
 
-1- **Mode dicter**
+1- **Mode "dicter"**
 
-Ajout d'un suffixe au coontenu du code QR qui permetrra à MAEL Gen de :
+- Ajout d'un suffixe au coontenu du code QR qui permetrra à MAEL Gen de :
 
-- ajouter la lecture à voix haute des signes de ponctuation et
-- afficher le menu lecture-pause (avec barre de défilement)
+    - ajouter la lecture à voix haute des signes de ponctuation et
+    - afficher le menu lecture-pause (avec barre de défilement)
 
-2- **Mode MP3**
+2- **Mode "MP3"**
 
 - Création d'un MAEL Cloud avec moins de limitations que Google Drive.
 
