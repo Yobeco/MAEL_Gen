@@ -14,7 +14,6 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
-
 ---
 
 **Auteur** : Yonnel Bécognée   
@@ -27,33 +26,11 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ## 1- Description
 
-Application de bureau multiplateforme (<img src="https://cdn.simpleicons.org/linux/FFFFFF" width="24" height="24" style="vertical-align: middle;" />, <img src="https://cdn.simpleicons.org/apple/FFFFFF" width="24" height="24" style="vertical-align: middle;" /> et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
-Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier. :speaker:
+Application de bureau multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
+Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier.
 
-Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** (disponible sur Android et bientôt sur iOS).
+Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Ce projet utilise <img src="https://cdn.simpleicons.org/android/FFFFFF" width="16" height="16" style="vertical-align: text-bottom;" /> et bientôt sur iOS).
 
-Traduit avec DeepL.com (version gratuite)
-
-
-### a- Licence d'utilisation : 
-
-**Licence Libre Non Commerciale** BY-SA-NC
----
-### b- Vous êtes autorisé à :
-
-- Utiliser ce logiciel librement à des fins personnelles, éducatives ou de recherche.
-
-- Copier, modifier et redistribuer ce logiciel sous les mêmes conditions.
-
-- Créer des produits dérivés à condition de conserver cette licence et d'attribuer l'auteur original.
----
-### c- Conditions :
-
-- Toute utilisation commerciale du logiciel (vente, distribution payante, intégration dans un produit commercial) est strictement interdite sans l'autorisation écrite préalable de l'auteur.
-
-- Toute redistribution ou script dérivé doit être sous la même licence Libre Non Commerciale BY-SA-NC
-
-- Vous devez conserver le présent avis de copyright et la mention de licence dans toutes les copies ou parties substantielles du logiciel.
 
 ---
 
