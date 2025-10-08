@@ -22,7 +22,7 @@ Copyright (c) 2025 Yonnel Bécognée
 ![](./readme_assets/MAEL_Gen.png)
 
 
-## A- Description
+## A- Description :eye:
 
 Application de bureau multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier.
@@ -31,7 +31,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ---
 
-## B- Fonctionnalités
+## B- Fonctionnalités :clipboard:
 
 - **Mode "lecture"** : affiche et lit à haute voix le texte contenu dans le code QR.
 - **Mode "dicter"** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
@@ -40,7 +40,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ---
 
-## C- Principe de fonctionnement
+## C- Principe de fonctionnement :gear:
 
 *(Pour aider à la compréhension du code)*
 
@@ -60,7 +60,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 2- Le texte subit d'abord un "encryptage" léger.
 
-3- Un code QR contenant ce texte est généré.
+3- Un code QR contenant ce texte (utf-8) est généré.
 
 *⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
 
@@ -72,7 +72,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 2- Le texte subit d'abord un "encryptage" léger.
 
-3- Un code QR contenant ce texte est généré.
+3- Un code QR contenant ce texte (utf-8) est généré.
 
 *⟶ __MAEL Scan__ comprendra qu'il est en __mode dictée__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
 
@@ -89,7 +89,7 @@ Les voix de synthèse sont celles générée oar le téléphone.
 
 ---
 
-## D- Fonctionnalités à développer
+## D- Fonctionnalités à développer :rocket:
 
 1- **Mode "dicter"**
 
@@ -114,7 +114,7 @@ Les voix de synthèse sont celles générée oar le téléphone.
 
 ---
 
-## E- Pour participer au développement
+## E- Pour participer au développement :arm:
 
 Écrivez moi à :
 
