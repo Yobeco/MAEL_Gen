@@ -114,9 +114,9 @@ Les voix de synthèse sont celles générée oar le téléphone.
 
 ---
 
-## E- Pour participer au développement :arm:
+## E- Pour participer au développement :open_hands:
 
-Écrivez moi à :
+Écrivez moi ici :
 
 ### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
