@@ -29,33 +29,35 @@ Copyright (c) 2025 Yonnel Bécognée
 Application de bureau multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier.
 
-Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Ce projet utilise <img src="https://cdn.simpleicons.org/android/FFFFFF" width="16" height="16" style="vertical-align: text-bottom;" /> et bientôt sur <img src="https://cdn.simpleicons.org/ios/FFFFFF" width="16" height="16" style="vertical-align: text-bottom;" /> ).
+Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android et bientôt sur iOS).
 
 
 ---
 
-## 2- Functions
-- **Read mode**: displays and reads aloud the text contained in the QR code.
-- **Dictation mode**: does not display but reads aloud the text contained in the QR code.
-- **Spell mode**: reads aloud each letter of the text contained in the QR code.
-- **MP3 playback**: File from Google Drive
+## 2- Fonctions
 
-##3- Upcoming features
-1- **Dictation mode** → Plans to add punctuation reading aloud and activate play-pause menu (With scroll bar)
+- **Mode lecture** : affiche et lit à haute voix le texte contenu dans le code QR.
+- **Mode dicter** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
+- **Mode épeler** : lit à haute voix chaque lettre du texte contenu dans le code QR.
+- **Mode MP3** : fichier provenant de Google Drive
 
-2- **Spell mode** → Add languages. Currently, only FR, EN, and ES are available
+##3- Fonctionnalités à venir
 
-3- **MP3 playback** → Creation of a MAEL Cloud with fewer limitations than Google Drive.
+1- **Mode dictée** → Ajout prévu de la lecture à voix haute des signes de ponctuation et activation du menu lecture-pause (avec barre de défilement)
 
-4- Replacing TKinter with **TTKBootstrap**
+2- **Mode épellation** → Ajout de langues. Actuellement, seules les langues FR, EN et ES sont disponibles
 
-5- **Move the mode change access buttons** from the “Settings” menu to the slider instead.
+3- **Lecture MP3** → Création d'un MAEL Cloud avec moins de limitations que Google Drive.
 
-##4- To participate in the development
+4- Remplacement de TKinter par **TTKBootstrap**
 
-Write to:
+5- **Déplacement des boutons d'accès au changement de mode** du menu « Paramètres » vers le curseur.
 
-<mael@lvh.edu.ni>
+##4- Pour participer au développement
+
+Écrivez à :
+
+### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
 ---
 
