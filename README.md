@@ -10,11 +10,11 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=yellow)
 
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](#contributing)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](#contributing) [![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-8A2BE2)]()
 
 [![Status: Active](https://img.shields.io/badge/status-active-success.svg)]()
 
-[![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-8A2BE2)]()
+
 
 
 ---
