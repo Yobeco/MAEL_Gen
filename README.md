@@ -14,10 +14,12 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-success.svg)]()
 
- :white_check_mark: [![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-E2B930)]() :+1:
+[![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-8A2BE2)]()
 
 
+[![Status: Active](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=plastic)]()
 
+https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=plastic
 
 ---
 
