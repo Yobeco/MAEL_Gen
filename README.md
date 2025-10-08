@@ -6,7 +6,7 @@ Une application associée au projet MAEL
 
 Copyright (c) 2025 Yonnel Bécognée
 
-[![License: Libre Non Commerciale](https://img.shields.io/badge/license-Libre%20Non%20Commerciale-blue.svg)](./LICENSE)
+[![License: Libre Non Commerciale](https://img.shields.io/badge/license-GNU%20GENERAL%20PUBLIC%20LICENSE%20V3-blue.svg)](./LICENSE)
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
