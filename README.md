@@ -29,7 +29,7 @@ Copyright (c) 2025 Yonnel Bécognée
 Application de bureau multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier.
 
-Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Ce projet utilise <img src="https://cdn.simpleicons.org/android/FFFFFF" width="16" height="16" style="vertical-align: text-bottom;" /> et bientôt sur iOS).
+Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Ce projet utilise <img src="https://cdn.simpleicons.org/android/FFFFFF" width="16" height="16" style="vertical-align: text-bottom;" /> et bientôt sur <img src="https://cdn.simpleicons.org/ios/FFFFFF" width="16" height="16" style="vertical-align: text-bottom;" /> ).
 
 
 ---
