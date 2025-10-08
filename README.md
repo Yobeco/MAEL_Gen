@@ -17,6 +17,8 @@ Copyright (c) 2025 Yonnel Bécognée
 
 <img src="https://cdn.simpleicons.org/react/61DAFB" width="24" height="24" style="vertical-align: middle;" />
 
+Ce projet utilise <img src="https://cdn.simpleicons.org/typescript/3178C6" width="16" height="16" style="vertical-align: text-bottom;" /> TypeScript pour le développement.
+
 ---
 
 **Auteur** : Yonnel Bécognée   
