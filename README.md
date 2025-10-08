@@ -19,7 +19,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ---
 
-![](https://github.com/Yobeco/MAEL_Gen/blob/main/readme_assets/MAEL_Gen.png)
+![](./readme_assets/MAEL_Gen.png)
 
 
 ## A- Description
@@ -38,14 +38,65 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
 - **Mode "MP3"** : fichier provenant de Google Drive
 
-## 3- Fonctionnalités à développer
+---
+
+## C- Principe de fonctionnement
+
+*(Pour aider à la compréhension du code)*
+
+**a- Au premier démarrage, quand on écrit un texte dans l'entrée de texte, la langue par défault est ":fr: français" et le mode par défaut est "Lecture" :**
+
+1- Le texte subit d'abord un "encryptage" léger.
+
+2- Un code QR contenant ce texte (utf-8) est généré.
+
+*⟶ MAEL Scan comprendra qu'il est en mode lecture et utilisera la voix de synthèse :fr: française.*
+
+**b- Si vous changez _la langue_ du contenu par exemple _italien_ :**
+
+1- Le texte reçoit un préfixe du type `<it>`
+
+2- Le texte subit d'abord un "encryptage" léger.
+
+3- Un code QR contenant ce texte est généré.
+
+*⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+
+**c- Si vous choisissez le *mode dicter* :**
+
+1- Le texte reçoit un préfixe du type `<it>`
+
+2- Le texte reçoit un siffixe du type `#d`
+
+2- Le texte subit d'abord un "encryptage" léger.
+
+3- Un code QR contenant ce texte est généré.
+
+*⟶ __MAEL Scan__ comprendra qu'il est en __mode dictée__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+
+Les voix de synthèse sont celles générée oar le téléphone.
+
+:eyes: Certaines langues (avec gtts) ont plusieurs voix possibles, par exemples :
+
+| Voix | Préfixe |
+| ----------- | ----------- |
+| Portugais du portugal | `<ptPRT>` |
+| Portugais du Bésil | `<ptBRA>` |
+
+:bookmark_tabs: [Voir la liste des lagues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
+
+---
+
+## D- Fonctionnalités à développer
 
 1- **Mode "dicter"**
 
-- Ajout d'un suffixe au contenu du code QR qui permetrra à MAEL Gen :
+- Le mode dictée actuelle va changer de nom et s'appeler "Mode caché".
 
-    - d'ajouter la lecture à voix haute des signes de ponctuation et
-    - d'afficher le menu lecture-pause (avec barre de défilement)
+- Le mode dictée reste une lecture sans montrer le texte, mais il faudrait :
+
+    - ajouter l'oralisation de la ponctuation et
+    - afficher le menu lecture-pause (avec barre de défilement)
 
 2- **Mode "MP3"**
 
@@ -55,10 +106,13 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 - Remplacement de TKinter par **TTKBootstrap**
 - **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à vers l'emplacement du curseur (qui sera supprimé).
+- Gestion des langues s'écrivant de droite à gauche.
 
 **:+1: Vous pouvez proposer votre aider pour developper ces fonctions**
 
-## 4- Pour participer au développement
+---
+
+## E- Pour participer au développement
 
 Écrivez moi à :
 
