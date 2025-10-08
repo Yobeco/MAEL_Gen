@@ -14,8 +14,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
-
-
+![Icone GitHub](https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg)
 
 ---
 
@@ -29,10 +28,12 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ## 1- Description
 
-Cross-platform desktop  application (Linux, MacOS, and Windows) that allows teachers to easily create QR codes containing text for their students to listen to.
-They can integrate them into their various teaching materials, adding an audio dimension to their paper documents.
+Application de bureau multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
+Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier. :speaker:
 
-QR codes will be scanned by students using the MAEL Scan app (available on Android and coming soon to iOS).
+Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** (disponible sur Android et bientôt sur iOS).
+
+Traduit avec DeepL.com (version gratuite)
 
 
 ### a- Licence d'utilisation : 
