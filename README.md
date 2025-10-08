@@ -44,9 +44,9 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *(Pour aider à la compréhension du code)*
 
-**:one: Au premier démarrage
+**:one: Au premier démarrage**
 
-Quand on écrit un texte dans l'entrée de texte, la langue par défault est ":fr: français" et le mode par défaut est "Lecture" :**
+Quand on écrit un texte dans l'entrée de texte, la langue par défault est ":fr: français" et le mode par défaut est "Lecture" :
 
 1- Le texte subit d'abord un "encryptage" léger.
 
