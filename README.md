@@ -42,10 +42,10 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 1- **Mode "dicter"**
 
-- Ajout d'un suffixe au coontenu du code QR qui permetrra à MAEL Gen de :
+- Ajout d'un suffixe au contenu du code QR qui permetrra à MAEL Gen :
 
-    - ajouter la lecture à voix haute des signes de ponctuation et
-    - afficher le menu lecture-pause (avec barre de défilement)
+    - d'ajouter la lecture à voix haute des signes de ponctuation et
+    - d'afficher le menu lecture-pause (avec barre de défilement)
 
 2- **Mode "MP3"**
 
@@ -54,7 +54,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 3- **Interface**
 
 - Remplacement de TKinter par **TTKBootstrap**
-- **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à la place du curseur.
+- **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à vers l'emplacement du curseur (qui sera supprimé).
 
 **:+1: Vous pouvez proposer votre aider pour developper ces fonctions**
 
