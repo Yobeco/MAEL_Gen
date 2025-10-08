@@ -27,7 +27,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ## 1- Description
 
-Application de bureau multiplateforme (<img src="https://cdn.simpleicons.org/linux/FFFFFF" width="24" height="24" style="vertical-align: middle;" />, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
+Application de bureau multiplateforme (<img src="https://cdn.simpleicons.org/linux/FFFFFF" width="24" height="24" style="vertical-align: bottom;" />, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier. :speaker:
 
 Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** (disponible sur Android et bientôt sur iOS).
