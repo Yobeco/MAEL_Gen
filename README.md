@@ -138,9 +138,9 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 
 1- **Mode "dicter"**
 
-- Le mode dictée actuelle (oralise le texte mais ne l'affiche pas) va changer de nom et s'appeler **"Mode caché"**.
+- Le _mode dictée_ actuelle (oralise le texte mais ne l'affiche pas) va changer de nom et s'appeler **"Mode caché"**.
 
-- Le mode dictée aura :
+- Le nouveau _mode dicter_ aura :
 
     - la lecture du texte, mais pas son affichage,
     - l'oralisation de la ponctuation et
