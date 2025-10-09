@@ -2,7 +2,7 @@
 
 # MAEL Gen
 
-*Une application appartenant au projet MAEL*   
+*Une application appartenant au [__projet MAEL__](https://github.com/Yobeco/MAEL_Project)*   
 Copyright (c) 2025 Yonnel Bécognée
 
 [![License: Libre Non Commerciale](https://img.shields.io/badge/license-GNU%20GENERAL%20PUBLIC%20LICENSE%20V3-white.svg)](./LICENSE)
