@@ -128,8 +128,6 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 - **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à vers l'emplacement du curseur (qui sera supprimé).
 - Gestion des langues s'écrivant de droite à gauche.
 
-**:+1: Vous pouvez proposer votre aider pour developper ces fonctions**
-
 4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/FFFF" width="24" height="24" style="vertical-align: middle;" />
 
 Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
@@ -137,6 +135,8 @@ Quand on crée un document contenant beaucoup de codes QR, il devient plus facil
 *(Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
 
 De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter ce texte dans les méta-données du fichier .png pour que sous LibreOffice, dans une bulle apparaisse les métadonnées de l'image ou bien quelles soient visibles dans l'inspecteur (colonne à droite).
+
+### :+1: Proposez votre aider pour developper ces fonctions
 
 
 ---
