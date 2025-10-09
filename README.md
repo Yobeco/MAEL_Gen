@@ -151,7 +151,7 @@ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappoint
 
 ## F- Participez au projet MAEL :open_hands:
 
-Pour **obtenir de l'aide** :sos: concernant l'utilisation de MAEL ou pour **paticiper au développememnt** :keyboard:, écrivez moi ici :
+Pour **obtenir de l'aide** :sos: concernant l'utilisation de MAEL ou pour **paticiper au développememnt** :computer:, écrivez moi ici :
 
 ### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
