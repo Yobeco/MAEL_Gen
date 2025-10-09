@@ -42,7 +42,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ---
 
-## C- Comment utiliser MAEL Scan
+## C- Comment utiliser MAEL Gen
 
 ### 1- Voix de synthèse :speaking_head:
 
