@@ -17,7 +17,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ---
 
-![](./readme_assets/MAEL_Gen.png)
+![](https://github.com/Yobeco/MAEL_Project/blob/main/readme_assets/MAEL_Gen.png)
 
 
 ## A- Description :eye:
