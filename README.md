@@ -131,9 +131,9 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 
 Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
 
-Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.
+*(Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
 
-De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter le texte qu'il contient dans les méta-données du fichier .png pour que sous LibreOffice, dans une bulle apparaisse les métadonnées de l'image oubien quelles soient visibles dans l'inspecteur (colonne à droite).
+De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter ce texte dans les méta-données du fichier .png pour que sous LibreOffice, dans une bulle apparaisse les métadonnées de l'image ou bien quelles soient visibles dans l'inspecteur (colonne à droite).
 
 
 ---
@@ -150,6 +150,10 @@ De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j
 
 Clonez ce dépôt et exécutez le script :
 
-    git clone git://github.com/toncompte/MAEL_Gen.git
-    cd phono-fouille
-    python3 monscript.py
+    git clone https://github.com/Yobeco/MAEL_Gen.git
+    cd MAEL_Gen
+    python3 -m venv mael_venv
+    source mael_venv/bin/activate     pip install -r requirements.txt
+    python3 MAEL_V5.0.py
+
+
