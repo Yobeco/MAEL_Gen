@@ -55,9 +55,9 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
-### 2- Fichier MP3 :microphone:
+### 2- Fichier MP3
 
-1. Déposez un fichier .mp3 sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/FFFF" width="24" height="24" style="vertical-align: middle;" />
+1. Déposez un fichier .mp3 :microphone: sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/FFFF" width="24" height="24" style="vertical-align: middle;" />
 
 1. **Partagez** le dossier où se trouve le fichier .mp3 **avec toutes les personnes possédant le lien**.
 1. Récupérer le lien de partage.
