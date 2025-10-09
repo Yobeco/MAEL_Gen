@@ -13,24 +13,6 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
-## :star2: Contributeurs
-
-Un grand merci à toutes les personnes qui ont contribué à ce projet !
-
-   Nom                | GitHub                          | Rôle                     |
- |--------------------|---------------------------------|--------------------------|
- | Bécognée Yonnel    | [@Yobeco](https://github.com/Yobeco) | Mainteneur               |
- | ...       | ... | Développeur              |
- | ...       | ... | Développeuse              |
- | ...       | ... | Traductrice   |
-
- | Avatar | Nom                | GitHub                          | Rôle                     |
- |--------|--------------------|---------------------------------|--------------------------|
- | ![Bécognée Yonnel](https://github.com/Yobeco.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
- | ... | ... | ... | Développeur |
- | ... | ... | ... | Développeuse |
- | ... | ... | ... | Traductrice |
-
 ---
 
 ![](./readme_assets/MAEL_Gen.png)
@@ -173,9 +155,20 @@ Pour **obtenir de l'aide** :sos: concernant l'utilisation de MAEL ou pour **pati
 
 ### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
+## :star2: Contributeurs
+
+Un grand merci à toutes les personnes qui ont contribué à ce projet !
+
+ | Avatar | Nom                | GitHub                          | Rôle                     |
+ |--------|--------------------|---------------------------------|--------------------------|
+ | ![Bécognée Yonnel](https://github.com/Yobeco.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
+ | ... | ... | ... | Développeur |
+ | ... | ... | ... | Développeuse |
+ | ... | ... | ... | Traductrice |
+
 ---
 
-## F- Installation :arrow_heading_down:
+## G- Installation :arrow_heading_down:
 
 Pour essayer **MAEL Gen**, exécutez le script :
 
