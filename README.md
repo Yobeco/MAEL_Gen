@@ -138,13 +138,13 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 
 1- **Mode "dicter"**
 
-- Le _mode dictée_ actuelle (oralise le texte mais ne l'affiche pas) va changer de nom et s'appeler **"Mode caché"**.
+- Le _mode dictée_ actuel (oraliser le texte mais ne pas l'afficher) va changer de nom et s'appeler **"Mode caché"**.
 
 - Le nouveau _mode dicter_ aura :
 
     - la lecture du texte, mais pas son affichage,
     - l'oralisation de la ponctuation et
-    - l'affichage le menu lecture-pause (avec barre de défilement).
+    - l'affichage du menu lecture-pause (avec barre de défilement).
 
 2- **Mode "MP3"**
 
@@ -154,8 +154,8 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 3- **Interface**
 
 - Remplacement de TKinter par **TTKBootstrap**
-- **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » à vers l'emplacement du curseur (qui sera supprimé).
-- Gestion des langues s'écrivant de droite à gauche.
+- **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » vers l'emplacement du curseur (qui sera supprimé).
+- Gestion des langues s'écrivant de droite à gauche :arrow_left:.
 
 4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/FFFF" width="24" height="24" style="vertical-align: middle;" />
 
