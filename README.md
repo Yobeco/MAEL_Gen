@@ -37,7 +37,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
 - **Mode "MP3"** : lit un fichier provenant de Google Drive.
 - **Sons mp3 spéciaux** : Sons issus de la méthode Borel-Maisonny et de l'Abecédaire Consigny (créé par  la zone AMLA Nort)
-- **55 langues supportées (sauf pour le mode épeler pour le moment)
+- **55 langues supportées** (sauf pour le mode épeler pour le moment)
 
 
 ---
