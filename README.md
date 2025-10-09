@@ -42,7 +42,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ## C- Comment utiliser MAEL Scan
 
-
+1. Lancez MAEL Gen
+2. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (`Ctrl + v` ou un simple `clic droit`)
 
 ---
 
