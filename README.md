@@ -134,7 +134,7 @@ Quand on crée un document contenant beaucoup de codes QR, il devient plus facil
 
 *(Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
 
-De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice, les métadonnées de l'image apparaissent dans une info-bulle ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
+De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice, les métadonnées de l'image apparaissent dans une info-bulle :left_speech_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
 
 ### :+1: Proposez votre aider pour developper ces fonctions
 
