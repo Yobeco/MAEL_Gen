@@ -152,7 +152,7 @@ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappoint
 
 ---
 
-## C- Installation
+## F- Installation
 
 Pour essayer **MAEL Gen**, exécutez le script :
 
