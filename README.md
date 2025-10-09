@@ -39,6 +39,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **Sons mp3 spéciaux** : Sons issus de la méthode Borel-Maisonny et de l'Abecédaire Consigny (créé par  la zone AMLA Nort)
 - **55 langues supportées** (sauf pour le mode épeler pour le moment)
 
+:fr: :gb: :es: :portugal: :brazil: :it: :de: :ru: :jp: :cn: :kr: ...
+
 
 ---
 
