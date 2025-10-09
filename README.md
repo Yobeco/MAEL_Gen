@@ -36,7 +36,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **Mode "lecture"** : affiche et lit à haute voix le texte contenu dans le code QR.
 - **Mode "dicter"** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
 - **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
-- **Mode "MP3"** : fichier provenant de Google Drive
+- **Mode "MP3"** : lit un fichier provenant de Google Drive.
 
 ---
 
@@ -86,6 +86,13 @@ Les voix de synthèse sont celles générée oar le téléphone.
 | Portugais du Bésil | `<ptBRA>` |
 
 :bookmark_tabs: [Voir la liste des lagues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
+
+**:four: À chaque modification :**
+
+Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
+(Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
+
+⟶ Le professeur n'a plus qu'à faire `Coller`dans son éditeur personnel.
 
 ---
 
