@@ -151,9 +151,9 @@ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappoint
 
 ## F- Participez au projet MAEL :open_hands:
 
-Pour **obtenir de l'aide** :sos: concernant l'utilisation de MAEL ou pour **paticiper au développememnt** :computer:, écrivez moi ici :
+:sos: Pour **obtenir de l'aide** concernant l'utilisation de MAEL ou pour **paticiper au développement** :computer:, écrivez moi ici :
 
-### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
+### :mailbox_with_mail: ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
 ### :star2: Contributeurs
 
