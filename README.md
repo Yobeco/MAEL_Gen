@@ -14,7 +14,7 @@ Copyright (c) 2025 Yonnel Bécognée
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
 **Auteur** : Yonnel Bécognée   
-**Année** : 2025
+**Année** : 2023
 
 ---
 
@@ -23,7 +23,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ## A- Description :eye:
 
-**Application de bureau** multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
+:computer: **Application de bureau** multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier.
 
 Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android et bientôt sur iOS).
