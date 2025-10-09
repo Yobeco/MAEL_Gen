@@ -109,16 +109,17 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 
 1- **Mode "dicter"**
 
-- Le mode dictée actuelle (oralise le texte mais ne l'affiche pas) va changer de nom et s'appeler "Mode caché".
+- Le mode dictée actuelle (oralise le texte mais ne l'affiche pas) va changer de nom et s'appeler **"Mode caché"**.
 
-- Le mode dictée aura en plus :
+- Le mode dictée aura :
 
+    - la lecture du texte, mais pas son affichage,
     - l'oralisation de la ponctuation et
-    - l'affichage le menu lecture-pause (avec barre de défilement)
+    - l'affichage le menu lecture-pause (avec barre de défilement).
 
 2- **Mode "MP3"**
 
-- Création d'un MAEL Cloud avec moins de limitations que Google Drive.
+- Création d'un MAEL Cloud avec moins de limitations que Google Drive. (hébergé avec la plateforme MAEL Phrase).
 - Ajout d'une option (suffixe) qui indiquera à **MAEL Scan** qu'il doit conserver le fichier pour ne pas à avoir à le re-télécharger s'il est scanné à nouveau.
 
 3- **Interface**
