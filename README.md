@@ -24,7 +24,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 ## A- Description :eye:
 
-Application de bureau multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
+**Application de bureau** multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une dimension audio à leurs documents papier.
 
 Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android et bientôt sur iOS).
@@ -37,6 +37,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **Mode "dicter"** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
 - **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
 - **Mode "MP3"** : lit un fichier provenant de Google Drive.
+- **Sons mp3 spéciaux** : Sons issus de la méthode Borel-Maisonny et de l'Abecédaire Consigny (créé par  la zone AMLA Nort)
+
 
 ---
 
