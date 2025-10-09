@@ -7,7 +7,7 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![License: Libre Non Commerciale](https://img.shields.io/badge/license-GNU%20GENERAL%20PUBLIC%20LICENSE%20V3-white.svg)](./LICENSE)
 
-![Python](https://img.shields.io/badge/Python-V3.10%2B-blue?logo=python&logoColor=yellow)
+[![Python](https://img.shields.io/badge/Python-V3.10%2B-blue?logo=python&logoColor=yellow)](https://www.python.org/)
 
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-009900.svg)](#contributing) [![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-FF8000)]()
 
@@ -55,7 +55,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
-### 2- Fichier MP3 :microphone:
+### 2- Fichier MP3
 
 1. Déposez un fichier .mp3 sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/FFFF" width="24" height="24" style="vertical-align: middle;" />
 
@@ -169,7 +169,7 @@ De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j
 
 Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
 
-### :+1: Proposez votre aider pour developper ces fonctions
+### :+1: Proposez votre aider pour developper une de ces fonctions
 
 
 ---
