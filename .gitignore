@@ -2,6 +2,7 @@
 env/
 venv/
 .venv/
+mael_venv
 
 # Cache Python
 __pycache__/
