@@ -93,7 +93,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 3- Un code QR contenant ce texte (utf-8) est généré.
 
-*⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+*⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ mais il utilisera cette fois la voix de synthèse de voix __italienne__ :it:.*
 
 ---
 
@@ -107,7 +107,9 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 3- Un code QR contenant ce texte (utf-8) est généré.
 
-*⟶ __MAEL Scan__ comprendra qu'il est en __mode dictée__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+*⟶ __MAEL Scan__ comprendra cette fois qu'il est en __mode dictée__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+
+---
 
 Les voix de synthèse sont celles générées par le téléphone.
 
