@@ -13,8 +13,16 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
-**Auteur** : Yonnel Bécognée   
-**Année** : 2021
+## :star2: Contributeurs
+
+Un grand merci à toutes les personnes qui ont contribué à ce projet !
+
+   Nom                | GitHub                          | Rôle                     |
+ |--------------------|---------------------------------|--------------------------|
+ | Bécognée Yonnel    | [@Yobeco](https://github.com/Yobeco) | Mainteneur               |
+ | ...       | ... | Développeur              |
+ | ...       | ... | Développeuse              |
+ | ...       | ... | Traductrice   |
 
 ---
 
@@ -41,10 +49,15 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 :fr: :gb: :es: :portugal: :brazil: :it: :de: :ru: :jp: :cn: :kr: ...
 
+---
+
+## C- Comment utiliser MAEL Scan
+
+
 
 ---
 
-## C- Principe de fonctionnement :gear:
+## D- Principe de fonctionnement :gear:
 
 *(Pour aider à la compréhension du code)*
 
@@ -109,7 +122,7 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 
 ---
 
-## D- Fonctionnalités à développer :rocket:
+## E- Fonctionnalités à développer :rocket:
 
 1- **Mode "dicter"**
 
@@ -147,9 +160,9 @@ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappoint
 
 ---
 
-## E- Pour participer au développement :open_hands:
+## F- Participez au projet MAEL :open_hands:
 
-Écrivez moi ici :
+Pour **obtenir de l'aide** :sos: concernant l'utilisation de MAEL ou pour **paticiper au développememnt** :keyboard:, écrivez moi ici :
 
 ### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
