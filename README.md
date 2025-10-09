@@ -13,11 +13,12 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
+:fr: [Français](https://github.com/Yobeco/MAEL_Gen) | :gb: Inglish
+
 ---
 
 ![](./readme_assets/MAEL_Gen.png)
 
-:fr: [Français](https://github.com/Yobeco/MAEL_Gen) | :gb: Inglish
 
 ## A- Description :eye:
 
