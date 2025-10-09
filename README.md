@@ -42,8 +42,28 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ## C- Comment utiliser MAEL Scan
 
+### 1- Voix de synthèse :speaking_head:
+
 1. Lancez MAEL Gen
-1. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (`Ctrl + v` ou un simple `clic droit`)
+1. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (écrivez-le, ou faite `Ctrl + v` ou encore un simple `clic droit`)
+1. Choisissez la langue (Menu `Langue`)
+1. Choisissez le mode (Menu `Paramètre`)
+1. Ajustez la taille (champ `Taille`ou glissière)
+1. Coller (`Ctrl + v` ou `clic droit` + `clic droit`) dans votre document (éditeur de texte ou LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/FFFF" width="24" height="24" style="vertical-align: middle;" />...)
+
+*⟶ L'élève n'aura plus qu'à scanner ce code pour avec __MAEL Scan__ écouter le contenu.*
+
+### 2- Fichier MP3 :microphone:
+
+1. Déposez un fichier .mp3 sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/FFFF" width="24" height="24" style="vertical-align: middle;" />
+
+1. **Partagez** le dossier où se trouve le fichier .mp3 avec **toutes les personnes possédant le lien**.
+1. Récupérer le lien de partage.
+1. Coller ce lien dans MAEL Gen.
+1. Ajustez la taille (champ `Taille`ou glissière).
+1. Coller (`Ctrl + v` ou `clic droit` + `Coller`) dans votre document (éditeur de texte ou LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficewriter/FFFF" width="24" height="24" style="vertical-align: middle;" />...).
+
+*⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le fichier mp3 : une poésie, un dialogue....*
 
 ---
 
