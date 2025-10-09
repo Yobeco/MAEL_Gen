@@ -24,6 +24,13 @@ Un grand merci à toutes les personnes qui ont contribué à ce projet !
  | ...       | ... | Développeuse              |
  | ...       | ... | Traductrice   |
 
+ | Avatar | Nom                | GitHub                          | Rôle                     |
+ |--------|--------------------|---------------------------------|--------------------------|
+ | ![Bécognée Yonnel](https://github.com/ton-pseudo.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
+ | ... | ... | ... | Développeur |
+ | ... | ... | ... | Développeuse |
+ | ... | ... | ... | Traductrice |
+
 ---
 
 ![](./readme_assets/MAEL_Gen.png)
