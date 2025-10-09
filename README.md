@@ -180,7 +180,7 @@ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappoint
 
 ### :star2: Contributeurs
 
-Un grand merci à toutes les personnes qui ont contribué à ce projet !
+Un grand merci à toutes les personnes qui vont contribuer à ce projet !
 
  | Avatar | Nom                | GitHub                          | Rôle                     |
  |--------|--------------------|---------------------------------|--------------------------|
