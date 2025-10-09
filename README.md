@@ -92,7 +92,7 @@ Les voix de synthèse sont celles générées par le téléphone.
 | Portugais du portugal | `<ptPRT>` |
 | Portugais du Bésil | `<ptBRA>` |
 
-:bookmark_tabs: [Voir la liste des lagues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
+:bookmark_tabs: [Voir la liste des langues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
 
 ---
 
