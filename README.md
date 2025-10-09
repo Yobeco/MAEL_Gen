@@ -1,6 +1,6 @@
 ![MAEL](https://github.com/Yobeco/MAEL_Phono_fouille/blob/main/readme_assets/Logo-MAEL-120.png "Logo du projet MAEL")
 
-Une application associée au projet MAEL
+Une application appartenant au projet MAEL
 
 # MAEL Gen
 
