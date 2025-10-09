@@ -60,7 +60,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 ---
 
-**:two: Si vous changez _la langue_ du contenu par exemple _italien_ :**
+**:two: Si vous changez _la langue_ du contenu, par exemple _italien_ :**
 
 1- Le texte reçoit un préfixe du type `<it>`
 
@@ -76,7 +76,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 1- Le texte reçoit un préfixe du type `<it>`
 
-2- Le texte reçoit un siffixe du type `#d`
+2- Le texte reçoit un suffixe du type `#d`
 
 2- Le texte subit d'abord un "encryptage" léger.
 
@@ -84,7 +84,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 *⟶ __MAEL Scan__ comprendra qu'il est en __mode dictée__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
 
-Les voix de synthèse sont celles générée oar le téléphone.
+Les voix de synthèse sont celles générées par le téléphone.
 
 :eyes: Certaines langues (avec gtts) ont plusieurs voix possibles, par exemples :
 
@@ -110,16 +110,17 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 
 1- **Mode "dicter"**
 
-- Le mode dictée actuelle va changer de nom et s'appeler "Mode caché".
+- Le mode dictée actuelle (oralise le texte mais ne l'affiche pas) va changer de nom et s'appeler "Mode caché".
 
-- Le mode dictée reste une lecture sans montrer le texte, mais il faudrait :
+- Le mode dictée aura en plus :
 
-    - ajouter l'oralisation de la ponctuation et
-    - afficher le menu lecture-pause (avec barre de défilement)
+    - l'oralisation de la ponctuation et
+    - l'affichage le menu lecture-pause (avec barre de défilement)
 
 2- **Mode "MP3"**
 
 - Création d'un MAEL Cloud avec moins de limitations que Google Drive.
+- Ajout d'une option (suffixe) qui indiquera à **MAEL Scan** qu'il doit conserver le fichier pour ne pas à avoir à le re-télécharger s'il est scanné à nouveau.
 
 3- **Interface**
 
