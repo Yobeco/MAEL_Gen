@@ -44,6 +44,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *(Pour aider à la compréhension du code)*
 
+---
+
 **:one: Au premier démarrage**
 
 Quand on écrit un texte dans l'entrée de texte, la langue par défault est "français" :fr: et le mode par défaut est "Lecture" :
@@ -54,6 +56,8 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 *⟶ MAEL Scan comprendra qu'il est en mode lecture et utilisera la voix de synthèse française :fr:.*
 
+---
+
 **:two: Si vous changez _la langue_ du contenu par exemple _italien_ :**
 
 1- Le texte reçoit un préfixe du type `<it>`
@@ -63,6 +67,8 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 3- Un code QR contenant ce texte (utf-8) est généré.
 
 *⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+
+---
 
 **:three: Si vous choisissez le *mode dicter* :**
 
@@ -87,12 +93,14 @@ Les voix de synthèse sont celles générée oar le téléphone.
 
 :bookmark_tabs: [Voir la liste des lagues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
 
+---
+
 **:four: À chaque modification :**
 
 Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 (Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
 
-⟶ Le professeur n'a plus qu'à faire `Coller`dans son éditeur personnel.
+⟶ Le professeur n'a plus qu'à faire `Coller` dans son éditeur personnel.
 
 ---
 
