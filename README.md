@@ -46,10 +46,10 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 1. Lancez MAEL Gen
 1. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (écrivez-le, ou faite `Ctrl + v` ou encore un simple `clic droit`)
-1. Choisissez la langue (Menu `Langue`)
-1. Choisissez le mode (Menu `Paramètre`)
+1. Choisissez la langue (Menu `Langue`) dans laquelle est le texte que vous avez introduit.
+1. Choisissez le mode (Menu `Paramètre`) selon votre objectif.
 1. Ajustez la taille du code QR (champ `Taille` ou glissière)
-1. Coller (`Ctrl + v` ou `clic droit` + `clic droit`) dans votre document : éditeur de texte, LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/FFFF" width="24" height="24" style="vertical-align: middle;" />...
+1. Collez dans votre document : éditeur de texte, LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/FFFF" width="24" height="24" style="vertical-align: middle;" />...
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
