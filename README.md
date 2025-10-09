@@ -111,9 +111,9 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 ---
 
-Les voix de synthèse sont celles générées par le téléphone.
+:speaking_head: Les voix de synthèse sont celles générées par le téléphone.
 
-:warning: Certaines langues (avec gtts) ont plusieurs voix possibles, par exemples :
+:warning: Certaines langues (avec gtts) ont plusieurs voix possibles. Le préfixe sera alors plus long. Par exemples :
 
 | Voix | Préfixe |
 | ----------- | ----------- |
