@@ -155,7 +155,7 @@ Pour **obtenir de l'aide** :sos: concernant l'utilisation de MAEL ou pour **pati
 
 ### 📨 ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
-## :star2: Contributeurs
+### :star2: Contributeurs
 
 Un grand merci à toutes les personnes qui ont contribué à ce projet !
 
