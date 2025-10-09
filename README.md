@@ -26,7 +26,7 @@ Un grand merci à toutes les personnes qui ont contribué à ce projet !
 
  | Avatar | Nom                | GitHub                          | Rôle                     |
  |--------|--------------------|---------------------------------|--------------------------|
- | ![Bécognée Yonnel](https://github.com/ton-pseudo.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
+ | ![Bécognée Yonnel](https://avatars.githubusercontent.com/u/1234567?v=4&s=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
  | ... | ... | ... | Développeur |
  | ... | ... | ... | Développeuse |
  | ... | ... | ... | Traductrice |
