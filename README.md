@@ -131,9 +131,9 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 
 Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
 
-Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'a ajouté un petit carré de couleur en bas à droite.
+Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.
 
-Pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter le texte qu'il contient dans les méta-données du fichier .png pour que sous LibreOffice, dans une bulle apparaisse les métadonnées de l'image oubien quelles soient visibles dans l'inspecteur (colonne à droite).
+De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter le texte qu'il contient dans les méta-données du fichier .png pour que sous LibreOffice, dans une bulle apparaisse les métadonnées de l'image oubien quelles soient visibles dans l'inspecteur (colonne à droite).
 
 
 ---
