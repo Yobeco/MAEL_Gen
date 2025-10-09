@@ -85,7 +85,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 Les voix de synthèse sont celles générées par le téléphone.
 
-:eyes: Certaines langues (avec gtts) ont plusieurs voix possibles, par exemples :
+:warning: Certaines langues (avec gtts) ont plusieurs voix possibles, par exemples :
 
 | Voix | Préfixe |
 | ----------- | ----------- |
@@ -101,7 +101,7 @@ Les voix de synthèse sont celles générées par le téléphone.
 Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 (Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
 
-⟶ Le professeur n'a plus qu'à faire `Coller` dans son éditeur personnel.
+*⟶ Le professeur n'a plus qu'à faire `Coller` dans son éditeur personnel.*
 
 ---
 
@@ -156,7 +156,8 @@ Pour essayer MAEL_Gen, exécutez le script :
     git clone https://github.com/Yobeco/MAEL_Gen.git
     cd MAEL_Gen
     python3 -m venv mael_venv
-    source mael_venv/bin/activate     pip install -r requirements.txt
+    source mael_venv/bin/activate
+    pip install -r requirements.txt
     python3 MAEL_V5.0.py
 
 
