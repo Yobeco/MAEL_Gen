@@ -7,9 +7,9 @@ Copyright (c) 2025 Yonnel Bécognée
 
 [![License: Libre Non Commerciale](https://img.shields.io/badge/license-GNU%20GENERAL%20PUBLIC%20LICENSE%20V3-white.svg)](./LICENSE)
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=yellow)
+![Python](https://img.shields.io/badge/Python-V3.10%2B-blue?logo=python&logoColor=yellow)
 
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-009900.svg)](#contributing) [![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-8A2BE2)]()
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-009900.svg)](#contributing) [![Beginner friendly](https://img.shields.io/badge/Beginner%20friendly-FF8000)]()
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
