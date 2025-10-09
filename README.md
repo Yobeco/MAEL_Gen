@@ -152,7 +152,7 @@ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappoint
 
 ---
 
-## F- Installation
+## F- Installation :arrow_heading_down:
 
 Pour essayer **MAEL Gen**, exécutez le script :
 
