@@ -42,9 +42,9 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ---
 
-## C- Comment utiliser MAEL Gen
+## C- Comment utiliser MAEL Gen ? :blush:
 
-### 1- Voix de synthèse :speaking_head:
+### 1- Utiliser une voix de synthèse :speaking_head:
 
 1. Lancez MAEL Gen
 1. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (écrivez-le, ou faites `Ctrl + v` ou encore un simple `clic droit`)
@@ -55,7 +55,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
-### 2- Fichier MP3
+### 2- Utiliser un fichier MP3
 
 1. Déposez un fichier .mp3 :microphone: sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/FFFF" width="24" height="24" style="vertical-align: middle;" />
 
