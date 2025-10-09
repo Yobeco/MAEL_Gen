@@ -101,7 +101,7 @@ Les voix de synthèse sont celles générées par le téléphone.
 
 **:four: À chaque modification :**
 
-Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
+Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :clipboard:
 (Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
 
 *⟶ Le professeur n'a plus qu'à faire `Coller` dans son éditeur personnel.*
