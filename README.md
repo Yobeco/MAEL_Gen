@@ -127,7 +127,7 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier.
 
 **:+1: Vous pouvez proposer votre aider pour developper ces fonctions**
 
-4- **LibreOffice** <img src="https://cdn.simpleicons.org/react/61DAFB" width="24" height="24" style="vertical-align: middle;" />
+4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/FFFF" width="24" height="24" style="vertical-align: middle;" />
 
 Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
 
