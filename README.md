@@ -137,6 +137,8 @@ Quand on crée un document contenant beaucoup de codes QR, il devient plus facil
 
 De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice, les métadonnées de l'image apparaissent dans une info-bulle :left_speech_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
 
+Je n'ai pas encore trouver comment faire quelque-chose de similaire. :disappointed_relieved:
+
 ### :+1: Proposez votre aider pour developper ces fonctions
 
 
