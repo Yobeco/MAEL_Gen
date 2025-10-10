@@ -3,7 +3,7 @@
 # MAEL Gen
 
 *Une application appartenant au [__projet MAEL__](https://github.com/Yobeco/MAEL_Project)*   
-Copyright (c) 2025 Yonnel Bécognée
+Copyright (c) 2022 Yonnel Bécognée
 
 [![License: Libre Non Commerciale](https://img.shields.io/badge/license-GNU%20GENERAL%20PUBLIC%20LICENSE%20V3-white.svg)](./LICENSE)
 
@@ -169,7 +169,7 @@ De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j
 
 Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
 
-### :+1: Proposez votre aider pour developper une de ces fonctions
+### :+1: Proposez votre aide pour developper une de ces fonctions
 
 
 ---
