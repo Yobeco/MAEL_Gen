@@ -51,19 +51,19 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 1. Choisissez la langue (Menu `Langue`) dans laquelle est le texte que vous avez introduit.
 1. Choisissez le mode (Menu `Paramètre`) selon votre objectif.
 1. Ajustez la taille du code QR (champ `Taille` ou glissière)
-1. Collez dans votre document : éditeur de texte, LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/FFFF" width="24" height="24" style="vertical-align: middle;" />...
+1. Collez dans votre document : éditeur de texte, LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/808080" width="24" height="24" style="vertical-align: middle;" />...
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
 ### 2- Utiliser un fichier MP3
 
-1. Déposez un fichier .mp3 :microphone: sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/FFFF" width="24" height="24" style="vertical-align: middle;" />
+1. Déposez un fichier .mp3 :microphone: sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/808080" width="24" height="24" style="vertical-align: middle;" />
 
 1. **Partagez** le dossier où se trouve le fichier .mp3 **avec toutes les personnes possédant le lien**.
 1. Récupérer le lien de partage.
 1. Coller ce lien dans MAEL Gen.
 1. Ajustez la taille (champ `Taille`ou glissière).
-1. Collez dans votre document (éditeur de texte ou LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficewriter/FFFF" width="24" height="24" style="vertical-align: middle;" />...).
+1. Collez dans votre document (éditeur de texte ou LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />...).
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le fichier mp3 :headphones: : une poésie, un dialogue...*
 
@@ -159,7 +159,7 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 - **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » vers l'emplacement du curseur (qui sera supprimé).
 - Gestion des langues s'écrivant de droite à gauche :arrow_left:.
 
-4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/FFFF" width="24" height="24" style="vertical-align: middle;" />
+4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/808080" width="24" height="24" style="vertical-align: middle;" />
 
 Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
 
