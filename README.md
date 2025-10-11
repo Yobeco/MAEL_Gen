@@ -17,7 +17,7 @@ Copyright (c) 2022 Yonnel Bécognée
 
 ---
 
-![](https://github.com/Yobeco/MAEL_Project/blob/main/readme_assets/MAEL_Gen.png)
+![](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
 
 
 ## A- Description :eye:
@@ -25,7 +25,7 @@ Copyright (c) 2022 Yonnel Bécognée
 :computer: **Application de bureau** multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une **dimension audio** :ear: à leurs documents papier.
 
-Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" /> et bientôt sur iOS <img src="https://cdn.simpleicons.org/ios/808080" width="24" height="24" style="vertical-align: middle;" />).
+Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android <img src="https://cdn.simpleicons.org/android/808080" width="24" height="24" style="vertical-align: middle;" /> et bientôt sur iOS <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" />).
 
 ---
 
@@ -203,5 +203,4 @@ Pour essayer **MAEL Gen**, exécutez le script :
     source mael_venv/bin/activate
     pip install -r requirements.txt
     python3 MAEL_V5.0.py
-
 
