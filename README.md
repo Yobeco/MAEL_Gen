@@ -17,12 +17,12 @@ Copyright (c) 2022 Yonnel Bécognée
 
 ---
 
-![](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
+![ScreenShot](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
 
 
 ## A- Description :eye:
 
-:computer: **Application de bureau** multiplateforme (Linux, MacOS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter. 
+:computer: **Application de bureau** multi-plateforme (Linux, Mac OS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter.  
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une **dimension audio** :ear: à leurs documents papier.
 
 Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android <img src="https://cdn.simpleicons.org/android/808080" width="24" height="24" style="vertical-align: middle;" /> et bientôt sur iOS <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" />).
@@ -35,8 +35,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **Mode "dicter"** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
 - **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
 - **Mode "MP3"** : lit un fichier provenant de Google Drive.
-- **Sons mp3 spéciaux** : Sons issus de la méthode Borel-Maisonny et de l'Abecédaire Consigny (créé par  la zone AMLA Nort)
-- **55 langues supportées** (sauf pour le mode épeler pour le moment)
+- **Sons mp3 spéciaux** : Ce sont des sons issus de la méthode Borel-Maisonny et de l'Abecédaire Consigny (créé par  la zone AMLA Nort)
+- **55 langues supportées** (sauf pour le mode "épeler" pour le moment)
 
 :fr: :gb: :es: :portugal: :brazil: :it: :de: :ru: :jp: :cn: :kr: ...
 
@@ -46,9 +46,9 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 
 ### 1- Utiliser une voix de synthèse :speaking_head:
 
-1. Lancez MAEL Gen
+1. Lancez **MAEL Gen**
 1. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (écrivez-le, ou faites `Ctrl + v` ou encore un simple `clic droit`)
-1. Choisissez la langue (Menu `Langue`) dans laquelle est le texte que vous avez introduit.
+1. Choisissez la langue (Menu `Langue`) dans laquelle est votre texte.
 1. Choisissez le mode (Menu `Paramètre`) selon votre objectif.
 1. Ajustez la taille du code QR (champ `Taille` ou glissière)
 1. Collez dans votre document : éditeur de texte, LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/808080" width="24" height="24" style="vertical-align: middle;" />...
@@ -66,6 +66,10 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 1. Collez dans votre document (éditeur de texte ou LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />...).
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le fichier mp3 :headphones: : une poésie, un dialogue...*
+
+Plus d'information :
+
+![](./readme_assets/Aide-V4.png)
 
 ---
 
