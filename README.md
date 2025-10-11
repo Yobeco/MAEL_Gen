@@ -51,7 +51,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 1. Choisissez la langue (Menu `Langue`) dans laquelle est votre texte.
 1. Choisissez le mode (Menu `Paramètre`) selon votre objectif.
 1. Ajustez la taille du code QR (champ `Taille` ou glissière)
-1. Collez dans votre document : éditeur de texte, LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficeimpress/808080" width="24" height="24" style="vertical-align: middle;" />...
+1. Collez dans votre document :  LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" /> ou Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
@@ -63,7 +63,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 1. Récupérer le lien de partage.
 1. Coller ce lien dans MAEL Gen.
 1. Ajustez la taille (champ `Taille`ou glissière).
-1. Collez dans votre document (éditeur de texte ou LibreOffice Draw <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />...).
+1. Collez dans votre document (LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" /> ou Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...).
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le fichier mp3 :headphones: : une poésie, un dialogue...*
 
@@ -81,39 +81,39 @@ Plus d'information :
 
 **:one: Au premier démarrage**
 
-Quand on écrit un texte dans l'entrée de texte, la langue par défault est "français" :fr: et le mode par défaut est "Lecture" :
+Quand on écrit dans l'entrée de texte, la langue par défaut est "français" :fr: et le mode par défaut est "Lecture" :
 
 1- Le texte subit d'abord un "encryptage" léger.
 
 2- Un code QR contenant ce texte (`utf-8`) est généré.
 
-*⟶ __MAEL Scan__ comprendra qu'il est en mode lecture et utilisera la voix de synthèse française :fr:.*
+*⟶ Par défaut, __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse française :fr:.*
 
 ---
 
 **:two: Si vous changez _la langue_ du contenu, par exemple _italien_ :it:** :
 
-1- Le texte reçoit un préfixe du type `<it>`
+1- Le texte à mettre dans le code QR reçoit un préfixe du type `<it>`
 
-2- Le texte avec son préfixe subit d'abord un "encryptage" léger.
+2- Le texte (avec son préfixe) subit d'abord un "encryptage" léger.
 
 3- Un code QR contenant ce texte (`utf-8`) est généré.
 
-*⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ mais il utilisera cette fois la voix de synthèse de voix __italienne__ :it:.*
+*⟶ __MAEL Scan__ reste __mode lecture__ mais il utilisera cette fois la voix de synthèse __italienne__ :it:.*
 
 ---
 
 **:three: Si vous changez pour le *mode dicter* :**
 
-1- Le texte reçoit un préfixe du type `<it>`
+1- Le texte garde son préfixe du type `<it>`
 
 2- Le texte reçoit un suffixe du type `#d`
 
-2- Le texte subit d'abord un "encryptage" léger.
+2- Le texte (avec son préfixe et son suffixe) subit d'abord un "encryptage" léger.
 
 3- Un code QR contenant ce texte (`utf-8`) est généré.
 
-*⟶ __MAEL Scan__ comprendra cette fois qu'il est en __mode dicter__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+*⟶ __MAEL Scan__ comprendra cette fois qu'il est en __mode dicter__ et utilisera la voix de synthèse __italienne__ :it:.*
 
 ---
 
@@ -132,7 +132,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 **:four: À chaque modification :**
 
-Un fichier `.png` du code QR est généré et automatiquement envoyé dans le presse-papier. :clipboard:
+Un fichier `.png` correspondant au code QR est généré et automatiquement envoyé dans le presse-papier. :clipboard:
 
 (Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
 
@@ -146,22 +146,22 @@ Un fichier `.png` du code QR est généré et automatiquement envoyé dans le pr
 
 - Le _mode dicter_ actuel (oraliser le texte mais ne pas l'afficher) va changer de nom et s'appeler **"Mode cacher"**. :arrows_counterclockwise:
 
-- Le nouveau _mode dicter_ aura :
+- Le __nouveau mode dicter__ aura :
 
-    - la lecture du texte, mais pas son affichage,
+    - la lecture du texte, sans son affichage,
     - l'oralisation de la ponctuation et
     - l'affichage du menu lecture-pause :play_or_pause_button: ​(avec barre de défilement) .
 
 2- **Mode "MP3"**
 
-- Création d'un **MAEL Cloud** :cloud: avec moins de limitations que Google Drive. (hébergé avec la plateforme **MAEL Phrase**).
+- Création d'un **MAEL Cloud** :cloud: avec moins de limitations que Google Drive (hébergé avec la plateforme **MAEL Phrase**).
 - Ajout d'une option (suffixe) qui indiquera à **MAEL Scan** qu'il doit conserver le fichier mp3 :inbox_tray: pour ne pas à avoir à le re-télécharger s'il est scanné à nouveau.
 
 3- **Interface**
 
 - Remplacement de TKinter par **TTKBootstrap**
-- **Déplacer les boutons d'accès au changement de mode** du menu « Paramètres » vers l'emplacement du curseur (qui sera supprimé).
-- Gestion des langues s'écrivant de droite à gauche :arrow_left:.
+- **Déplacement des 4 boutons de changement de mode** du menu « Paramètres » vers l'emplacement du curseur de taille (qui sera supprimé).
+- Gestion des langues s'écrivant de droite à gauche :arrow_left: comme l'arabe ou l’hébreu.
 
 4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/808080" width="24" height="24" style="vertical-align: middle;" />
 
@@ -169,9 +169,9 @@ Quand on crée un document contenant beaucoup de codes QR, il devient plus facil
 
 *(Pour que le professeur puisse voir d'un seul coup d’œil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
 
-De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" /><img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, les métadonnées de l'image apparaissent dans une info-bulle :left_speech_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
+Dans le même esprit, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" /><img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, les métadonnées de l'image apparaissent dans une info-bulle :right_anger_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
 
-Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
+⟶ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
 
 ### :+1: Proposez votre aide pour développer une de ces fonctions :smile:
 
