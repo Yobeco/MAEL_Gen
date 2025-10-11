@@ -85,25 +85,25 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 1- Le texte subit d'abord un "encryptage" léger.
 
-2- Un code QR contenant ce texte (utf-8) est généré.
+2- Un code QR contenant ce texte (`utf-8`) est généré.
 
-*⟶ MAEL Scan comprendra qu'il est en mode lecture et utilisera la voix de synthèse française :fr:.*
+*⟶ __MAEL Scan__ comprendra qu'il est en mode lecture et utilisera la voix de synthèse française :fr:.*
 
 ---
 
-**:two: Si vous changez _la langue_ du contenu, par exemple _italien_ :**
+**:two: Si vous changez _la langue_ du contenu, par exemple _italien_ :it:** :
 
 1- Le texte reçoit un préfixe du type `<it>`
 
-2- Le texte subit d'abord un "encryptage" léger.
+2- Le texte avec son préfixe subit d'abord un "encryptage" léger.
 
-3- Un code QR contenant ce texte (utf-8) est généré.
+3- Un code QR contenant ce texte (`utf-8`) est généré.
 
 *⟶ __MAEL Scan__ comprendra qu'il est en __mode lecture__ mais il utilisera cette fois la voix de synthèse de voix __italienne__ :it:.*
 
 ---
 
-**:three: Si vous choisissez le *mode dicter* :**
+**:three: Si vous changez pour le *mode dicter* :**
 
 1- Le texte reçoit un préfixe du type `<it>`
 
@@ -111,20 +111,20 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 2- Le texte subit d'abord un "encryptage" léger.
 
-3- Un code QR contenant ce texte (utf-8) est généré.
+3- Un code QR contenant ce texte (`utf-8`) est généré.
 
-*⟶ __MAEL Scan__ comprendra cette fois qu'il est en __mode dictée__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
+*⟶ __MAEL Scan__ comprendra cette fois qu'il est en __mode dicter__ et utilisera la voix de synthèse de voix __italienne__ :it:.*
 
 ---
 
-:speaking_head: Les voix de synthèse sont celles générées par le téléphone.
+:speaking_head: Les voix de synthèse sont celles générées par le téléphone. (`GTTS` sous Android)
 
-:warning: Certaines langues (avec gtts) ont plusieurs voix possibles. Le préfixe sera alors plus long. Par exemples :
+:warning: Certaines langues ont plusieurs voix possibles. Le préfixe sera alors plus long. Par exemple :
 
 | Voix | Préfixe |
 | ----------- | ----------- |
-| Portugais du portugal | `<ptPRT>` |
-| Portugais du Bésil | `<ptBRA>` |
+| Portugais du portugal :portugal: | `<ptPRT>` |
+| Portugais du Bésil :brazil: | `<ptBRA>` |
 
 :bookmark_tabs: [Voir la liste des langues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
 
@@ -132,7 +132,7 @@ Quand on écrit un texte dans l'entrée de texte, la langue par défault est "fr
 
 **:four: À chaque modification :**
 
-Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :clipboard:
+Un fichier `.png` du code QR est généré et automatiquement envoyé dans le presse-papier. :clipboard:
 
 (Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
 
@@ -150,12 +150,12 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 
     - la lecture du texte, mais pas son affichage,
     - l'oralisation de la ponctuation et
-    - l'affichage du menu lecture-pause (avec barre de défilement) :play_or_pause_button:.
+    - l'affichage du menu lecture-pause :play_or_pause_button: ​(avec barre de défilement) .
 
 2- **Mode "MP3"**
 
 - Création d'un **MAEL Cloud** :cloud: avec moins de limitations que Google Drive. (hébergé avec la plateforme **MAEL Phrase**).
-- Ajout d'une option (suffixe) qui indiquera à **MAEL Scan** qu'il doit conserver le fichier :inbox_tray: pour ne pas à avoir à le re-télécharger s'il est scanné à nouveau.
+- Ajout d'une option (suffixe) qui indiquera à **MAEL Scan** qu'il doit conserver le fichier mp3 :inbox_tray: pour ne pas à avoir à le re-télécharger s'il est scanné à nouveau.
 
 3- **Interface**
 
@@ -167,9 +167,9 @@ Le fichier `.png` généré est automatiquement envoyé dans le presse-papier. :
 
 Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
 
-*(Pour que le professeur puisse voir d'un seul coup d'oeil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
+*(Pour que le professeur puisse voir d'un seul coup d’œil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
 
-De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice, les métadonnées de l'image apparaissent dans une info-bulle :left_speech_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
+De la même manière, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" /><img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, les métadonnées de l'image apparaissent dans une info-bulle :left_speech_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
 
 Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
 
