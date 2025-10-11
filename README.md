@@ -51,7 +51,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 1. Choisissez la langue (Menu `Langue`) dans laquelle est votre texte.
 1. Choisissez le mode (Menu `Paramètre`) selon votre objectif.
 1. Ajustez la taille du code QR (champ `Taille` ou glissière)
-1. Collez dans votre document :  LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" /> ou Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...
+1. Collez dans votre document :  LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
 
@@ -63,7 +63,7 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 1. Récupérer le lien de partage.
 1. Coller ce lien dans MAEL Gen.
 1. Ajustez la taille (champ `Taille`ou glissière).
-1. Collez dans votre document (LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" /> ou Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...).
+1. Collez dans votre document (LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...).
 
 *⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le fichier mp3 :headphones: : une poésie, un dialogue...*
 
