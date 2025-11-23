@@ -192,10 +192,9 @@ Un grand merci à toutes les personnes qui vont contribuer à ce projet !
 
 | Avatar | Nom                | GitHub                          | Rôle                     |
 |--------|--------------------|---------------------------------|--------------------------|
-| ![Bécognée Yonnel](https://github.com/Yobeco.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
-| ... | ... | ... | Développeur |
-| ... | ... | ... | Développeuse |
-| <img src="https://avatars.githubusercontent.com/u/214922496?v=4" alt="View Nail-yk's full-sized avatar" style="zoom:10%;" /> | ... | ... | Traduction de la documentation |
+| [<img src="https://github.com/YoBeco.png" width="50" style="border-radius: 50%;">](https://github.com/YoBeco) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
+| [<img src="https://github.com/Nail-yk.png" width="50" style="border-radius: 50%;">](https://github.com/Nail-yk) | Padawan         | [@Nail-yk](https://github.com/Nail-yk) | Traduction de la documentation |
+| ... | ... | ... | Développeuse Python |
 
 ---
 
