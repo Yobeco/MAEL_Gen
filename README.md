@@ -144,9 +144,9 @@ Un fichier `.png` correspondant au code QR est généré et automatiquement envo
 
 1- **Mode "dicter"**
 
-- Le _mode dicter_ actuel (oraliser le texte mais ne pas l'afficher) va changer de nom et s'appeler **"Mode cacher"**. :arrows_counterclockwise:
+- Le _**"Mode dicter"**_ actuel (oraliser le texte mais ne pas l'afficher) va changer de nom et s'appeler **"Mode cacher"**. :arrows_counterclockwise:
 
-- Le __nouveau mode dicter__ aura :
+- Le nouveau  _**"Mode dicter"**_ aura :
 
     - la lecture du texte, sans son affichage,
     - l'oralisation de la ponctuation et
@@ -163,15 +163,17 @@ Un fichier `.png` correspondant au code QR est généré et automatiquement envo
 - **Déplacement des 4 boutons de changement de mode** du menu « Paramètres » vers l'emplacement du curseur de taille (qui sera supprimé).
 - Gestion des langues s'écrivant de droite à gauche :arrow_left: comme l'arabe ou l’hébreu.
 
-4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/808080" width="24" height="24" style="vertical-align: middle;" />
+4- **Vérification par lots des codes QR**
 
-Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
+Quand on crée un document contenant plusieurs de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
 
-*(Pour que le professeur puisse voir d'un seul coup d’œil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
+J'ai donc commencé à créer une fonction de vérification rapide des code QR.
 
-Dans le même esprit, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" /><img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, les métadonnées de l'image apparaissent dans une info-bulle :right_anger_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
+1. Proposera de faire une capture d'écran du document à vérifier
+2. Détectera les codes QR de l'image capturée
+3. Ajoutera sur l'image le texte de chaque code QR trouvé
 
-⟶ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
+J'ai commencé avec **TKinter** pour l'interface de sélection de la zone à capturer (déjà utilisé par MAEL Gen), **mss** pour la capture en soi et peut-être **OpenCV** pour la détection et la lecture des codes QR.
 
 ### :+1: Proposez votre aide pour développer une de ces fonctions :smile:
 
