@@ -190,12 +190,12 @@ J'ai commencé avec **TKinter** pour l'interface de sélection de la zone à cap
 
 Un grand merci à toutes les personnes qui vont contribuer à ce projet !
 
- | Avatar | Nom                | GitHub                          | Rôle                     |
- |--------|--------------------|---------------------------------|--------------------------|
- | ![Bécognée Yonnel](https://github.com/Yobeco.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
- | ... | ... | ... | Développeur |
- | ... | ... | ... | Développeuse |
- | ... | ... | ... | Traductrice |
+| Avatar | Nom                | GitHub                          | Rôle                     |
+|--------|--------------------|---------------------------------|--------------------------|
+| ![Bécognée Yonnel](https://github.com/Yobeco.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
+| ... | ... | ... | Développeur |
+| ... | ... | ... | Développeuse |
+| <img src="https://avatars.githubusercontent.com/u/214922496?v=4" alt="View Nail-yk's full-sized avatar" style="zoom:10%;" /> | ... | ... | Traduction de la documentation |
 
 ---
 
