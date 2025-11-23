@@ -182,7 +182,7 @@ J'ai commencé avec **TKinter** pour l'interface de sélection de la zone à cap
 
 # F- :open_hands: Participez au projet MAEL <img src="https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL.svg" alt="Logo MAEL" width="40" height="40" /> !
 
-:sos: Pour **obtenir de l'aide** concernant l'utilisation de **MAEL Gen** ou pour **participer au développement** :computer:, écrivez-moi ici :
+:ring_buoy: Pour **obtenir de l'aide** concernant l'utilisation de **MAEL Gen** ou pour **participer au développement** :computer:, écrivez-moi ici :
 
 ### :mailbox_with_mail: ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
