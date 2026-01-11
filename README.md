@@ -1,8 +1,10 @@
-![MAEL](./readme_assets/Logo-MAEL-120.png "Logo du projet MAEL")
+
+![MAEL](./readme_assets/Logo-MAEL-120.png "MAEL project logo")
 
 # MAEL Gen
 
-*Une application appartenant au [__projet MAEL__](https://github.com/Yobeco/MAEL_Project)*   
+*An application belonging to the [__MAEL project__](https://github.com/Yobeco/MAEL_Project)*   
+
 Copyright (c) 2022 Yonnel Bécognée
 
 [![License: Libre Non Commerciale](https://img.shields.io/badge/license-GNU%20GENERAL%20PUBLIC%20LICENSE%20V3-white.svg)](./LICENSE)
@@ -17,189 +19,226 @@ Copyright (c) 2022 Yonnel Bécognée
 
 ---
 
-![ScreenShot](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
+---
 
+![ScreenShot](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
 
 ## A- Description :eye:
 
-:computer: **Application de bureau** multi-plateforme (Linux, Mac OS et Windows) qui permet aux enseignants de créer facilement des codes QR contenant du texte que leurs élèves peuvent écouter.  
-Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une **dimension audio** :ear: à leurs documents papier.
+:computer: **Cross-platform desktop application** (Linux, macOS, and Windows) that allows teachers to easily create QR codes containing text that their students can listen to.  
 
-Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android <img src="https://cdn.simpleicons.org/android/808080" width="24" height="24" style="vertical-align: middle;" /> et bientôt sur iOS <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" />).
+They can integrate them into their various teaching materials, thus adding an **audio dimension** :ear: to their paper documents.
+
+The QR codes will be scanned by students using the **MAEL Scan** application :speaker: (available on Android <img src="https://cdn.simpleicons.org/android/808080" width="24" height="24" style="vertical-align: middle;" /> and soon on iOS <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" />).
 
 ---
 
-## B- Fonctionnalités :clipboard:
+---
 
-- **Mode "lecture"** : affiche et lit à haute voix le texte contenu dans le code QR.
-- **Mode "dicter"** : n'affiche pas mais lit à haute voix le texte contenu dans le code QR.
-- **Mode "épeler"** : lit à haute voix chaque lettre du texte contenu dans le code QR.
-- **Mode "MP3"** : lit un fichier provenant de Google Drive.
-- **Sons mp3 spéciaux** : Ce sont des sons issus de la méthode Borel-Maisonny et de l'Abecédaire Consigny (créé par  la zone AMLA Nort)
-- **55 langues supportées** (sauf pour le mode "épeler" pour le moment)
+## B- Features :clipboard:
+
+- **"Read" mode**: displays and reads aloud the text contained in the QR code.
+
+- **"Dictate" mode**: does not display the text but reads aloud the text contained in the QR code.
+
+- **"Spell" mode**: reads aloud each letter of the text contained in the QR code.
+
+- **"MP3" mode**: plays a file from Google Drive.
+
+- **Special MP3 sounds**: these are sounds from the Borel-Maisonny method and the Consigny Alphabet Book (created by the AMLA Nort area).
+
+- **55 supported languages** (except for the "spell" mode for the moment).
 
 :fr: :gb: :es: :portugal: :brazil: :it: :de: :ru: :jp: :cn: :kr: ...
 
----
+## C- How to use MAEL Gen? :blush:
 
-## C- Comment utiliser MAEL Gen ? :blush:
+### 1- Use a synthetic voice :speaking_head:
 
-### 1- Utiliser une voix de synthèse :speaking_head:
+1. Launch **MAEL Gen**
 
-1. Lancez **MAEL Gen**
-1. Introduisez le texte que vous souhaitez faire entendre dans le champ de texte (écrivez-le, ou faites `Ctrl + v` ou encore un simple `clic droit`)
-1. Choisissez la langue (Menu `Langue`) dans laquelle est votre texte.
-1. Choisissez le mode (Menu `Paramètre`) selon votre objectif.
-1. Ajustez la taille du code QR (champ `Taille` ou glissière)
-1. Collez dans votre document :  LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...
+2. Enter the text you want to be spoken in the text field (type it, or use `Ctrl + v`, or simply `right-click`)
 
-*⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le contenu :headphones:...*
+3. Choose the language (menu `Language`) of your text.
 
-### 2- Utiliser un fichier MP3
+4. Choose the mode (menu `Settings`) according to your objective.
 
-1. Déposez un fichier .mp3 :microphone: sur votre compte Google Drive <img src="https://cdn.simpleicons.org/googledrive/808080" width="24" height="24" style="vertical-align: middle;" />
+5. Adjust the size of the QR code (field `Size` or slider)
 
-1. **Partagez** le dossier où se trouve le fichier .mp3 **avec toutes les personnes possédant le lien**.
-1. Récupérer le lien de partage.
-1. Coller ce lien dans MAEL Gen.
-1. Ajustez la taille (champ `Taille`ou glissière).
-1. Collez dans votre document (LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />ou n'importe-quel autre éditeur...).
+6. Paste it into your document: LibreOffice Writer <img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, Draw <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" />, or any other editor...
 
-*⟶ L'élève n'aura plus qu'à scanner ce code avec __MAEL Scan__ pour écouter le fichier mp3 :headphones: : une poésie, un dialogue...*
+*⟶ The student will then only have to scan this code with __MAEL Scan__ to listen to the content :headphones:...*
 
-Plus d'information :
+### 2- Use an MP3 file
+
+1. Upload an .mp3 file :microphone: to your Google Drive account <img src="https://cdn.simpleicons.org/googledrive/808080" width="24" height="24" style="vertical-align: middle;" />
+
+2. **Share** the folder containing the .mp3 file **with anyone who has the link**.
+
+3. Retrieve the sharing link.
+
+4. Paste this link into MAEL Gen.
+
+5. Adjust the size (field `Size` or slider).
+
+*⟶ The student will then only have to scan this code with __MAEL Scan__ to listen to the MP3 file :headphones:: a poem, a dialogue...*
+
+More information:
 
 ![](./readme_assets/Aide-V4.png)
 
 ---
 
-## D- Principe de fonctionnement :gear:
+---
 
-*(Pour aider à la compréhension du code)*
+## D- Operating principle :gear:
+
+*(To help understand the code)*
 
 ---
 
-**:one: Au premier démarrage**
+---
 
-Quand on écrit dans l'entrée de texte, la langue par défaut est "français" :fr: et le mode par défaut est "Lecture" :
+**:one: On first launch**
 
-1- Le texte subit d'abord un "encryptage" léger.
+When writing in the text input, the default language is "French" :fr: and the default mode is "Read":
 
-2- Un code QR contenant ce texte (`utf-8`) est généré.
+1- The text first undergoes light "encryption".
 
-*⟶ Par défaut, __MAEL Scan__ comprendra qu'il est en __mode lecture__ et utilisera la voix de synthèse française :fr:.*
+2- A QR code containing this text (`utf-8`) is generated.
+
+*⟶ By default, __MAEL Scan__ will understand that it is in __read mode__ and will use the French synthetic voice :fr:.*
 
 ---
 
-**:two: Si vous changez _la langue_ du contenu, par exemple _italien_ :it:** :
+---
 
-1- Le texte à mettre dans le code QR reçoit un préfixe du type `<it>`
+**:two: If you change the _language_ of the content, for example _Italian_ :it:** :
 
-2- Le texte (avec son préfixe) subit d'abord un "encryptage" léger.
+1- The text to be placed in the QR code receives a prefix such as `<it>`
 
-3- Un code QR contenant ce texte (`utf-8`) est généré.
+2- The text (with its prefix) first undergoes light "encryption".
 
-*⟶ __MAEL Scan__ reste __mode lecture__ mais il utilisera cette fois la voix de synthèse __italienne__ :it:.*
+3- A QR code containing this text (`utf-8`) is generated.
+
+*⟶ __MAEL Scan__ remains in __read mode__ but will this time use the __Italian__ synthetic voice :it:.*
 
 ---
 
-**:three: Si vous changez pour le *mode dicter* :**
+---
 
-1- Le texte garde son préfixe du type `<it>`
+**:three: If you switch to *dictate mode* :**
 
-2- Le texte reçoit un suffixe du type `#d`
+1- The text keeps its prefix such as `<it>`
 
-2- Le texte (avec son préfixe et son suffixe) subit d'abord un "encryptage" léger.
+2- The text receives a suffix such as `#d`
 
-3- Un code QR contenant ce texte (`utf-8`) est généré.
+2- The text (with its prefix and suffix) first undergoes light "encryption".
 
-*⟶ __MAEL Scan__ comprendra cette fois qu'il est en __mode dicter__ et utilisera la voix de synthèse __italienne__ :it:.*
+3- A QR code containing this text (`utf-8`) is generated.
+
+*⟶ __MAEL Scan__ will this time understand that it is in __dictate mode__ and will use the __Italian__ synthetic voice :it:.*
 
 ---
 
-:speaking_head: Les voix de synthèse sont celles générées par le téléphone. (`GTTS` sous Android)
+---
 
-:warning: Certaines langues ont plusieurs voix possibles. Le préfixe sera alors plus long. Par exemple :
+:speaking_head: The synthetic voices are those generated by the phone. (`GTTS` on Android)
 
-| Voix | Préfixe |
+:warning: Some languages have several possible voices. The prefix will then be longer. For example:
+
+| Voice | Prefix |
 | ----------- | ----------- |
-| Portugais du portugal :portugal: | `<ptPRT>` |
-| Portugais du Bésil :brazil: | `<ptBRA>` |
+| Portuguese from Portugal :portugal: | `<ptPRT>` |
+| Portuguese from Brazil :brazil: | `<ptBRA>` |
 
-:bookmark_tabs: [Voir la liste des langues de GTTS (Probablement à actualiser...)](./readme_assets/Langues_GTTS.pdf)
-
----
-
-**:four: À chaque modification :**
-
-Un fichier `.png` correspondant au code QR est généré et automatiquement envoyé dans le presse-papier. :clipboard:
-
-(Un petit icône indique si dans le presse-papier, il y a un code QR ou du texte)
-
-*⟶ Le professeur n'a plus qu'à faire `Coller` dans son éditeur personnel.*
+:bookmark_tabs: [See the list of GTTS languages (Probably needs updating...)](./readme_assets/Langues_GTTS.pdf)
 
 ---
 
-## E- Fonctionnalités à développer :rocket:
+---
 
-1- **Mode "dicter"**
+**:four: On each modification:**
 
-- Le _mode dicter_ actuel (oraliser le texte mais ne pas l'afficher) va changer de nom et s'appeler **"Mode cacher"**. :arrows_counterclockwise:
+A `.png` file corresponding to the QR code is generated and automatically sent to the clipboard. :clipboard:
 
-- Le __nouveau mode dicter__ aura :
+(A small icon indicates whether there is a QR code or text in the clipboard)
 
-    - la lecture du texte, sans son affichage,
-    - l'oralisation de la ponctuation et
-    - l'affichage du menu lecture-pause :play_or_pause_button: ​(avec barre de défilement) .
+*⟶ The teacher only has to `Paste` it into their personal editor.*
 
-2- **Mode "MP3"**
+---
 
-- Création d'un **MAEL Cloud** :cloud: avec moins de limitations que Google Drive (hébergé avec la plateforme **MAEL Phrase**).
-- Ajout d'une option (suffixe) qui indiquera à **MAEL Scan** qu'il doit conserver le fichier mp3 :inbox_tray: pour ne pas à avoir à le re-télécharger s'il est scanné à nouveau.
+---
+
+## E- Features to be developed :rocket:
+
+1- **"Dictate" mode**
+
+- The current _**"Dictate mode"**_ (speaking the text without displaying it) will change its name and be called **"Hide mode"**. :arrows_counterclockwise:
+
+- The new _**"Dictate mode"**_ will include:
+
+    - reading the text without displaying it,
+    - speaking the punctuation, and
+    - displaying the play-pause menu :play_or_pause_button: (with scroll bar).
+
+2- **"MP3" mode**
+
+- Creation of a **MAEL Cloud** :cloud: with fewer limitations than Google Drive (hosted with the **MAEL Phrase** platform).
+
+- Addition of an option (suffix) that will indicate to **MAEL Scan** that it must keep the MP3 file :inbox_tray: so as not to have to re-download it if it is scanned again.
 
 3- **Interface**
 
-- Remplacement de TKinter par **TTKBootstrap**
-- **Déplacement des 4 boutons de changement de mode** du menu « Paramètres » vers l'emplacement du curseur de taille (qui sera supprimé).
-- Gestion des langues s'écrivant de droite à gauche :arrow_left: comme l'arabe ou l’hébreu.
+- Replacement of TKinter with **TTKBootstrap**
 
-4- **LibreOffice** <img src="https://cdn.simpleicons.org/LibreOffice/808080" width="24" height="24" style="vertical-align: middle;" />
+- **Moving the 4 mode-switch buttons** from the “Settings” menu to the location of the size slider (which will be removed).
 
-Quand on crée un document contenant beaucoup de codes QR, il devient plus facile de se tromper. (Mettre deux fois le même code QR par exemple... :sweat_smile: )
+- Management of right-to-left languages :arrow_left: such as Arabic or Hebrew.
 
-*(Pour que le professeur puisse voir d'un seul coup d’œil le mode du code QR, j'avais ajouté un petit carré de couleur en bas à droite.)*
+4- **Batch verification of QR codes**
 
-Dans le même esprit, pour pouvoir vérifier facilement le contenu du code QR, j'aurais voulu ajouter son texte dans les méta-données du fichier .png pour que, sous LibreOffice <img src="https://cdn.simpleicons.org/libreofficedraw/808080" width="24" height="24" style="vertical-align: middle;" /><img src="https://cdn.simpleicons.org/libreofficewriter/808080" width="24" height="24" style="vertical-align: middle;" />, les métadonnées de l'image apparaissent dans une info-bulle :right_anger_bubble: ou bien quelles soient visibles dans l'inspecteur (colonne de droite).
+When creating a document containing several QR codes, it becomes easier to make mistakes (for example, placing the same QR code twice... :sweat_smile: ).
 
-⟶ Je n'ai pas encore trouvé comment faire quelque-chose de similaire. :disappointed_relieved:
+I therefore started creating a quick QR code verification function.
 
-### :+1: Proposez votre aide pour développer une de ces fonctions :smile:
+1. Will propose taking a screenshot of the document to be checked
 
+2. Will detect the QR codes in the captured image
+
+3. Will add to the image the text of each QR code found
+
+I started with **TKinter** for the interface to select the area to capture (already used by MAEL Gen), **mss** for the capture itself, and possibly **OpenCV** for detecting and reading QR codes.
+
+### :+1: Offer your help to develop one of these features :smile:
 
 ---
 
-# F- :open_hands: Participez au projet MAEL <img src="https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL.svg" alt="Logo MAEL" width="40" height="40" /> !
+---
 
-:sos: Pour **obtenir de l'aide** concernant l'utilisation de **MAEL Gen** ou pour **participer au développement** :computer:, écrivez-moi ici :
+# F- :open_hands: Take part in the MAEL project <img src="https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL.svg" alt="MAEL Logo" width="40" height="40" /> !
+
+:ring_buoy: To **get help** regarding the use of **MAEL Gen** or to **participate in development** :computer:, write to me here:
 
 ### :mailbox_with_mail: ***[mael@lvh.edu.ni](mailto:mael@lvh.edu.ni)***
 
-### :star2: Contributeurs
+### :star2: Contributors
 
-Un grand merci à toutes les personnes qui vont contribuer à ce projet !
+Many thanks to all the people who will contribute to this project!
 
- | Avatar | Nom                | GitHub                          | Rôle                     |
- |--------|--------------------|---------------------------------|--------------------------|
- | ![Bécognée Yonnel](https://github.com/Yobeco.png?size=50) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
- | ... | ... | ... | Développeur |
- | ... | ... | ... | Développeuse |
- | ... | ... | ... | Traductrice |
+| Avatar | Name               | GitHub                          | Role                     |
+|--------|--------------------|---------------------------------|--------------------------|
+| [<img src="https://github.com/YoBeco.png" width="50" style="border-radius: 50%;">](https://github.com/YoBeco) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Maintainer |
+| [<img src="https://github.com/Nail-yk.png" width="50" style="border-radius: 50%;">](https://github.com/Nail-yk) | Padawan         | [@Nail-yk](https://github.com/Nail-yk) | Documentation translation |
+| ... | ... | ... | Python developer |
+
+---
 
 ---
 
 ## G- Installation :arrow_heading_down:
 
-Pour essayer **MAEL Gen**, exécutez le script :
+To try **MAEL Gen**, run the script:
 
     git clone https://github.com/Yobeco/MAEL_Gen.git
     cd MAEL_Gen
@@ -207,4 +246,3 @@ Pour essayer **MAEL Gen**, exécutez le script :
     source mael_venv/bin/activate
     pip install -r requirements.txt
     python3 MAEL_V5.0.py
-
