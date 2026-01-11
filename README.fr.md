@@ -15,10 +15,6 @@ Copyright (c) 2022 Yonnel Bécognée
 
 ## :fr: [Français](https://github.com/Yobeco/MAEL_Gen) | :gb: English
 
----
-
----
-
 ![ScreenShot](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
 
 ## A- Description :eye:
@@ -28,6 +24,8 @@ Copyright (c) 2022 Yonnel Bécognée
 Ils peuvent les intégrer à leurs différents supports pédagogiques, ajoutant ainsi une **dimension audio** :ear: à leurs documents papier.
 
 Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL Scan** :speaker: (disponible sur Android <img src="https://cdn.simpleicons.org/android/808080" width="24" height="24" style="vertical-align: middle;" /> et bientôt sur iOS <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" />).
+
+---
 
 ## B- Fonctionnalités :clipboard:
 
@@ -44,6 +42,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 - **55 langues supportées** (sauf pour le mode "épeler" pour le moment)
 
 :fr: :gb: :es: :portugal: :brazil: :it: :de: :ru: :jp: :cn: :kr: ...
+
+---
 
 ## C- Comment utiliser MAEL Gen ? :blush:
 
@@ -84,6 +84,8 @@ Les codes QR seront scannés par les élèves à l'aide de l'application **MAEL 
 Plus d'information :
 
 ![](./readme_assets/Aide-V4.png)
+
+---
 
 ## D- Principe de fonctionnement :gear:
 
@@ -140,6 +142,8 @@ Un fichier `.png` correspondant au code QR est généré et automatiquement envo
 
 *⟶ Le professeur n'a plus qu'à faire `Coller` dans son éditeur personnel.*
 
+---
+
 ## E- Fonctionnalités à développer :rocket:
 
 1- **Mode "dicter"**
@@ -182,6 +186,8 @@ J'ai commencé avec **TKinter** pour l'interface de sélection de la zone à cap
 
 ### :+1: Proposez votre aide pour développer une de ces fonctions :smile:
 
+---
+
 # F- :open_hands: Participez au projet MAEL <img src="https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL.svg" alt="Logo MAEL" width="40" height="40" /> !
 
 :ring_buoy: Pour **obtenir de l'aide** concernant l'utilisation de **MAEL Gen** ou pour **participer au développement** :computer:, écrivez-moi ici :
@@ -197,6 +203,8 @@ Un grand merci à toutes les personnes qui vont contribuer à ce projet !
 | [<img src="https://github.com/YoBeco.png" width="50" style="border-radius: 50%;">](https://github.com/YoBeco) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mainteneur |
 | [<img src="https://github.com/Nail-yk.png" width="50" style="border-radius: 50%;">](https://github.com/Nail-yk) | Padawan         | [@Nail-yk](https://github.com/Nail-yk) | Traduction de la documentation |
 | ... | ... | ... | Développeuse Python |
+
+---
 
 ## G- Installation :arrow_heading_down:
 
