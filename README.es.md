@@ -15,9 +15,7 @@ Copyright (c) 2022 Yonnel Bécognée
 
 [![Status: Active](https://img.shields.io/badge/status-active-009900.svg)]()
 
-## :fr: [Français](https://github.com/Yobeco/MAEL_Gen) | :gb: English
-
----
+## :fr: [Français](https://github.com/Yobeco/MAEL_Gen/blob/main/README.fr.md) | :es: Español |:gb: [English](https://github.com/Yobeco/MAEL_Gen/blob/main/README.md)
 
 ---
 
@@ -30,8 +28,6 @@ Copyright (c) 2022 Yonnel Bécognée
 Pueden integrarlos en sus distintos materiales didácticos, añadiendo así una **dimensión de audio** :ear: a sus documentos en papel.
 
 Los códigos QR serán escaneados por los alumnos con la aplicación **MAEL Scan** :speaker: (disponible en Android <img src="https://cdn.simpleicons.org/android/808080" width="24" height="24" style="vertical-align: middle;" /> y pronto en iOS <img src="https://cdn.simpleicons.org/apple/808080" width="24" height="24" style="vertical-align: middle;" />).
-
----
 
 ---
 
@@ -91,13 +87,9 @@ Más información:
 
 ---
 
----
-
 ## D- Principio de funcionamiento :gear:
 
 *(Para ayudar a entender el código)*
-
----
 
 ---
 
@@ -113,8 +105,6 @@ Al escribir en el campo de texto, el idioma predeterminado es "francés" :fr: y 
 
 ---
 
----
-
 **:two: Si cambia el _idioma_ del contenido, por ejemplo _italiano_ :it:** :
 
 1- El texto que se incluirá en el código QR recibe un prefijo del tipo `<it>`
@@ -124,8 +114,6 @@ Al escribir en el campo de texto, el idioma predeterminado es "francés" :fr: y 
 3- Se genera un código QR que contiene este texto (`utf-8`).
 
 *⟶ __MAEL Scan__ permanecerá en __modo Leer__ pero esta vez utilizará la voz sintética __italiana__ :it:.*
-
----
 
 ---
 
@@ -143,8 +131,6 @@ Al escribir en el campo de texto, el idioma predeterminado es "francés" :fr: y 
 
 ---
 
----
-
 :speaking_head: Las voces sintéticas son las que genera el teléfono. (`GTTS` en Android)
 
 :warning: Algunos idiomas tienen varias voces posibles. Entonces el prefijo será más largo. Por ejemplo:
@@ -158,8 +144,6 @@ Al escribir en el campo de texto, el idioma predeterminado es "francés" :fr: y 
 
 ---
 
----
-
 **:four: En cada modificación:**
 
 Se genera un archivo `.png` correspondiente al código QR y se envía automáticamente al portapapeles. :clipboard:
@@ -167,8 +151,6 @@ Se genera un archivo `.png` correspondiente al código QR y se envía automátic
 (Un pequeño icono indica si en el portapapeles hay un código QR o texto)
 
 *⟶ El profesor solo tiene que `Pegar` en su editor personal.*
-
----
 
 ---
 
@@ -216,8 +198,6 @@ Comencé con **TKinter** para la interfaz de selección del área a capturar (ya
 
 ---
 
----
-
 # F- :open_hands: ¡Participe en el proyecto MAEL <img src="https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL.svg" alt="Logo MAEL" width="40" height="40" /> !
 
 :ring_buoy: Para **obtener ayuda** sobre el uso de **MAEL Gen** o para **participar en el desarrollo** :computer:, escríbame aquí:
@@ -233,8 +213,6 @@ Comencé con **TKinter** para la interfaz de selección del área a capturar (ya
 | [<img src="https://github.com/YoBeco.png" width="50" style="border-radius: 50%;">](https://github.com/YoBeco) | Bécognée Yonnel | [@Yobeco](https://github.com/Yobeco) | Mantenedor |
 | [<img src="https://github.com/Nail-yk.png" width="50" style="border-radius: 50%;">](https://github.com/Nail-yk) | Padawan         | [@Nail-yk](https://github.com/Nail-yk) | Traducción de la documentación |
 | ... | ... | ... | Desarrolladora Python |
-
----
 
 ---
 
