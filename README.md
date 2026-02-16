@@ -218,9 +218,11 @@ Many thanks to all the people who will contribute to this project!
 
 To try **MAEL Gen**, run the script:
 
-    git clone https://github.com/Yobeco/MAEL_Gen.git
-    cd MAEL_Gen
-    python3 -m venv mael_venv
-    source mael_venv/bin/activate
-    pip install -r requirements.txt
-    python3 MAEL_V5.0.py
+```bash
+git clone https://github.com/Yobeco/MAEL_Gen.git
+cd MAEL_Gen
+python3 -m venv mael_venv
+source mael_venv/bin/activate
+pip install -r requirements.txt
+python3 MAEL_V5.0.py
+```
