@@ -15,6 +15,8 @@ Copyright (c) 2022 Yonnel Bécognée
 
 ## :fr: Français | :es: [Español](https://github.com/Yobeco/MAEL_Gen/blob/main/README.es.md) | :gb: [English](https://github.com/Yobeco/MAEL_Gen/blob/main/README.md)
 
+---
+
 ![ScreenShot](https://raw.githubusercontent.com/Yobeco/MAEL_Project/refs/heads/main/readme_assets/MAEL_Gen.png)
 
 ## A- Description :eye:
