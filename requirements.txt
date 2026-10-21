@@ -1,4 +1,0 @@
-tk
-qrcode[pil]
-opencv-python
-clipboard
