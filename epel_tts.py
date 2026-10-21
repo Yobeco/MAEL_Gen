@@ -1407,4 +1407,288 @@ epel_tts_de = {
 
 
 
+"""
+
+  _____ _        _ _
+ |_   _| |      | (_)
+   | | | |_ __ _| |_  ___ _ __
+   | | | __/ _` | | |/ _ \ '_ \
+  _| |_| || (_| | | |  __/ | | |
+ |_____|\__\__,_|_|_|\___|_| |_|
+
+
+
+"""
+
+"""
+  _____ _        _ _
+ |_   _| |_ __ _| | | ___
+   | | | __/ _` | | |/ _ \
+   | | | || (_| | | |  __/
+   |_|  \__\__,_|_|_|\___|
+"""
+
+epel_tts_it = {
+    # ==================================================================
+    # 1. LETTERE ACCENTATE
+    # L'italiano usa l'accento grave e acuto su vocali aperte e chiuse.
+    # ==================================================================
+    "\u00e0": "a con accento grave",             # [à]
+    "\u00c0": "a maiuscola con accento grave",   # [À]
+    "\u00e8": "e con accento grave",             # [è]
+    "\u00c8": "e maiuscola con accento grave",   # [È]
+    "\u00e9": "e con accento acuto",             # [é]
+    "\u00c9": "e maiuscola con accento acuto",   # [É]
+    "\u00ec": "i con accento grave",             # [ì]
+    "\u00cc": "i maiuscola con accento grave",   # [Ì]
+    "\u00f2": "o con accento grave",             # [ò]
+    "\u00d2": "o maiuscola con accento grave",   # [Ò]
+    "\u00f9": "u con accento grave",             # [ù]
+    "\u00d9": "u maiuscola con accento grave",   # [Ù]
+
+    # ==================================================================
+    # 2. LETTERE PARTICOLARI
+    # Nessuna lettera speciale propria dell'italiano standard.
+    # ==================================================================
+
+    # ==================================================================
+    # 3. LETTERE MAIUSCOLE
+    # ==================================================================
+    "\u0041": "a maiuscola",                     # [A]
+    "\u0042": "b maiuscola",                     # [B]
+    "\u0043": "c maiuscola",                     # [C]
+    "\u0044": "d maiuscola",                     # [D]
+    "\u0045": "e maiuscola",                     # [E]
+    "\u0046": "f maiuscola",                     # [F]
+    "\u0047": "g maiuscola",                     # [G]
+    "\u0048": "h maiuscola",                     # [H]
+    "\u0049": "i maiuscola",                     # [I]
+    "\u004a": "i lunga maiuscola",               # [J] — comment. : in italiano "i lunga"
+    "\u004b": "cappa maiuscola",                 # [K] — comment. : in italiano "cappa"
+    "\u004c": "l maiuscola",                     # [L]
+    "\u004d": "m maiuscola",                     # [M]
+    "\u004e": "n maiuscola",                     # [N]
+    "\u004f": "o maiuscola",                     # [O]
+    "\u0050": "p maiuscola",                     # [P]
+    "\u0051": "q maiuscola",                     # [Q]
+    "\u0052": "r maiuscola",                     # [R]
+    "\u0053": "s maiuscola",                     # [S]
+    "\u0054": "t maiuscola",                     # [T]
+    "\u0055": "u maiuscola",                     # [U]
+    "\u0056": "v maiuscola",                     # [V]
+    "\u0057": "doppia v maiuscola",              # [W] — comment. : "doppia vu"
+    "\u0058": "x maiuscola",                     # [X] — comment. : "ics"
+    "\u0059": "ipsilon maiuscola",               # [Y] — comment. : "i greca" o "ipsilon"
+    "\u005a": "z maiuscola",                     # [Z] — comment. : "zeta"
+
+    # ==================================================================
+    # 4. LETTERE MINUSCOLE
+    # ==================================================================
+    "\u0061": "a",                               # [a]
+    "\u0062": "b",                               # [b]
+    "\u0063": "c",                               # [c]
+    "\u0064": "d",                               # [d]
+    "\u0065": "e",                               # [e]
+    "\u0066": "f",                               # [f]
+    "\u0067": "g",                               # [g]
+    "\u0068": "h",                               # [h]
+    "\u0069": "i",                               # [i]
+    "\u006a": "i lunga",                         # [j] — comment. : in italiano "i lunga"
+    "\u006b": "cappa",                           # [k] — comment. : in italiano "cappa"
+    "\u006c": "l",                               # [l]
+    "\u006d": "m",                               # [m]
+    "\u006e": "n",                               # [n]
+    "\u006f": "o",                               # [o]
+    "\u0070": "p",                               # [p]
+    "\u0071": "q",                               # [q]
+    "\u0072": "r",                               # [r]
+    "\u0073": "s",                               # [s]
+    "\u0074": "t",                               # [t]
+    "\u0075": "u",                               # [u]
+    "\u0076": "v",                               # [v]
+    "\u0077": "doppia v",                        # [w] — comment. : "doppia vu"
+    "\u0078": "x",                               # [x] — comment. : "ics"
+    "\u0079": "ipsilon",                         # [y] — comment. : "i greca" o "ipsilon"
+    "\u007a": "z",                               # [z] — comment. : "zeta"
+
+    # ==================================================================
+    # 5. PUNTEGGIATURA
+    # L'italiano non usa segni di apertura invertiti: ? e ! aprono direttamente.
+    # ==================================================================
+    "\u002c": "virgola",                         # [,]
+    "\u002e": "punto",                           # [.]
+    "\u003b": "punto e virgola",                  # [;]
+    "\u003a": "due punti",                        # [:]
+    "\u003f": "punto interrogativo",              # [?]
+    "\u0021": "punto esclamativo",               # [!]
+    "\u2026": "puntini di sospensione",          # […] — comment. : anche "puntini"
+    "\u0028": "parentesi aperta",                # [(]
+    "\u0029": "parentesi chiusa",                # [)]
+    "\u005b": "parentesi quadra aperta",         # [[]
+    "\u005d": "parentesi quadra chiusa",         # []]
+    "\u007b": "graffa aperta",                   # [{]
+    "\u007d": "graffa chiusa",                   # [}]
+    "\u00b7": "punto medio",                     # [·]
+    "\u2030": "per mille",                       # [‰]
+    "\u00a4": "simbolo monetario",               # [¤]
+
+    # ==================================================================
+    # 6. APOSTROFI
+    # L'apostrofo è essenziale in italiano (elisioni, troncamenti).
+    # Tutti e tre i tipi condividono il valore "apostrofo".
+    # ==================================================================
+    "\u0027": "apostrofo",                       # ['] dritto (tastiera)
+    "\u2019": "apostrofo",                       # [’] tipografico — comment. : stesso valore
+    "\u02bc": "apostrofo",                       # [ʼ] apostrofo lettera — comment. : stesso valore
+    "\u0060": "apostrofo",                       # [`] accento grave — comment. : stesso valore
+
+    # ==================================================================
+    # 7. VIRGOLETTE (distinzione apertura / chiusura)
+    # Le virgolette basse « » sono lo standard italiano; le alte “ ” sono comuni.
+    # ==================================================================
+    "\u00ab": "apri virgolette",                 # [«] virgolette basse — comment. : standard italiano
+    "\u00bb": "chiudi virgolette",               # [»]
+    "\u201e": "apri virgolette",                 # [„] virgolette tedesche — comment. : usate in italiano, stesso valore
+    "\u201c": "apri virgolette",                 # [“] virgolette alte
+    "\u201d": "chiudi virgolette",               # [”]
+    "\u201f": "chiudi virgolette",               # [‟] — comment. : rara
+    "\u0022": "virgolette",                      # ["] dritte — comment. : apertura o chiusura a seconda del contesto
+    "\u2018": "apri virgolette",                 # [‘] virgolette singole basse
+    "\u2019": "chiudi virgolette",               # [’] — comment. : stesso codice dell'apostrofo; chiude anche le virgolette singole
+    "\u201b": "chiudi virgolette",               # [‛] — comment. : rara
+    "\u201a": "virgola",                         # [‚] virgola singola bassa
+    "\u2039": "apri virgolette",                 # [‹] virgolette singole basse — comment. : rara
+    "\u203a": "chiudi virgolette",               # [›]
+
+    # ==================================================================
+    # 8. TRATTINI E BARRE
+    # Il trattino (hyphen-minus) è polivalente: valore "trattino" (uso dominante).
+    # Semicomma, virgola e puntini di elenco condividono il valore "trattino lungo".
+    # ==================================================================
+    "\u002d": "trattino",                        # [-] trattino (tastiera) — comment. : uso dominante
+    "\u2010": "trattino",                        # [‐] trattino vero — comment. : stesso valore
+    "\u2011": "trattino",                        # [‑] trattino non separabile — comment. : stesso valore
+    "\ufe63": "trattino",                        # [﹣] variante piccola — comment. : stesso valore
+    "\uff0d": "trattino",                        # [－] a larghezza piena — comment. : stesso valore
+    "\u2012": "trattino lungo",                  # [‒] trattino numerico
+    "\u2013": "trattino lungo",                  # [–] semivirgola (en dash)
+    "\u2014": "trattino lungo",                  # [—] virgola (em dash)
+    "\u2015": "trattino lungo",                  # [―] barra orizzontale
+    "\u2212": "meno",                            # [−] segno meno matematico
+    "\u2022": "trattino lungo",                  # [•] puntino elenco — comment. : letto come trattino di elenco
+    "\u2023": "trattino lungo",                  # [‣] puntino triangolare — comment. : idem
+    "\u002f": "barra",                           # [/] — comment. : "barra" o "slash"
+    "\u005c": "barra inversa",                   # [\]
+    "\u007c": "barra verticale",                 # [|] — comment. : anche "pipe"
+    "\u005f": "trattino basso",                  # [_] — comment. : "underscore"
+
+    # ==================================================================
+    # 9. SIMBOLI E SEGNI
+    # ==================================================================
+    "\u20ac": "euro",                            # [€]
+    "\u0024": "dollaro",                         # [$]
+    "\u00a3": "sterlina",                        # [£]
+    "\u00a2": "cent",                            # [¢]
+    "\u0023": "cancelletto",                     # [#] — comment. : "cancelletto" o "diesis"
+    "\u002a": "asterisco",                       # [*]
+    "\u0040": "chiocciola",                      # [@] — comment. : "chiocciola"
+    "\u0026": "e commerciale",                   # [&] — comment. : "e commerciale" o "ampersand"
+    "\u0025": "percento",                        # [%]
+    "\u002b": "più",                             # [+]
+    "\u003d": "uguale",                           # [=]
+    "\u003c": "minore",                           # [<]
+    "\u003e": "maggiore",                         # [>]
+    "\u005e": "accento circonflesso",            # [^]
+    "\u007e": "tilde",                           # [~]
+    "\u00b0": "grado",                           # [°]
+    "\u00a7": "paragrafo",                       # [§]
+    "\u00b6": "paragrafo",                       # [¶] — comment. : "pilcrow", stesso valore di §
+    "\u2020": "croce",                           # [†] — comment. : "daga" o "obelisco"
+    "\u2021": "doppia croce",                    # [‡]
+    "\u00a9": "copyright",                       # [©]
+    "\u00ae": "marchio registrato",              # [®]
+    "\u2122": "marchio registrato",              # [™] — comment. : stesso valore di ®
+    "\u00d7": "moltiplicato per",                # [×]
+    "\u00f7": "diviso per",                      # [÷]
+    "\u2260": "diverso da",                      # [≠]
+    "\u2264": "minore o uguale",                 # [≤]
+    "\u2265": "maggiore o uguale",               # [≥]
+
+    # ==================================================================
+    # 10. SPAZI (solo categoria Zs)
+    # Tutte le larghezze condividono il valore "spazio".
+    # ==================================================================
+    "\u0020": "spazio",                          # [ ] spazio normale
+    "\u00a0": "spazio",                          # [ ] spazio non separabile — comment. : stesso valore
+    "\u202f": "spazio",                          # [ ] spazio stretto non separabile — comment. : stesso valore
+    "\u2009": "spazio",                          # [ ] spazio sottile — comment. : stesso valore
+    "\u2007": "spazio",                          # [ ] spazio numerico — comment. : stesso valore
+    "\u2008": "spazio",                          # [ ] spazio di punteggiatura — comment. : stesso valore
+    "\u200a": "spazio",                          # [ ] spazio sottile — comment. : stesso valore
+
+    # ==================================================================
+    # 11. SPECIALE: categorie Zp, Zl e C (controllo e formato)
+    # Zp = separatore di paragrafo, Zl = separatore di riga,
+    # C  = controllo (Cc), formato (Cf), uso privato (Co), non assegnato (Cn).
+    # ==================================================================
+    # --- Zp e Zl ---
+    "\u2029": "spazio",                          # [ ] separatore di paragrafo — comment. : letto come spazio
+    "\u2028": "spazio",                          # [ ] separatore di riga — comment. : letto come spazio
+
+    # --- Cc: caratteri di controllo ---
+    "\u0009": "spazio",                          # [ ] tabulazione — comment. : letto come spazio
+    "\u000a": "spazio",                          # [ ] avanzamento riga (LF) — comment. : letto come spazio
+    "\u000b": "spazio",                          # [ ] tabulazione verticale — comment. : idem
+    "\u000c": "spazio",                          # [ ] avanzamento pagina (FF) — comment. : idem
+    "\u000d": "spazio",                          # [ ] ritorno a capo (CR) — comment. : idem
+    "\u0000": "",                                # [ ] NUL — comment. : ignorato
+    "\u0001": "",                                # [ ] SOH — comment. : ignorato
+    "\u0002": "",                                # [ ] STX — comment. : ignorato
+    "\u0003": "",                                # [ ] ETX — comment. : ignorato
+    "\u0004": "",                                # [ ] EOT — comment. : ignorato
+    "\u0005": "",                                # [ ] ENQ — comment. : ignorato
+    "\u0006": "",                                # [ ] ACK — comment. : ignorato
+    "\u0007": "",                                # [ ] BEL — comment. : ignorato
+    "\u0008": "",                                # [ ] backspace (BS) — comment. : ignorato
+    "\u000e": "",                                # [ ] Shift In — comment. : ignorato
+    "\u000f": "",                                # [ ] Shift Out — comment. : ignorato
+    "\u0010": "",                                # [ ] DLE — comment. : ignorato
+    "\u0011": "",                                # [ ] DC1 — comment. : ignorato
+    "\u0012": "",                                # [ ] DC2 — comment. : ignorato
+    "\u0013": "",                                # [ ] DC3 — comment. : ignorato
+    "\u0014": "",                                # [ ] DC4 — comment. : ignorato
+    "\u0015": "",                                # [ ] NAK — comment. : ignorato
+    "\u0016": "",                                # [ ] SYN — comment. : ignorato
+    "\u0017": "",                                # [ ] ETB — comment. : ignorato
+    "\u0018": "",                                # [ ] CAN — comment. : ignorato
+    "\u0019": "",                                # [ ] EM — comment. : ignorato
+    "\u001a": "",                                # [ ] SUB — comment. : ignorato
+    "\u001b": "",                                # [ ] Escape — comment. : ignorato
+    "\u001c": "",                                # [ ] separatore di file — comment. : ignorato
+    "\u001d": "",                                # [ ] separatore di gruppo — comment. : ignorato
+    "\u001e": "",                                # [ ] separatore di record — comment. : ignorato
+    "\u001f": "",                                # [ ] separatore di unità — comment. : ignorato
+    "\u007f": "",                                # [ ] DEL — comment. : ignorato
+
+    # --- Cf: caratteri di formato (invisibili) ---
+    "\u00ad": "",                                # [­] trattino condizionale (SOFT HYPHEN) — comment. : ignorato
+    "\u200b": "",                                # [​] spazio a larghezza zero — comment. : ignorato
+    "\u200c": "",                                # [‌] ZWNJ — comment. : ignorato
+    "\u200d": "",                                # [‍] ZWJ — comment. : ignorato
+    "\u200e": "",                                # [‎] LRM — comment. : ignorato
+    "\u200f": "",                                # [‏] RLM — comment. : ignorato
+    "\u202a": "",                                # [‎] LRE — comment. : ignorato
+    "\u202b": "",                                # [‏] RLE — comment. : ignorato
+    "\u202c": "",                                # [‬] PDF — comment. : ignorato
+    "\u202d": "",                                # [‎] LRO — comment. : ignorato
+    "\u202e": "",                                # [‏] RLO — comment. : ignorato
+    "\u2060": "",                                # [⁠] unione parole (WJ) — comment. : ignorato
+    "\ufeff": "",                                # [﻿] BOM — comment. : ignorato
+
+    # --- Co e Cn: non enumerabili, gestire con fallback ---
+    # Gli intervalli Co (U+E000–U+F8FF) e Cn (non assegnati) non hanno
+    # pronuncia possibile: da trattare di default con stringa vuota
+    # nel codice del TTS (fallback), senza enumerazione esaustiva qui.
+}
+
 
