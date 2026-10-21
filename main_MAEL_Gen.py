@@ -1,7 +1,7 @@
 """
 #############################################################################
 #
-#   Application multi-plateforme - "MAEL Gen" - GPL v3
+#   Application "MAEL Gen" - GPL v3
 #   Multi-logiciel d'Assistance à l'Enseignement des Langues
 #   "Donnez une voix à vos documents pédagogiques"
 #
@@ -71,50 +71,9 @@
 
 >>>>> Environnement de développement <<<<<
 
-Ubuntu 24.04.3
-Python 3.12.3
+NixOS 26.05
+Python 3.13
 
-Voir quelle version de python est installée :
-    python3 --version
-    which python3.xx
-Installer le dernier ?
-
-Installer pip :
-    sudo apt update
-    sudo apt install python3-pip
-    pip3 --version
-
->>>>> Environnement virtuel <<<<<
-    sudo apt install python3.xx-venv
-
-Aller dans le dossier du projet :
-    python3.xx -m venv env
-
-Activer l'environnement :
-    source env/bin/activate
-
----> Installer tous les modules :
-Contenu du fichier "requirements.txt" dans le dossier du projet
-    ttkbootstrap
-    qrcode[pil]
-    opencv-python
-    clipboard
-
-Pour tout installer d'un coup :
-    pip install -r requirements.txt
-------------------------------------------------------------------------------
-<<<<<<<   Gestion du presse-papier selon l'OS   >>>>>>>>>>
-------------------------------------------------------------------------------
-- Module pywin32 pour Windows :
-    pip install pywin32
-- Vérifier la l'installation de pywin32 :
-    python -m pip show pywin32
-------------------------------------------------------------------------------
-- Module AppKit pour OSX :
-    pip install PyObjC
-- Vérifier la l'installation de AppKit :
-    python -c "import AppKit"
---> Ne doit pas retourner d'erreur
 ------------------------------------------------------------------------------
 - Pas de module python à installer pour Linux
 Cependant, l'ordinateur Linux hôte nécessite "xclip" pour gérer le presse papier :

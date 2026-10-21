@@ -101,7 +101,14 @@ class RawQr:
 # ======================================================================
 @dataclass(frozen=True, slots=True)
 class TtsItem:
-    """Contenu textuel enrichi à restituer par synthèse vocale."""
+    """Contenu textuel enrichi à restituer par synthèse vocale.
+            raw         --> Structure de données contenue dans le code QR
+            original    --> texte obfusqué
+            text        --> texte désobfusqué
+            lang        --> Langue pour configuer TTS
+            mode        --> Mode pour adapter le contenu vers TTS
+
+    """
 
     raw: RawQr
     original: str
