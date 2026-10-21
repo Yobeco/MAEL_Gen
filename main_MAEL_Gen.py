@@ -60,7 +60,8 @@
 - Ajouter le mode épeler pour EN ES PT
 - Corriger le bug de l'accent séparé de la lettre sous LINUX ?
 - Étudier les messages Warning
-- Faire charger les modules spécifiques à chaque OS une seule fois au début du programme en fonction de l'OS détecté.
+- Faire charger les modules spécifiques à chaque OS une seule fois au début
+  du programme en fonction de l'OS détecté.
 - Permettre le glisser - déposer du code QR vers l'éditeur externe
 - Réparer l'affichage de l'icône "Presse papier vide"
 - Ajouter des icônes aux "toplevel"  --> À vérifier !
