@@ -145,3 +145,93 @@ class WifiItem:
     hide: bool = False
     text: str = "Wifi"
 
+
+# ======================================================================
+# DTO TtsSetup — sortie de TtsSetupBuilder pour le module de synthèse
+# ======================================================================
+@dataclass(frozen=True, slots=True)
+class TtsSetup:
+    """
+    Configuration prête à l'emploi pour piloter une synthèse vocale.
+
+    Ce DTO est produit par ``TtsSetupBuilder`` à partir d'un ``TtsItem``
+    déjà analysé. Il consolide la résolution de langue (clé interne →
+    code gTTS), le débit de lecture, ainsi que la ventilation du texte
+    entre la partie à **prononcer** et la partie à **afficher** à l'écran.
+
+    Champs
+    ------
+    item : TtsItem
+        Item source ayant servi à produire cette configuration. Conservé
+        pour permettre aux couches suivantes de retrouver le contexte
+        (texte brut, mode, langue d'origine, etc.).
+    mode : str
+        Mode d'usage francophone (par ex. ``"lire"``, ``"dicter"``,
+        ``"epeler"``). Recopié tel quel depuis ``TtsItem.mode``.
+    lang : Optional[str]
+        Code de langue **gTTS** retenu à l'issue de la résolution
+        (par ex. ``"fr-CA"``, ``"yue"``, ``"iw"``). Vaut ``None`` si la
+        langue n'a pas pu être résolue ; dans ce cas ``ok`` vaut
+        ``False`` et ``to_pronounce`` est vide.
+    speed : int
+        Vitesse de lecture en pourcentage (100 = vitesse normale).
+    to_pronounce : tuple[str, ...]
+        Segments de texte à restituer oralement, dans l'ordre.
+        Tuple vide si rien ne doit être prononcé (mode non géré ou
+        langue inconnue).
+    to_show : str
+        Texte (ou message court) à afficher à l'écran pendant la
+        lecture. Vaut ``""`` si rien à afficher, ``"Langue inconnue :
+        xx"`` en cas d'échec de résolution, ``"Mode non géré"`` pour un
+        mode non encore implémenté.
+
+    Propriétés
+    ----------
+    ok : bool
+        ``True`` si la langue a été résolue avec succès (``lang`` non
+        ``None``). ``False`` sinon.
+
+    Méthodes
+    --------
+    to_dict()
+        Sérialise la configuration sous la forme attendue par la couche
+        TTS :
+
+        ``{"settings": {"lang": <str|None>, "speed": <int>},
+           "to_pronounce": [<str>, ...],
+           "to_show": <str>}``
+    """
+
+    item: TtsItem
+    mode: str
+    lang: Optional[str]
+    speed: int = 100
+    to_pronounce: tuple[str, ...] = ()
+    to_show: str = ""
+
+    @property
+    def ok(self) -> bool:
+        """Vaut ``True`` si la langue a été résolue, ``False`` sinon."""
+        return self.lang is not None
+
+    def to_dict(self) -> dict:
+        """
+        Sérialise la configuration pour la couche TTS.
+
+        La forme retournée est :
+
+        ``{"settings": {"lang": <str|None>, "speed": <int>},
+           "to_pronounce": [<str>, ...],
+           "to_show": <str>}``
+
+        ``to_pronounce`` est converti du tuple interne en liste pour
+        rester compatible avec les sérialiseurs JSON.
+        """
+        return {
+            "settings": {
+                "lang": self.lang,
+                "speed": self.speed,
+            },
+            "to_pronounce": list(self.to_pronounce),
+            "to_show": self.to_show,
+        }

@@ -1333,7 +1333,7 @@ epel_tts_de = {
     # 10. LEERZEICHEN (nur kategorie Zs)
     # Alle breiten teilen den wert "leerzeichen" oder "zwischenraum".
     # ==================================================================
-    "\u0020": "leerzeichen",                     # [ ] — comment. : normales leerzeichen
+    "\u0020": "Leerzeichen",                     # [ ] — comment. : normales Leerzeichen
     "\u00a0": "leerzeichen",                     # [ ] — comment. : geschütztes leerzeichen
     "\u202f": "leerzeichen",                     # [ ] — comment. : schmales geschütztes leerzeichen
     "\u2009": "leerzeichen",                     # [ ] — comment. : dünnes leerzeichen

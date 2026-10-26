@@ -283,22 +283,13 @@ if __name__ == "__main__":
     # On fabrique un objet Obfus pour faire les tests.
     obfusor = Obfus()
 
-    strings_to_obfus = [
-        'Coucou tout le monde !',
-        "Ça va les élèves ?",
-        "Un maître à œil vif.",
-        "C’eût été drôle pour Æsius.",
-        "Une île",
-        "Du maïs Noël !",
-        "안녕하세요! 제 이름은... 입니다. 만나서 and 반갑습니다.",
-        "El niño est fort à Managua.",
-        "クレジットカードではらいます。",
-        "書左僕射燕國公張說 製若夫玉毫流照｡甘露灑于大千｡金鏡揚暉｡",
-        "У меня большая семья из шести человек: я, мама",
-        "Τὴν εὐγενεστάτην ὄλυραν, ὅταν ὡς χρὴ",
-        "À Noël, l'œuf est dans l'âtre contre le mûr de la façade.",
-        "Est-ce que le caractère ~ est accepté ?"
-    ]
+        # Import local : la liste de démo vit dans ``test_list``
+    # (donnée pure, sans import métier). On ne charge
+    # ``test_list`` qu'à l'intérieur du bloc __main__ pour
+    # ne créer aucune dépendance au niveau module — et donc
+    # aucun risque d'import circulaire avec les modules métier.
+    import test_list
+    strings_to_obfus = list(test_list.strings_to_obfus)
 
     for string_to_obfus in strings_to_obfus:
         print(f"La chaîne de caractères à cacher : {string_to_obfus!r}")

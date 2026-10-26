@@ -31,8 +31,8 @@ Règles d'extraction (par ordre de priorité) :
   1. Préfixe /gd/ :
         mode = "gd", lang = None
         texte = ID pur (le /gd/ retiré, et tout suffixe #d/#e retiré)
-  2. Suffixe #d / #e (sans /gd/) :
-        mode = "dicter" ou "epeler"
+  2. Suffixe #d / #e / #c (sans /gd/) :
+        mode = "dicter", "epeler" ou "cacher"
         texte = texte sans le suffixe, et sans le préfixe <xxXXX> éventuel
         lang = code du préfixe s'il existe, sinon LANG_DEFAULT
   3. Préfixe <xxXXX> seul :
@@ -58,11 +58,15 @@ from MAEL_obfus import Obfus
 MODE_LIRE = "lire"
 MODE_DICTER = "dicter"
 MODE_EPELER = "epeler"
+MODE_CACHER = "cacher"
 MODE_GD = "gd"
 MODE_NC = "nc"
 MODE_LS = "ls"
 MODE_WIFI = "wifi"
-LANG_DEFAULT = "frFR"
+# Langue par defaut utilisee quand aucun prefixe <xxXXX> n'est detecte.
+# On utilise le code court "fr" (cle racine du dictionnaire lang_tts)
+# pour rester aligne avec la resolution de langue de TtsSetupBuilder.
+LANG_DEFAULT = "fr"
 MODES_CLOUD = (MODE_GD, MODE_NC, MODE_LS)
 
 
@@ -84,6 +88,7 @@ CLOUD_PREFIXES = {
 # Suffixes de mode
 SUFFIX_DICTER = "#d"
 SUFFIX_EPELER = "#e"
+SUFFIX_CACHER = "#c"
 
 # Paramètre du tri naturel : tolérance verticale relative à la hauteur
 # d'un QR pour considérer que deux QR appartiennent à la même ligne.
@@ -121,7 +126,7 @@ def _extract_lang(text: str) -> tuple[str | None, str]:
 # ======================================================================
 def _strip_suffix(text: str) -> tuple[str | None, str]:
     """
-    Détecte un suffixe #d / #e en fin de chaîne.
+    Détecte un suffixe #d / #e / #c en fin de chaîne.
 
     Retourne (mode_ou_None, texte_sans_suffixe).
     """
@@ -129,6 +134,8 @@ def _strip_suffix(text: str) -> tuple[str | None, str]:
         return MODE_DICTER, text[: -len(SUFFIX_DICTER)]
     if text.endswith(SUFFIX_EPELER):
         return MODE_EPELER, text[: -len(SUFFIX_EPELER)]
+    if text.endswith(SUFFIX_CACHER):
+        return MODE_CACHER, text[: -len(SUFFIX_CACHER)]
     return None, text
 
 
@@ -232,7 +239,7 @@ def _parse_decrypted(decrypted: str) -> tuple[str, str | None, str, str]:
 
     - texte    : contenu nettoyé (préfixe et suffixe retirés)
     - lang     : code langue (LANG_DEFAULT par défaut), ou None si mode GD
-    - mode     : MODE_LIRE, MODE_DICTER, MODE_EPELER ou MODE_GD
+    - mode     : MODE_LIRE, MODE_DICTER, MODE_EPELER, MODE_CACHER ou MODE_GD
     - original : texte déobfusqué inchangé (avant tout retrait)
     """
     original = decrypted
