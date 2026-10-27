@@ -184,6 +184,10 @@ class TtsSetup:
         lecture. Vaut ``""`` si rien à afficher, ``"Langue inconnue :
         xx"`` en cas d'échec de résolution, ``"Mode non géré"`` pour un
         mode non encore implémenté.
+    list_gds : tuple[str, ...]
+        Groupes de souffle avant substitution des signes de ponctuation.
+        Principalement renseigné en mode « dicter » ; tuple vide par défaut
+        pour préserver la compatibilité des autres modes.
 
     Propriétés
     ----------
@@ -208,6 +212,7 @@ class TtsSetup:
     speed: int = 100
     to_pronounce: tuple[str, ...] = ()
     to_show: str = ""
+    list_gds: tuple[str, ...] = ()
 
     @property
     def ok(self) -> bool:
