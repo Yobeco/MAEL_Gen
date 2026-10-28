@@ -19,6 +19,8 @@ strings_to_obfus : tuple[str, ...]
 
 strings_to_obfus = (
     "C'est ce que l'on dit...#d",
+    "/gd/1IHf9ayDGjCthJhKmzstr0ZUUvZVcJH8P",
+    "WIFI:T:WPA;S:CLARO1_F53E79;P:c024ZwRKpG;H:;;",
     "C'est ce que l'on dit…#d",
     "Ils aiment ça parce que c'est bon !#d",
     "Où vas-tu Zaïn ?#d",

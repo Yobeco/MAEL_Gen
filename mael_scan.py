@@ -12,10 +12,11 @@ class MaelScan:
     """Coordonne le scanner virtuel ou image, qr_parse et les sorties métier."""
 
     def __init__(self, tts_player: Any, wifi_setup: WifiSetup | None = None,
-                 scanner: Any | None = None) -> None:
+                 scanner: Any | None = None, mp3_fetch: Any | None = None) -> None:
         self.tts_player = tts_player
         self.wifi_setup = wifi_setup or WifiSetup()
         self.scanner = scanner
+        self.mp3_fetch = mp3_fetch
         self.tts_setup_builder = TtsSetupBuilder()
         self.last_tts_item: TtsItem | None = None
         self.last_tts_setup: TtsSetup | None = None
@@ -47,8 +48,11 @@ class MaelScan:
                 self.tts_player.play(self.last_tts_setup)
                 self.wifi_setup.apply(item)
             elif isinstance(item, CloudItem):
-                # TODO: aiguiller CloudItem vers mp3_fetch puis mp3_read.
-                pass
+                # Le lecteur est construit à la demande pour ne rien charger côté audio.
+                if self.mp3_fetch is None:
+                    from mp3_fetch import Mp3Fetch
+                    self.mp3_fetch = Mp3Fetch()
+                self.mp3_fetch.fetch(item)
         return items
 
     def repeat(self, slow: bool = False) -> None:
@@ -63,6 +67,9 @@ class MaelScan:
 
 def scan(tts_player: Any, source: object | None = None,
          wifi_setup: WifiSetup | None = None,
-         scanner: Any | None = None) -> list[TtsItem | CloudItem | WifiItem]:
+         scanner: Any | None = None,
+         mp3_fetch: Any | None = None) -> list[TtsItem | CloudItem | WifiItem]:
     """Point d'entrée fonctionnel pratique pour un scan ponctuel."""
-    return MaelScan(tts_player, wifi_setup=wifi_setup, scanner=scanner).scan(source)
+    return MaelScan(
+        tts_player, wifi_setup=wifi_setup, scanner=scanner, mp3_fetch=mp3_fetch
+    ).scan(source)
