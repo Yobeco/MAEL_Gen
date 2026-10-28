@@ -1,23 +1,21 @@
-"""Contrat et implémentation miniaudio pour lire un MP3 distant."""
+"""Lecteur MP3 local asynchrone, avec arrêt coopératif de la sortie audio."""
 from __future__ import annotations
 
 import logging
+import os
 import threading
 from abc import ABC, abstractmethod
-from typing import Any, Callable
-from urllib.request import Request, urlopen
-
-import audio_control
-from audio_control import StoppablePlayback
+from pathlib import Path
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
 
-class Mp3Reader(StoppablePlayback, ABC):
-    """Contrat minimal d’un lecteur MP3 piloté par URL et audio_control."""
+class Mp3Reader(ABC):
+    """Contrat du lecteur MP3 : démarrer, arrêter, inspecter et attendre."""
 
     @abstractmethod
-    def play(self, url: str) -> None:
+    def play(self, path: str) -> None:
         raise NotImplementedError
 
     @abstractmethod
@@ -27,158 +25,139 @@ class Mp3Reader(StoppablePlayback, ABC):
     @property
     @abstractmethod
     def is_playing(self) -> bool:
+        raise NotImplementedError
+
+    @abstractmethod
+    def wait(self, timeout: float | None = None) -> bool:
         raise NotImplementedError
 
 
 class MiniaudioMp3Reader(Mp3Reader):
-    """Lecteur en arrière-plan, avec téléchargement annulable par blocs."""
+    """Lit un fichier MP3 local via miniaudio (le téléchargement est externe)."""
 
-    DEFAULT_MAX_DOWNLOAD_BYTES = 100 * 1024 * 1024
-
-    def __init__(self, *, timeout: float = 30.0,
-                 max_download_bytes: int = DEFAULT_MAX_DOWNLOAD_BYTES,
-                 opener: Callable[..., Any] | None = None,
-                 on_download_start: Callable[[], None] | None = None,
-                 on_download_end: Callable[[], None] | None = None) -> None:
-        self.timeout = timeout
-        self.max_download_bytes = max_download_bytes
-        self._opener = opener or urlopen
-        self.on_download_start = on_download_start
-        self.on_download_end = on_download_end
+    def __init__(self) -> None:
         self._lock = threading.RLock()
-        self._stop_event = threading.Event()
         self._thread: threading.Thread | None = None
+        self._stop_event = threading.Event()
+        self._stop_event.set()
+        self._done = threading.Event()
+        self._done.set()
         self._device: Any = None
-        self._playback_done: threading.Event | None = None
-        self._generation: int | None = None
-        audio_control.register(self)
 
     @property
     def is_playing(self) -> bool:
         with self._lock:
-            return self._thread is not None and self._thread.is_alive()
+            done = self._done
+        return not done.is_set()
 
-    def play(self, url: str) -> None:
-        if not isinstance(url, str) or not url.startswith(("https://", "http://")):
-            raise ValueError("L’URL MP3 doit utiliser http ou https.")
-        audio_control.stop_all()
-        previous = self._thread
-        if previous is not None and previous is not threading.current_thread():
-            previous.join()
+    def play(self, path: str) -> None:
+        """Démarre la lecture d'un fichier MP3 local existant."""
+        if not isinstance(path, (str, os.PathLike)):
+            raise ValueError("Le chemin MP3 doit désigner un fichier local existant.")
+        file_path = Path(path)
+        if file_path.suffix.lower() != ".mp3" or not file_path.is_file():
+            raise ValueError("Le chemin MP3 doit désigner un fichier local .mp3 existant.")
+
+        self.stop()
         event = threading.Event()
-        token = audio_control.new_generation()
+        done = threading.Event()
+        thread = threading.Thread(
+            target=self._play_file,
+            args=(str(file_path), event, done),
+            name="Mp3Reader",
+            daemon=True,
+        )
         with self._lock:
             self._stop_event = event
-            self._generation = token
-            self._thread = threading.Thread(
-                target=self._play_url, args=(url, event, token), name="Mp3Reader", daemon=True
-            )
-            self._thread.start()
+            self._done = done
+            self._thread = thread
+        thread.start()
 
     def stop(self) -> None:
-        self._stop_event.set()
+        """Demande l'arrêt, ferme la sortie et attend le thread au plus 0,5 s."""
         with self._lock:
-            device = self._device
-            done = self._playback_done
-            self._device = None
-        if done is not None:
-            done.set()
+            event, thread, device = self._stop_event, self._thread, self._device
+            event.set()
+            if self._device is device:
+                self._device = None
+        # Aucun appel miniaudio (y compris stop/close) ne se fait sous _lock.
         self._close_device(device)
+        if thread is not None and thread is not threading.current_thread():
+            thread.join(timeout=0.5)
 
-    def _current(self, event: threading.Event, token: int) -> bool:
-        return not event.is_set() and audio_control.is_current(token)
+    def wait(self, timeout: float | None = None) -> bool:
+        """Attend la fin de la lecture courante; True signifie qu'elle est terminée."""
+        with self._lock:
+            done = self._done
+        return done.wait(timeout)
 
-    def _download(self, url: str, event: threading.Event, token: int) -> bytes:
-        request = Request(url, headers={"User-Agent": "MAEL-Scan/1.0"})
-        with self._opener(request, timeout=self.timeout) as response:
-            length = response.headers.get("Content-Length")
-            if length and int(length) > self.max_download_bytes:
-                raise ValueError(f"Fichier MP3 trop volumineux (limite {self.max_download_bytes} octets).")
-            chunks: list[bytes] = []
-            size = 0
-            while self._current(event, token):
-                chunk = response.read(min(64 * 1024, self.max_download_bytes - size + 1))
-                if not chunk:
-                    break
-                size += len(chunk)
-                if size > self.max_download_bytes:
-                    raise ValueError(f"Fichier MP3 trop volumineux (limite {self.max_download_bytes} octets).")
-                chunks.append(chunk)
-            if not self._current(event, token):
-                return b""
-            return b"".join(chunks)
-
-    def _play_url(self, url: str, event: threading.Event, token: int) -> None:
-        device = stream = finished = None
-        downloading = False
+    def _play_file(self, path: str, event: threading.Event,
+                   done: threading.Event) -> None:
+        device = stream = None
+        ended = threading.Event()
         try:
-            if not self._current(event, token):
-                return
-            downloading = True
-            if self.on_download_start:
-                self.on_download_start()
-            content = self._download(url, event, token)
-            if not self._current(event, token) or not content:
-                return
             import miniaudio
-            decoded = miniaudio.decode(content)
-            finished = threading.Event()
+
+            decoded = miniaudio.decode_file(path)
+            if event.is_set():
+                return
 
             def pcm_stream():
+                # Callback miniaudio : volontairement indépendant de tout verrou.
                 frame = 0
-                total_frames = decoded.num_frames
-                samples_per_frame = decoded.nchannels
+                requested = yield b""
                 try:
-                    requested_frames = yield b""
-                    while self._current(event, token) and frame < total_frames:
-                        count = min(requested_frames, total_frames - frame)
+                    while not event.is_set() and frame < decoded.num_frames:
+                        count = min(requested, decoded.num_frames - frame)
                         if count <= 0:
-                            requested_frames = yield b""
+                            requested = yield b""
                             continue
-                        first = frame * samples_per_frame
-                        last = (frame + count) * samples_per_frame
+                        first = frame * decoded.nchannels
+                        last = (frame + count) * decoded.nchannels
                         frame += count
-                        requested_frames = yield decoded.samples[first:last].tobytes()
+                        requested = yield decoded.samples[first:last].tobytes()
                 finally:
-                    finished.set()
+                    ended.set()
 
             stream = pcm_stream()
             next(stream)
-            if not self._current(event, token):
-                return
             device = miniaudio.PlaybackDevice(
                 output_format=decoded.sample_format,
                 nchannels=decoded.nchannels,
                 sample_rate=decoded.sample_rate,
             )
             with self._lock:
-                if not self._current(event, token):
+                if event.is_set():
                     return
                 self._device = device
-                self._playback_done = finished
-                device.start(stream)
-            finished.wait()
+
+            # start peut exécuter le callback synchrone; ne jamais le tenir sous _lock.
+            device.start(stream)
+            if not event.is_set():
+                ended.wait()
         except Exception:
-            if self._current(event, token):
-                logger.exception("Impossible de récupérer ou lire le MP3 : %s", url)
+            if not event.is_set():
+                logger.exception("Impossible de lire le MP3 local : %s", path)
         finally:
-            if downloading and self.on_download_end:
-                try:
-                    self.on_download_end()
-                except Exception:
-                    logger.exception("Erreur du callback de fin de téléchargement MP3.")
             if stream is not None:
                 try:
                     stream.close()
                 except Exception:
                     pass
             with self._lock:
-                owned_device = device if self._device is device else None
+                owned = device if self._device is device else None
                 if self._device is device:
                     self._device = None
-                if self._playback_done is finished:
-                    self._playback_done = None
-            self._close_device(owned_device)
+            self._close_device(owned)
+            # Mp3Fetch nomme ses temporaires mael_cloud_*.mp3; les autres fichiers
+            # locaux appartiennent à l'appelant et ne sont jamais supprimés.
+            candidate = Path(path)
+            if candidate.name.startswith("mael_cloud_") and candidate.suffix.lower() == ".mp3":
+                try:
+                    candidate.unlink(missing_ok=True)
+                except OSError:
+                    logger.warning("Impossible de supprimer le MP3 temporaire %s", candidate)
+            done.set()
 
     @staticmethod
     def _close_device(device: Any) -> None:
@@ -191,8 +170,11 @@ class MiniaudioMp3Reader(Mp3Reader):
         try:
             device.close()
         except Exception:
-            logger.exception("Impossible de fermer le périphérique miniaudio.")
+            logger.exception("Impossible de fermer le périphérique audio.")
 
 
 def create_mp3_reader(**kwargs: Any) -> Mp3Reader:
-    return MiniaudioMp3Reader(**kwargs)
+    """Crée le lecteur matériel à chargement différé."""
+    if kwargs:
+        raise TypeError("create_mp3_reader n'accepte aucun argument.")
+    return MiniaudioMp3Reader()

@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import logging
-import audio_control
 import queue
 import threading
 from pathlib import Path
@@ -65,6 +64,7 @@ class MaelGui:
         self._build_header()
         self._build_body()
         self._build_footer()
+        self.root.protocol("WM_DELETE_WINDOW", self._on_close)
         self.root.after(80, self._poll_events)
 
     def _load_image(self, filename: str, *, qr_limit: bool = False) -> Any | None:
@@ -186,17 +186,15 @@ class MaelGui:
     def _start_scan(self) -> None:
         if self._busy:
             return
-        audio_control.stop_all()
+        self.controller.scan_service.stop()
         self._set_busy(True)
         self._show_text("Lecture du code QR…")
         self._run_background("scan", self.controller.on_scan)
 
-    # Ne pas appeler stop_all() depuis de futurs boutons de volume : ils
-    # doivent modifier le niveau sans interrompre la lecture courante.
     def _start_repeat(self, slow: bool) -> None:
         if self._busy or not self.controller.can_repeat:
             return
-        audio_control.stop_all()
+        self.controller.scan_service.stop()
         self._set_busy(True)
         self._run_background("repeat", lambda: self.controller.on_repeat(slow))
 
@@ -223,6 +221,11 @@ class MaelGui:
         except queue.Empty:
             pass
         self.root.after(80, self._poll_events)
+
+    def _on_close(self) -> None:
+        """Interrompt l’audio via l’orchestrateur avant de fermer la fenêtre."""
+        self.controller.scan_service.stop()
+        self.root.destroy()
 
     def run(self) -> None:
         self.root.mainloop()

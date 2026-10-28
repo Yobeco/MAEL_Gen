@@ -118,6 +118,10 @@ traductions = {
             "Spelmodus nog nie in hierdie taal geïmplementeer nie",
         "Mode epeler emoji":
             "MAEL verwerk nie emoji's nie",
+        "Mode mp3 telechargement ":
+            "Klank aflaai...",
+        "Mode mp3 erreur ":
+            "Aflaai fout...",
     },
     # Amharique
     "am": {
@@ -128,6 +132,10 @@ traductions = {
             "የፊደል አጻጻፍ ሁነታ በዚህ ቋንቋ ገና አልተተገበረም",
         "Mode epeler emoji":
             "MAEL ኢሞጂዎችን አያስኬድም",
+        "Mode mp3 telechargement ":
+            "ድምጽ በማውረድ ላይ...",
+        "Mode mp3 erreur ":
+            "የማውረድ ስህተት...",
     },
     # Arabe
     "ar": {
@@ -138,6 +146,10 @@ traductions = {
             "وضع التهجئة لم يتم تنفيذه بعد في هذه اللغة",
         "Mode epeler emoji":
             "MAEL لا يعالج الرموز التعبيرية",
+        "Mode mp3 telechargement ":
+            "جارٍ تنزيل الصوت...",
+        "Mode mp3 erreur ":
+            "خطأ في التنزيل...",
     },
     # Bengali
     "bn": {
@@ -148,6 +160,10 @@ traductions = {
             "এই ভাষায় বানান মোড এখনও প্রয়োগ করা হয়নি",
         "Mode epeler emoji":
             "MAEL ইমোজি প্রক্রিয়া করে না",
+        "Mode mp3 telechargement ":
+            "অডিও ডাউনলোড হচ্ছে...",
+        "Mode mp3 erreur ":
+            "ডাউনলোড ত্রুটি...",
     },
     # Bosniaque
     "bs": {
@@ -158,6 +174,10 @@ traductions = {
             "Način sricanja još nije implementiran na ovom jeziku",
         "Mode epeler emoji":
             "MAEL ne obrađuje emodžije",
+        "Mode mp3 telechargement ":
+            "Preuzimanje zvuka...",
+        "Mode mp3 erreur ":
+            "Greška pri preuzimanju...",
     },
     # Bulgare
     "bg": {
@@ -168,6 +188,10 @@ traductions = {
             "Режимът за правопис все още не е внедрен на този език",
         "Mode epeler emoji":
             "MAEL не обработва емоджита",
+        "Mode mp3 telechargement ":
+            "Изтегляне на аудио...",
+        "Mode mp3 erreur ":
+            "Грешка при изтегляне...",
     },
     # Catalan
     "ca": {
@@ -178,6 +202,10 @@ traductions = {
             "El mode de lletrejar encara no està implementat en aquest idioma",
         "Mode epeler emoji":
             "MAEL no processa els emojis",
+        "Mode mp3 telechargement ":
+            "Descarregant àudio...",
+        "Mode mp3 erreur ":
+            "Error de descàrrega...",
     },
     # Chinois
     "zh": {
@@ -188,6 +216,10 @@ traductions = {
             "该语言尚未实现拼写模式",
         "Mode epeler emoji":
             "MAEL 不处理表情符号",
+        "Mode mp3 telechargement ":
+            "正在下载音频...",
+        "Mode mp3 erreur ":
+            "下载错误...",
     },
     # Croate
     "hr": {
@@ -198,6 +230,10 @@ traductions = {
             "Način sricanja još nije implementiran na ovom jeziku",
         "Mode epeler emoji":
             "MAEL ne obrađuje emoji znakove",
+        "Mode mp3 telechargement ":
+            "Preuzimanje zvuka...",
+        "Mode mp3 erreur ":
+            "Pogreška pri preuzimanju...",
     },
     # Tchèque
     "cs": {
@@ -208,6 +244,10 @@ traductions = {
             "Režim hláskování zatím není v tomto jazyce implementován",
         "Mode epeler emoji":
             "MAEL nezpracovává emoji",
+        "Mode mp3 telechargement ":
+            "Stahování zvuku...",
+        "Mode mp3 erreur ":
+            "Chyba stahování...",
     },
     # Danois
     "da": {
@@ -218,6 +258,10 @@ traductions = {
             "Stavemåde er endnu ikke implementeret på dette sprog",
         "Mode epeler emoji":
             "MAEL behandler ikke emojis",
+        "Mode mp3 telechargement ":
+            "Downloader lyd...",
+        "Mode mp3 erreur ":
+            "Downloadfejl...",
     },
     # Néerlandais
     "nl": {
@@ -228,6 +272,10 @@ traductions = {
             "Spelmodus is nog niet geïmplementeerd in deze taal",
         "Mode epeler emoji":
             "MAEL verwerkt geen emoji's",
+        "Mode mp3 telechargement ":
+            "Audio downloaden...",
+        "Mode mp3 erreur ":
+            "Downloadfout...",
     },
     # Anglais
     "en": {
@@ -238,6 +286,10 @@ traductions = {
             "Spelling mode not yet implemented in this language",
         "Mode epeler emoji":
             "MAEL does not process emojis",
+        "Mode mp3 telechargement ":
+            "Audio downloading...",
+        "Mode mp3 erreur ":
+            "Download Error...",
     },
     # Estonien
     "et": {
@@ -248,6 +300,10 @@ traductions = {
             "Õigekirjarežiim pole selles keeles veel rakendatud",
         "Mode epeler emoji":
             "MAEL ei töötle emotikone",
+        "Mode mp3 telechargement ":
+            "Heli allalaadimine...",
+        "Mode mp3 erreur ":
+            "Allalaadimise viga...",
     },
     # Filipino
     "tl": {
@@ -258,6 +314,10 @@ traductions = {
             "Ang spelling mode ay hindi pa naipapatupad sa wikang ito",
         "Mode epeler emoji":
             "Hindi pinoproseso ng MAEL ang mga emoji",
+        "Mode mp3 telechargement ":
+            "Nagda-download ng audio...",
+        "Mode mp3 erreur ":
+            "Error sa pag-download...",
     },
     # Finnois
     "fi": {
@@ -268,6 +328,10 @@ traductions = {
             "Tavausmoodia ei ole vielä toteutettu tällä kielellä",
         "Mode epeler emoji":
             "MAEL ei käsittele emojeita",
+        "Mode mp3 telechargement ":
+            "Ladataan ääntä...",
+        "Mode mp3 erreur ":
+            "Latausvirhe...",
     },
     # Français
     "fr": {
@@ -278,6 +342,10 @@ traductions = {
             "Mode épeler pas encore implémenté dans cette langue",
         "Mode epeler emoji":
             "MAEL ne traite pas les émojis",
+        "Mode mp3 telechargement ":
+            "Téléchargement de l'audio...",
+        "Mode mp3 erreur ":
+            "Erreur de téléchargement...",
     },
     # Galicien
     "gl": {
@@ -288,6 +356,10 @@ traductions = {
             "O modo de deletrear aínda non está implementado neste idioma",
         "Mode epeler emoji":
             "MAEL non procesa os emojis",
+        "Mode mp3 telechargement ":
+            "Descargando o audio...",
+        "Mode mp3 erreur ":
+            "Erro de descarga...",
     },
     # Allemand
     "de": {
@@ -298,6 +370,10 @@ traductions = {
             "Buchstabiermodus in dieser Sprache noch nicht implementiert",
         "Mode epeler emoji":
             "MAEL verarbeitet keine Emojis",
+        "Mode mp3 telechargement ":
+            "Audio wird heruntergeladen...",
+        "Mode mp3 erreur ":
+            "Download-Fehler...",
     },
     # Grec
     "el": {
@@ -308,6 +384,10 @@ traductions = {
             "Η λειτουργία συλλαβισμού δεν έχει ακόμη υλοποιηθεί σε αυτή τη γλώσσα",
         "Mode epeler emoji":
             "Το MAEL δεν επεξεργάζεται emoji",
+        "Mode mp3 telechargement ":
+            "Λήψη ήχου...",
+        "Mode mp3 erreur ":
+            "Σφάλμα λήψης...",
     },
     # Gujarati
     "gu": {
@@ -318,6 +398,10 @@ traductions = {
             "આ ભાષામાં જોડણી મોડ હજી લાગુ કરવામાં આવ્યો નથી",
         "Mode epeler emoji":
             "MAEL ઇમોજી પ્રક્રિયા કરતું નથી",
+        "Mode mp3 telechargement ":
+            "ઓડિયો ડાઉનલોડ થઈ રહ્યું છે...",
+        "Mode mp3 erreur ":
+            "ડાઉનલોડ ભૂલ...",
     },
     # Haoussa
     "ha": {
@@ -328,6 +412,10 @@ traductions = {
             "Ba a aiwatar da yanayin rubutu a wannan harshe ba tukuna",
         "Mode epeler emoji":
             "MAEL baya sarrafa emoji",
+        "Mode mp3 telechargement ":
+            "Ana sauke sauti...",
+        "Mode mp3 erreur ":
+            "Kuskuren saukewa...",
     },
     # Hébreu
     "he": {
@@ -338,6 +426,10 @@ traductions = {
             "מצב איות עדיין לא מיושם בשפה זו",
         "Mode epeler emoji":
             "MAEL לא מעבד אימוג'ים",
+        "Mode mp3 telechargement ":
+            "מוריד שמע...",
+        "Mode mp3 erreur ":
+            "שגיאת הורדה...",
     },
     # Hindi
     "hi": {
@@ -348,6 +440,10 @@ traductions = {
             "इस भाषा में वर्तनी मोड अभी लागू नहीं किया गया है",
         "Mode epeler emoji":
             "MAEL इमोजी को प्रोसेस नहीं करता",
+        "Mode mp3 telechargement ":
+            "ऑडियो डाउनलोड हो रहा है...",
+        "Mode mp3 erreur ":
+            "डाउनलोड त्रुटि...",
     },
     # Hongrois
     "hu": {
@@ -358,6 +454,10 @@ traductions = {
             "A betűzési mód még nincs megvalósítva ezen a nyelven",
         "Mode epeler emoji":
             "A MAEL nem dolgoz fel emojikat",
+        "Mode mp3 telechargement ":
+            "Hang letöltése...",
+        "Mode mp3 erreur ":
+            "Letöltési hiba...",
     },
     # Islandais
     "is": {
@@ -368,6 +468,10 @@ traductions = {
             "Stafsetningahamur hefur ekki verið útfærður á þessu tungumáli ennþá",
         "Mode epeler emoji":
             "MAEL vinnur ekki með emoji",
+        "Mode mp3 telechargement ":
+            "Hleð niður hljóði...",
+        "Mode mp3 erreur ":
+            "Niðurhalsvilla...",
     },
     # Indonésien
     "id": {
@@ -378,6 +482,10 @@ traductions = {
             "Mode ejaan belum diterapkan dalam bahasa ini",
         "Mode epeler emoji":
             "MAEL tidak memproses emoji",
+        "Mode mp3 telechargement ":
+            "Mengunduh audio...",
+        "Mode mp3 erreur ":
+            "Kesalahan unduhan...",
     },
     # Italien
     "it": {
@@ -388,6 +496,10 @@ traductions = {
             "Modalità spelling non ancora implementata in questa lingua",
         "Mode epeler emoji":
             "MAEL non gestisce le emoji",
+        "Mode mp3 telechargement ":
+            "Download dell'audio in corso...",
+        "Mode mp3 erreur ":
+            "Errore di download...",
     },
     # Japonais
     "ja": {
@@ -398,6 +510,10 @@ traductions = {
             "この言語ではスペルモードはまだ実装されていません",
         "Mode epeler emoji":
             "MAELは絵文字を処理しません",
+        "Mode mp3 telechargement ":
+            "音声をダウンロード中...",
+        "Mode mp3 erreur ":
+            "ダウンロードエラー...",
     },
     # Javanais
     "jv": {
@@ -408,6 +524,10 @@ traductions = {
             "Mode ejaan durung ditrapake ing basa iki",
         "Mode epeler emoji":
             "MAEL ora ngolah emoji",
+        "Mode mp3 telechargement ":
+            "Ngundhuh audio...",
+        "Mode mp3 erreur ":
+            "Kesalahan undhuhan...",
     },
     # Kannada
     "kn": {
@@ -418,6 +538,10 @@ traductions = {
             "ಈ ಭಾಷೆಯಲ್ಲಿ ಕಾಗುಣಿತ ಮೋಡ್ ಇನ್ನೂ ಜಾರಿಗೆ ಬಂದಿಲ್ಲ",
         "Mode epeler emoji":
             "MAEL ಎಮೋಜಿಗಳನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುವುದಿಲ್ಲ",
+        "Mode mp3 telechargement ":
+            "ಆಡಿಯೋ ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+        "Mode mp3 erreur ":
+            "ಡೌನ್‌ಲೋಡ್ ದೋಷ...",
     },
     # Khmer
     "km": {
@@ -428,6 +552,10 @@ traductions = {
             "របៀបប្រកបមិនទាន់ត្រូវបានអនុវត្តនៅក្នុងភាសានេះទេ",
         "Mode epeler emoji":
             "MAEL មិនដំណើរការអេម៉ូជីទេ",
+        "Mode mp3 telechargement ":
+            "កំពុងទាញយកសំឡេង...",
+        "Mode mp3 erreur ":
+            "កំហុសក្នុងការទាញយក...",
     },
     # Coréen
     "ko": {
@@ -438,6 +566,10 @@ traductions = {
             "이 언어에서는 철자 모드가 아직 구현되지 않았습니다",
         "Mode epeler emoji":
             "MAEL은 이모지를 처리하지 않습니다",
+        "Mode mp3 telechargement ":
+            "오디오 다운로드 중...",
+        "Mode mp3 erreur ":
+            "다운로드 오류...",
     },
     # Letton
     "lv": {
@@ -448,6 +580,10 @@ traductions = {
             "Pareizrakstības režīms šajā valodā vēl nav ieviests",
         "Mode epeler emoji":
             "MAEL neapstrādā emocijzīmes",
+        "Mode mp3 telechargement ":
+            "Lejupielādē audio...",
+        "Mode mp3 erreur ":
+            "Lejupielādes kļūda...",
     },
     # Lituanien
     "lt": {
@@ -458,6 +594,10 @@ traductions = {
             "Rašybos režimas šioje kalboje dar neįdiegtas",
         "Mode epeler emoji":
             "MAEL neapdoroja jaustukų",
+        "Mode mp3 telechargement ":
+            "Atsisiunčiamas garsas...",
+        "Mode mp3 erreur ":
+            "Atsisiuntimo klaida...",
     },
     # Malais
     "ms": {
@@ -468,6 +608,10 @@ traductions = {
             "Mod ejaan belum dilaksanakan dalam bahasa ini",
         "Mode epeler emoji":
             "MAEL tidak memproses emoji",
+        "Mode mp3 telechargement ":
+            "Memuat turun audio...",
+        "Mode mp3 erreur ":
+            "Ralat muat turun...",
     },
     # Malayalam
     "ml": {
@@ -478,6 +622,10 @@ traductions = {
             "ഈ ഭാഷയിൽ അക്ഷരവിന്യാസ മോഡ് ഇതുവരെ നടപ്പിലാക്കിയിട്ടില്ല",
         "Mode epeler emoji":
             "MAEL ഇമോജികൾ പ്രോസസ്സ് ചെയ്യുന്നില്ല",
+        "Mode mp3 telechargement ":
+            "ഓഡിയോ ഡൗൺലോഡ് ചെയ്യുന്നു...",
+        "Mode mp3 erreur ":
+            "ഡൗൺലോഡ് പിശക്...",
     },
     # Marathi
     "mr": {
@@ -488,6 +636,10 @@ traductions = {
             "या भाषेत स्पेलिंग मोड अद्याप लागू केलेला नाही",
         "Mode epeler emoji":
             "MAEL इमोजी प्रक्रिया करत नाही",
+        "Mode mp3 telechargement ":
+            "ऑडिओ डाउनलोड होत आहे...",
+        "Mode mp3 erreur ":
+            "डाउनलोड त्रुटी...",
     },
     # Birman
     "my": {
@@ -498,6 +650,10 @@ traductions = {
             "ဤဘာသာစကားတွင် စာလုံးပေါင်းမုဒ်ကို မအကောင်အထည်ဖော်ရသေးပါ",
         "Mode epeler emoji":
             "MAEL သည် အီမိုဂျီများကို မလုပ်ဆောင်ပါ",
+        "Mode mp3 telechargement ":
+            "အသံဒေါင်းလုဒ်လုပ်နေသည်...",
+        "Mode mp3 erreur ":
+            "ဒေါင်းလုဒ်အမှား...",
     },
     # Népalais
     "ne": {
@@ -508,6 +664,10 @@ traductions = {
             "यो भाषामा हिज्जे मोड अझै लागू गरिएको छैन",
         "Mode epeler emoji":
             "MAEL ले इमोजी प्रशोधन गर्दैन",
+        "Mode mp3 telechargement ":
+            "अडियो डाउनलोड हुँदैछ...",
+        "Mode mp3 erreur ":
+            "डाउनलोड त्रुटि...",
     },
     # Norvégien
     "no": {
@@ -518,6 +678,10 @@ traductions = {
             "Stavemodus er ennå ikke implementert på dette språket",
         "Mode epeler emoji":
             "MAEL behandler ikke emojier",
+        "Mode mp3 telechargement ":
+            "Laster ned lyd...",
+        "Mode mp3 erreur ":
+            "Nedlastingsfeil...",
     },
     # Polonais
     "pl": {
@@ -528,6 +692,10 @@ traductions = {
             "Tryb literowania nie został jeszcze zaimplementowany w tym języku",
         "Mode epeler emoji":
             "MAEL nie przetwarza emoji",
+        "Mode mp3 telechargement ":
+            "Pobieranie dźwięku...",
+        "Mode mp3 erreur ":
+            "Błąd pobierania...",
     },
     # Portugais
     "pt": {
@@ -538,6 +706,10 @@ traductions = {
             "Modo soletrar ainda não implementado neste idioma",
         "Mode epeler emoji":
             "O MAEL não processa emojis",
+        "Mode mp3 telechargement ":
+            "Baixando áudio...",
+        "Mode mp3 erreur ":
+            "Erro de download...",
     },
     # Pendjabi
     "pa": {
@@ -548,6 +720,10 @@ traductions = {
             "ਇਸ ਭਾਸ਼ਾ ਵਿੱਚ ਸਪੈਲਿੰਗ ਮੋਡ ਅਜੇ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਗਿਆ",
         "Mode epeler emoji":
             "MAEL ਇਮੋਜੀ ਨੂੰ ਪ੍ਰੋਸੈਸ ਨਹੀਂ ਕਰਦਾ",
+        "Mode mp3 telechargement ":
+            "ਆਡੀਓ ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+        "Mode mp3 erreur ":
+            "ਡਾਊਨਲੋਡ ਗਲਤੀ...",
     },
     # Roumain
     "ro": {
@@ -558,6 +734,10 @@ traductions = {
             "Modul de silabisire nu este încă implementat în această limbă",
         "Mode epeler emoji":
             "MAEL nu procesează emoji",
+        "Mode mp3 telechargement ":
+            "Se descarcă audio...",
+        "Mode mp3 erreur ":
+            "Eroare de descărcare...",
     },
     # Russe
     "ru": {
@@ -568,6 +748,10 @@ traductions = {
             "Режим произношения по буквам ещё не реализован в этом языке",
         "Mode epeler emoji":
             "MAEL не обрабатывает эмодзи",
+        "Mode mp3 telechargement ":
+            "Загрузка аудио...",
+        "Mode mp3 erreur ":
+            "Ошибка загрузки...",
     },
     # Serbe
     "sr": {
@@ -578,6 +762,10 @@ traductions = {
             "Način sricanja još nije implementiran na ovom jeziku",
         "Mode epeler emoji":
             "MAEL ne obrađuje emodžije",
+        "Mode mp3 telechargement ":
+            "Preuzimanje zvuka...",
+        "Mode mp3 erreur ":
+            "Greška pri preuzimanju...",
     },
     # Cingalais
     "si": {
@@ -588,6 +776,10 @@ traductions = {
             "මෙම භාෂාවේ අක්ෂර වින්‍යාස මාදිලිය තවම ක්‍රියාත්මක කර නැත",
         "Mode epeler emoji":
             "MAEL ඉමෝජි සකසයන්නේ නැත",
+        "Mode mp3 telechargement ":
+            "ශ්‍රව්‍ය බාගත වෙමින්...",
+        "Mode mp3 erreur ":
+            "බාගැනීමේ දෝෂය...",
     },
     # Slovaque
     "sk": {
@@ -598,6 +790,10 @@ traductions = {
             "Režim hláskovania zatiaľ nie je v tomto jazyku implementovaný",
         "Mode epeler emoji":
             "MAEL nespracúva emoji",
+        "Mode mp3 telechargement ":
+            "Sťahovanie zvuku...",
+        "Mode mp3 erreur ":
+            "Chyba sťahovania...",
     },
     # Espagnol
     "es": {
@@ -608,6 +804,10 @@ traductions = {
             "Modo deletrear aún no implementado en este idioma",
         "Mode epeler emoji":
             "MAEL no procesa los emojis",
+        "Mode mp3 telechargement ":
+            "Descargando audio...",
+        "Mode mp3 erreur ":
+            "Error de descarga...",
     },
     # Soundanais
     "su": {
@@ -618,6 +818,10 @@ traductions = {
             "Mode éjahan can digunakeun dina ieu basa",
         "Mode epeler emoji":
             "MAEL henteu ngolah emoji",
+        "Mode mp3 telechargement ":
+            "Ngundeur audio...",
+        "Mode mp3 erreur ":
+            "Kasalahan undeuran...",
     },
     # Suédois
     "sv": {
@@ -628,6 +832,10 @@ traductions = {
             "Stavningsläget är ännu inte implementerat på detta språk",
         "Mode epeler emoji":
             "MAEL bearbetar inte emojier",
+        "Mode mp3 telechargement ":
+            "Laddar ner ljud...",
+        "Mode mp3 erreur ":
+            "Nedladdningsfel...",
     },
     # Swahili
     "sw": {
@@ -638,6 +846,10 @@ traductions = {
             "Hali ya tahajia bado haijatekelezwa katika lugha hii",
         "Mode epeler emoji":
             "MAEL haichakati emoji",
+        "Mode mp3 telechargement ":
+            "Inapakua sauti...",
+        "Mode mp3 erreur ":
+            "Hitilafu ya upakuaji...",
     },
     # Tamoul
     "ta": {
@@ -648,6 +860,10 @@ traductions = {
             "இந்த மொழியில் எழுத்துப்பிழை பயன்முறை இன்னும் செயல்படுத்தப்படவில்லை",
         "Mode epeler emoji":
             "MAEL வரைபடக்குறியீடுகளை செயலாக்குவதில்லை",
+        "Mode mp3 telechargement ":
+            "ஒலி பதிவிறக்கப்படுகிறது...",
+        "Mode mp3 erreur ":
+            "பதிவிறக்கப் பிழை...",
     },
     # Télougou
     "te": {
@@ -658,6 +874,10 @@ traductions = {
             "ఈ భాషలో స్పెల్లింగ్ మోడ్ ఇంకా అమలు చేయబడలేదు",
         "Mode epeler emoji":
             "MAEL ఎమోజీలను ప్రాసెస్ చేయదు",
+        "Mode mp3 telechargement ":
+            "ఆడియో డౌన్‌లోడ్ అవుతోంది...",
+        "Mode mp3 erreur ":
+            "డౌన్‌లోడ్ లోపం...",
     },
     # Thaï
     "th": {
@@ -668,6 +888,10 @@ traductions = {
             "โหมดการสะกดยังไม่ได้ใช้งานในภาษานี้",
         "Mode epeler emoji":
             "MAEL ไม่ประมวลผลอีโมจิ",
+        "Mode mp3 telechargement ":
+            "กำลังดาวน์โหลดเสียง...",
+        "Mode mp3 erreur ":
+            "ข้อผิดพลาดในการดาวน์โหลด...",
     },
     # Turc
     "tr": {
@@ -678,6 +902,10 @@ traductions = {
             "Heceleme modu bu dilde henüz uygulanmadı",
         "Mode epeler emoji":
             "MAEL emojileri işlemez",
+        "Mode mp3 telechargement ":
+            "Ses indiriliyor...",
+        "Mode mp3 erreur ":
+            "İndirme hatası...",
     },
     # Ukrainien
     "uk": {
@@ -688,6 +916,10 @@ traductions = {
             "Режим промовляння по літерах ще не реалізовано в цій мові",
         "Mode epeler emoji":
             "MAEL не обробляє емодзі",
+        "Mode mp3 telechargement ":
+            "Завантаження аудіо...",
+        "Mode mp3 erreur ":
+            "Помилка завантаження...",
     },
     # Ourdou
     "ur": {
@@ -698,6 +930,10 @@ traductions = {
             "اس زبان میں ہجے کا موڈ ابھی نافذ نہیں کیا گیا",
         "Mode epeler emoji":
             "MAEL ایموجی پر کارروائی نہیں کرتا",
+        "Mode mp3 telechargement ":
+            "آڈیو ڈاؤن لوڈ ہو رہی ہے...",
+        "Mode mp3 erreur ":
+            "ڈاؤن لوڈ کی خرابی...",
     },
     # Vietnamien
     "vi": {
@@ -708,6 +944,10 @@ traductions = {
             "Chế độ đánh vần chưa được triển khai trong ngôn ngữ này",
         "Mode epeler emoji":
             "MAEL không xử lý emoji",
+        "Mode mp3 telechargement ":
+            "Đang tải âm thanh...",
+        "Mode mp3 erreur ":
+            "Lỗi tải xuống...",
     },
     # Gallois
     "cy": {
@@ -718,6 +958,10 @@ traductions = {
             "Nid yw'r modd sillafu wedi'i weithredu yn yr iaith hon eto",
         "Mode epeler emoji":
             "Nid yw MAEL yn prosesu emojis",
+        "Mode mp3 telechargement ":
+            "Yn llwytho sain i lawr...",
+        "Mode mp3 erreur ":
+            "Gwall llwytho i lawr...",
     },
 }
 
