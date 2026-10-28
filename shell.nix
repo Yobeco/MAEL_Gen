@@ -32,12 +32,21 @@ let
     # --- Presse-papier (MAEL_V6.0, prévu pour usage futur) -------------
     pyperclip      # Équivalent du paquet pip 'clipboard'
 
+    # --- Synthèse vocale (TTS) -----------------------------------------
+    gtts           # Synthèse vocale en ligne (Google Text-to-Speech)
+    miniaudio      # Lecture audio pour la maquette TTS
+
     # --- Outils de développement ---------------------------------------
     ipython
     pytest
     black
     ruff
   ]);
+
+  # 🔊 AJOUT AUDIO (1/3) : bibliothèques chargées dynamiquement par
+  # miniaudio à l'exécution. Sans elles, miniaudio retombe sur le
+  # backend "Null" (aucun son).
+  audioLibs = with pkgs; [ alsa-lib libpulseaudio pipewire ];
 
 in
 pkgs.mkShell {
@@ -61,15 +70,19 @@ pkgs.mkShell {
 
     # --- Outils de développement ---------------------------------------
     pkgs.git
-  ];
+  ] ++ audioLibs;     # 🔊 AJOUT AUDIO (2/3)
 
   shellHook = ''
+    # 🔊 AJOUT AUDIO (3/3) : permet à miniaudio de trouver ALSA/PulseAudio
+    export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath audioLibs}:$LD_LIBRARY_PATH
+
     echo "🚀 Environnement NixOS pour MAEL activé."
     echo "🐍 Version Python : $(python --version)"
     echo "📦 Modules Python : tkinter, ttkbootstrap, qrcode, pillow, cv2,"
-    echo "                    numpy, zxingcpp, fpdf, pypdf, pypdfium2, pyperclip"
+    echo "                    numpy, zxingcpp, fpdf, pypdf, pypdfium2, pyperclip, gtts, miniaudio"
     echo "🖥️  Presse-papier  : xclip, xsel, wl-clipboard"
     echo "🧰 Dev tools      : ipython, pytest, black, ruff, git"
+    echo "🔊 Audio          : alsa-lib, libpulseaudio, pipewire"
     echo ""
     echo "Pour lancer les applications :"
     echo "  python MAEL_V6.0.py"

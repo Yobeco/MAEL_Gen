@@ -90,9 +90,6 @@ MODE_LIRE: str = "lire"
 #: Clé de repli utilisée quand ``TtsItem.lang`` vaut ``None``.
 DEFAULT_LANG_KEY: str = "fr"
 
-#: Vitesse de lecture par défaut, en pourcentage (100 = normal).
-DEFAULT_SPEED: int = 100
-
 #: Message affiché (et journalisé) quand la langue n'a pas pu être résolue.
 MSG_LANGUE_INCONNUE: str = "Langue inconnue : {key}"
 
@@ -288,7 +285,7 @@ class TtsSetupBuilder:
     Ventilation par mode
     --------------------
     * ``"lire"`` → ``to_pronounce = (item.text,)``,
-      ``to_show = item.text``, ``speed = 100``.
+      ``to_show = item.text``.
     * ``"cacher"`` → ``to_pronounce = (item.text,)``,
       ``to_show = "Écoute bien."`` (localisé).
     * ``"epeler"`` → ``to_pronounce = épellation de item.text``,
@@ -421,7 +418,6 @@ class TtsSetupBuilder:
                 item=item,
                 mode=item.mode,
                 lang=None,
-                speed=DEFAULT_SPEED,
                 to_pronounce=(),
                 to_show=message,
             )
@@ -441,7 +437,6 @@ class TtsSetupBuilder:
                     item=item,
                     mode=item.mode,
                     lang=resolved_lang,
-                    speed=DEFAULT_SPEED,
                     to_pronounce=(),
                     to_show=message,
                 )
@@ -460,7 +455,6 @@ class TtsSetupBuilder:
                     item=item,
                     mode=item.mode,
                     lang=resolved_lang,
-                    speed=DEFAULT_SPEED,
                     to_pronounce=(),
                     to_show=message,
                 )
@@ -489,7 +483,6 @@ class TtsSetupBuilder:
                 item=item,
                 mode=item.mode,
                 lang=resolved_lang,
-                speed=DEFAULT_SPEED,
                 to_pronounce=tuple(a_prononcer),
                 to_show=get_mode_message("Mode dicter", item.lang),
                 list_gds=groupes,
@@ -514,7 +507,6 @@ class TtsSetupBuilder:
                     item=item,
                     mode=item.mode,
                     lang=resolved_lang,
-                    speed=DEFAULT_SPEED,
                     to_pronounce=(),
                     to_show=message,
                 )
@@ -534,7 +526,6 @@ class TtsSetupBuilder:
                     item=item,
                     mode=item.mode,
                     lang=resolved_lang,
-                    speed=DEFAULT_SPEED,
                     to_pronounce=(),
                     to_show=message,
                 )
@@ -544,7 +535,6 @@ class TtsSetupBuilder:
                 item=item,
                 mode=item.mode,
                 lang=resolved_lang,
-                speed=DEFAULT_SPEED,
                 to_pronounce=_spell(item.text, epel_dict),
                 to_show=get_mode_message("Mode Epeler", item.lang),
             )
@@ -577,7 +567,6 @@ class TtsSetupBuilder:
                 item=item,
                 mode=item.mode,
                 lang=resolved_lang,
-                speed=DEFAULT_SPEED,
                 to_pronounce=(item.text,),
                 to_show=show_builder(item, resolved_lang),
             )
@@ -590,7 +579,6 @@ class TtsSetupBuilder:
             item=item,
             mode=item.mode,
             lang=resolved_lang,
-            speed=DEFAULT_SPEED,
             to_pronounce=(),
             to_show=MSG_MODE_NON_GERE,
         )

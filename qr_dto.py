@@ -156,7 +156,7 @@ class TtsSetup:
 
     Ce DTO est produit par ``TtsSetupBuilder`` à partir d'un ``TtsItem``
     déjà analysé. Il consolide la résolution de langue (clé interne →
-    code gTTS), le débit de lecture, ainsi que la ventilation du texte
+    code gTTS, ainsi que la ventilation du texte
     entre la partie à **prononcer** et la partie à **afficher** à l'écran.
 
     Champs
@@ -173,8 +173,6 @@ class TtsSetup:
         (par ex. ``"fr-CA"``, ``"yue"``, ``"iw"``). Vaut ``None`` si la
         langue n'a pas pu être résolue ; dans ce cas ``ok`` vaut
         ``False`` et ``to_pronounce`` est vide.
-    speed : int
-        Vitesse de lecture en pourcentage (100 = vitesse normale).
     to_pronounce : tuple[str, ...]
         Segments de texte à restituer oralement, dans l'ordre.
         Tuple vide si rien ne doit être prononcé (mode non géré ou
@@ -201,7 +199,7 @@ class TtsSetup:
         Sérialise la configuration sous la forme attendue par la couche
         TTS :
 
-        ``{"settings": {"lang": <str|None>, "speed": <int>},
+        ``{"settings": {"lang": <str|None>},
            "to_pronounce": [<str>, ...],
            "to_show": <str>}``
     """
@@ -209,7 +207,6 @@ class TtsSetup:
     item: TtsItem
     mode: str
     lang: Optional[str]
-    speed: int = 100
     to_pronounce: tuple[str, ...] = ()
     to_show: str = ""
     list_gds: tuple[str, ...] = ()
@@ -225,7 +222,7 @@ class TtsSetup:
 
         La forme retournée est :
 
-        ``{"settings": {"lang": <str|None>, "speed": <int>},
+        ``{"settings": {"lang": <str|None>},
            "to_pronounce": [<str>, ...],
            "to_show": <str>}``
 
@@ -235,7 +232,6 @@ class TtsSetup:
         return {
             "settings": {
                 "lang": self.lang,
-                "speed": self.speed,
             },
             "to_pronounce": list(self.to_pronounce),
             "to_show": self.to_show,
