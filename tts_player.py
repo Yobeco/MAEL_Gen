@@ -7,11 +7,13 @@ import threading
 from abc import ABC, abstractmethod
 
 from qr_dto import TtsSetup
+import audio_control
+from audio_control import StoppablePlayback
 
 logger = logging.getLogger(__name__)
 
 
-class TtsPlayer(ABC):
+class TtsPlayer(StoppablePlayback, ABC):
     """Orchestre les modes de lecture et leur exécution interruptible."""
 
     SPEED_NORMAL = 100
@@ -29,6 +31,7 @@ class TtsPlayer(ABC):
         self._stop_event = threading.Event()
         self._thread: threading.Thread | None = None
         self._lock = threading.RLock()
+        audio_control.register(self)
 
     @abstractmethod
     def _say(self, text: str, lang: str, speed: int) -> None:
@@ -55,16 +58,18 @@ class TtsPlayer(ABC):
             raise ValueError(
                 "En mode dicter, to_pronounce et list_gds doivent avoir la même longueur."
             )
-        self.stop()
+        audio_control.stop_all()
         ancien_thread = self._thread
         if ancien_thread is not None and ancien_thread is not threading.current_thread():
             ancien_thread.join()
         event = threading.Event()
+        token = audio_control.new_generation()
         with self._lock:
             self._stop_event = event
+            self._active_generation = token
             thread = threading.Thread(
                 target=self._play_setup,
-                args=(setup, slow, event),
+                args=(setup, slow, event, token),
                 name="TtsPlayer",
                 daemon=True,
             )
@@ -87,15 +92,15 @@ class TtsPlayer(ABC):
         return max(minimum, min(maximum, value))
 
     def _play_setup(
-        self, setup: TtsSetup, slow: bool, event: threading.Event
+        self, setup: TtsSetup, slow: bool, event: threading.Event, token: int
     ) -> None:
         """Prépare les segments puis exécute l'algorithme du mode demandé."""
         try:
-            if setup.lang is None or event.is_set():
+            if setup.lang is None or event.is_set() or not audio_control.is_current(token):
                 return
             plan = self._build_plan(setup, slow)
             self._prepare(plan)
-            if event.is_set():
+            if event.is_set() or not audio_control.is_current(token):
                 return
             if setup.mode == "dicter":
                 self._play_dicter(setup, slow, event)
@@ -127,7 +132,7 @@ class TtsPlayer(ABC):
         """Lit les modes lire, cacher et épeler avec leur pause fixe."""
         pause = self.PAUSE_SLOW if slow else self.PAUSE_NORMAL
         for text, lang, speed in plan:
-            if event.is_set():
+            if event.is_set() or not audio_control.is_current(getattr(self, "_active_generation", -1)):
                 break
             self._say(text, lang, speed)
             if event.is_set():
@@ -145,7 +150,9 @@ class TtsPlayer(ABC):
         assert setup.lang is not None
         factor = self.PAUSE_FACT_SLOW if slow else self.PAUSE_FACT_NORMAL
         for index, text in enumerate(setup.to_pronounce):
-            if event.is_set():
+            if event.is_set() or not audio_control.is_current(
+                getattr(self, "_active_generation", -1)
+            ):
                 break
             self._say(text, setup.lang, self.SPEED_NORMAL)
             if event.is_set():

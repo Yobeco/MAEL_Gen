@@ -11,8 +11,17 @@ from mp3_read import Mp3Reader, create_mp3_reader
 class Mp3Fetch:
     """Reconstruit l’URL cloud puis la confie au lecteur MP3."""
 
-    def __init__(self, mp3_read: Mp3Reader | None = None) -> None:
-        self.mp3_read = mp3_read or create_mp3_reader()
+    def __init__(self, mp3_read: Mp3Reader | None = None, *,
+                 on_download_start: Any | None = None,
+                 on_download_end: Any | None = None) -> None:
+        self.mp3_read = mp3_read or create_mp3_reader(
+            on_download_start=on_download_start, on_download_end=on_download_end
+        )
+        if mp3_read is not None:
+            if hasattr(mp3_read, "on_download_start"):
+                mp3_read.on_download_start = on_download_start
+            if hasattr(mp3_read, "on_download_end"):
+                mp3_read.on_download_end = on_download_end
 
     def fetch(self, cloud_item: CloudItem) -> str:
         """Lance la lecture du fichier référencé et retourne son URL."""

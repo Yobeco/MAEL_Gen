@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+import audio_control
 import queue
 import threading
 from pathlib import Path
@@ -46,6 +47,8 @@ class MaelGui:
         self.tk = tk
         self.root = root or tk.Tk()
         self.controller = controller
+        if hasattr(self.controller.scan_service, "on_audio_status"):
+            self.controller.scan_service.on_audio_status = self._queue_audio_status
         self._events: queue.Queue[tuple[str, Any]] = queue.Queue()
         self._busy = False
         self._images: dict[str, Any] = {}
@@ -183,15 +186,23 @@ class MaelGui:
     def _start_scan(self) -> None:
         if self._busy:
             return
+        audio_control.stop_all()
         self._set_busy(True)
         self._show_text("Lecture du code QR…")
         self._run_background("scan", self.controller.on_scan)
 
+    # Ne pas appeler stop_all() depuis de futurs boutons de volume : ils
+    # doivent modifier le niveau sans interrompre la lecture courante.
     def _start_repeat(self, slow: bool) -> None:
         if self._busy or not self.controller.can_repeat:
             return
+        audio_control.stop_all()
         self._set_busy(True)
         self._run_background("repeat", lambda: self.controller.on_repeat(slow))
+
+    def _queue_audio_status(self, setup: Any) -> None:
+        # Le callback peut partir du worker MP3 : la file est lue depuis after().
+        self._events.put(("audio_status", setup.to_show))
 
     def _run_background(self, kind: str, action: Any) -> None:
         def work() -> None:
@@ -205,9 +216,10 @@ class MaelGui:
         try:
             while True:
                 kind, value = self._events.get_nowait()
-                if kind in {"scan", "error"}:
+                if kind in {"scan", "error", "audio_status"}:
                     self._show_text(value)
-                self._set_busy(False)
+                if kind != "audio_status":
+                    self._set_busy(False)
         except queue.Empty:
             pass
         self.root.after(80, self._poll_events)

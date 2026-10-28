@@ -8,6 +8,7 @@ import threading
 from typing import Any
 
 from tts_player import TtsPlayer
+import audio_control
 
 logger = logging.getLogger(__name__)
 
@@ -33,6 +34,11 @@ class GttsPlayer(TtsPlayer):
         from gtts import gTTS
 
         for text, lang, speed in items:
+            # Ne lance pas de nouvelles synthèses si stop_all() a invalidé ce play.
+            if self._stop_event.is_set() or not audio_control.is_current(
+                getattr(self, "_active_generation", -1)
+            ):
+                return
             key = (text, lang, speed < self.SPEED_NORMAL)
             with self._cache_lock:
                 if key in self._cache:
