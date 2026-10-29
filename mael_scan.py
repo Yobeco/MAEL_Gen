@@ -10,6 +10,7 @@ from typing import Any
 from qr_dto import CloudItem, TtsItem, TtsSetup, WifiItem
 from wifi_setup import WifiSetup
 from tts_setup import TtsSetupBuilder
+from mael_modes import Mode
 
 logger = logging.getLogger(__name__)
 
@@ -86,11 +87,11 @@ class MaelScan:
             elif isinstance(item, WifiItem):
                 wifi_tts_item = TtsItem(
                     raw=item.raw, original=item.raw.text, text="Code QR Wifi",
-                    lang="fr", mode=MODE_LIRE,
+                    lang="fr", mode=Mode.LIRE,
                 )
                 setup = replace(
                     self.tts_setup_builder.build(wifi_tts_item),
-                    mode=MODE_LIRE, lang="fr", list_gds=("Code QR Wifi",),
+                    mode=Mode.LIRE, lang="fr", list_gds=("Code QR Wifi",),
                     to_pronounce=("Code QR Wifi",), to_show="Code QR Wifi",
                 )
                 self.last_tts_setup = setup
@@ -122,7 +123,7 @@ class MaelScan:
     def _play_cloud(self, item: CloudItem, generation: int, event: threading.Event) -> None:
         """Télécharge un MP3 cloud, puis en confie la lecture au lecteur."""
         base_setup = self.tts_setup_builder.build(TtsItem(
-            raw=item.raw, original=item.text, text=item.text, lang="fr", mode="lire"
+            raw=item.raw, original=item.text, text=item.text, lang="fr", mode=Mode.LIRE
         ))
         def download_start() -> None:
             if self.on_audio_status and self._current(generation, event):
@@ -163,7 +164,7 @@ class MaelScan:
                     event: threading.Event) -> None:
         if setup.lang is None or not self._current(generation, event):
             return
-        if setup.mode == "dicter":
+        if setup.mode == Mode.DICTER:
             self._play_dicter(setup, slow, generation, event)
             return
         pause = self.PAUSE_SLOW if slow else self.PAUSE_NORMAL

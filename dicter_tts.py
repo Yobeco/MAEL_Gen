@@ -12,7 +12,7 @@ from __future__ import annotations
 import re
 
 
-#: Locutions reconnues comme un seul groupe, par langue de référence.
+#: Locutions reconnues comme un seul groupe de souffle, par langue de référence.
 COMPOSES_PAR_LANGUE: dict[str, tuple[str, ...]] = {
     "fr": (
         "au fur et à mesure",

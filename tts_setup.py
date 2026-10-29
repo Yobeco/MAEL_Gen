@@ -54,15 +54,11 @@ from lang_tts import lang_tts
 
 from qr_dto import TtsItem, TtsSetup
 
-from mode_msg import get_mode_message
+from mode_msg import FALLBACK_LANG, MsgKey, get_mode_message, has_message
+from mael_modes import Mode
 
 from dicter_tts import decouper_gds
 
-# Clés de mode recopiées volontairement pour garder ce builder
-# indépendant des dépendances de déobfuscation/scanner de qr_parse.
-MODE_CACHER = "cacher"
-MODE_DICTER = "dicter"
-MODE_EPELER = "epeler"
 
 # Le dictionnaire d'épellation ``epel_tts`` est facultatif : si le
 # module n'est pas disponible (par exemple en environnement allégé),
@@ -85,17 +81,11 @@ logger = logging.getLogger(__name__)
 # ----------------------------------------------------------------------
 
 #: Mode pour lequel la lecture intégrale du texte est demandée.
-MODE_LIRE: str = "lire"
+MODE_LIRE: Mode = Mode.LIRE
 
 #: Clé de repli utilisée quand ``TtsItem.lang`` vaut ``None``.
-DEFAULT_LANG_KEY: str = "fr"
+DEFAULT_LANG_KEY: str = FALLBACK_LANG
 
-#: Message affiché (et journalisé) quand la langue n'a pas pu être résolue.
-MSG_LANGUE_INCONNUE: str = "Langue inconnue : {key}"
-
-#: Message affiché (et journalisé) quand le mode demandé n'est pas encore
-#: implémenté dans cette couche.
-MSG_MODE_NON_GERE: str = "Mode non géré"
 
 
 # ----------------------------------------------------------------------
@@ -125,6 +115,7 @@ def _normalize_lang_key(raw: Optional[str]) -> Optional[str]:
         return None
     cleaned = raw.strip().strip("<>\"'«»").strip()
     return cleaned or None
+
 
 
 def _gtts_for_key(key: str) -> Optional[str]:
@@ -279,8 +270,7 @@ class TtsSetupBuilder:
     4. Variante régionale inconnue (référence connue) → repli sur la
        référence avec un ``logging.warning``.
     5. Langue totalement inconnue → erreur :
-       ``lang = None``, ``to_pronounce = ()``,
-       ``to_show = "Langue inconnue : xx"``.
+       configuration de repli construite par ``_fallback_setup``.
 
     Ventilation par mode
     --------------------
@@ -292,7 +282,7 @@ class TtsSetupBuilder:
       ``to_show = "Écoute les lettres."`` (localisé), ou message
       d'erreur court si la langue est sans dictionnaire
       d'épellation ou si le payload contient un émoji.
-    * autre mode → ``to_pronounce = ()``, ``to_show = "Mode non géré"``
+    * autre mode → configuration de repli localisée via ``_fallback_setup``
       + ``logging.warning`` en console.
     """
 
@@ -300,9 +290,19 @@ class TtsSetupBuilder:
     # Construction
     # --------------------------------------------------------------
 
-    def __init__(self) -> None:
-        # Pas d'état interne : le builder est réutilisable tel quel.
-        pass
+    def _fallback_setup(self, item: TtsItem, msg_key: MsgKey) -> TtsSetup:
+        """Produit une configuration neutre, localisée selon l'item en erreur."""
+        item_lang = _normalize_lang_key(item.lang)
+        msg_lang = (
+            item_lang
+            if item_lang in lang_tts and has_message(msg_key, item_lang)
+            else FALLBACK_LANG
+        )
+        return TtsSetup(
+            item=item, mode=Mode.LIRE, lang=msg_lang,
+            list_gds=(" ",), to_pronounce=(" ",),
+            to_show=get_mode_message(msg_key, msg_lang),
+        )
 
     # --------------------------------------------------------------
     # API publique
@@ -407,57 +407,33 @@ class TtsSetupBuilder:
         3. dictionnaire d'épellation absent pour la langue ;
         4. mode « epeler » nominal ;
         5. mode « lire » / « cacher » nominaux ;
-        6. tout autre mode → ``MSG_MODE_NON_GERE``.
+        6. tout autre mode → repli ``MsgKey.MODE_INCONNU``.
         """
         # --- Erreur de langue : on court-circuite le mode ---------
         if resolved_lang is None:
-            original_key = _normalize_lang_key(item.lang) or ""
-            message = MSG_LANGUE_INCONNUE.format(key=original_key)
-            logger.warning(message)
-            return TtsSetup(
-                item=item,
-                mode=item.mode,
-                lang=None,
-                to_pronounce=(),
-                to_show=message,
-            )
+            logger.warning("Langue inconnue pour TtsItem : %r", item.lang)
+            return self._fallback_setup(item, MsgKey.LANGUE_INCONNUE)
 
         # ------------------------------------------------------------------
         # Mode « dicter » : segmentation en GDS, avec substitution des
         # seuls signes de ponctuation connus du dictionnaire linguistique.
         # ------------------------------------------------------------------
-        if item.mode == MODE_DICTER:
+        if item.mode == Mode.DICTER:
             if _payload_has_emoji(item.text):
-                message = get_mode_message("Mode epeler emoji", item.lang)
                 logger.warning(
                     "Mode dicter : émoji détecté dans le payload ; "
                     "sortie en erreur courte."
                 )
-                return TtsSetup(
-                    item=item,
-                    mode=item.mode,
-                    lang=resolved_lang,
-                    to_pronounce=(),
-                    to_show=message,
-                )
+                return self._fallback_setup(item, MsgKey.MODE_EPELER_EMOJI)
 
             epel_dict = _get_epel_dict(item.lang)
             if epel_dict is None:
-                message = get_mode_message(
-                    "Mode epeler non implemente", item.lang,
-                )
                 logger.warning(
                     "Mode dicter : aucun dictionnaire de ponctuation "
                     "disponible pour la langue '%s'.",
                     _normalize_lang_key(item.lang),
                 )
-                return TtsSetup(
-                    item=item,
-                    mode=item.mode,
-                    lang=resolved_lang,
-                    to_pronounce=(),
-                    to_show=message,
-                )
+                return self._fallback_setup(item, MsgKey.MODE_EPELER_NON_IMPLEMENTE)
 
             groupes = decouper_gds(item.text, item.lang or "fr")
             a_prononcer: list[str] = []
@@ -481,10 +457,10 @@ class TtsSetupBuilder:
 
             return TtsSetup(
                 item=item,
-                mode=item.mode,
+                mode=Mode(item.mode),
                 lang=resolved_lang,
                 to_pronounce=tuple(a_prononcer),
-                to_show=get_mode_message("Mode dicter", item.lang),
+                to_show=get_mode_message(MsgKey.MODE_DICTER, item.lang),
                 list_gds=groupes,
             )
 
@@ -493,50 +469,32 @@ class TtsSetupBuilder:
         # détection d'émojis, dict absent). On la traite en amont pour
         # pouvoir court-circuiter proprement avec des messages courts.
         # ------------------------------------------------------------------
-        if item.mode == MODE_EPELER:
+        if item.mode == Mode.EPELER:
             # Priorité 2 : émojis dans le payload.
             if _payload_has_emoji(item.text):
-                message = get_mode_message(
-                    "Mode epeler emoji", item.lang,
-                )
                 logger.warning(
                     "Mode épeler : émoji détecté dans le payload ; "
                     "sortie en erreur courte."
                 )
-                return TtsSetup(
-                    item=item,
-                    mode=item.mode,
-                    lang=resolved_lang,
-                    to_pronounce=(),
-                    to_show=message,
-                )
+                return self._fallback_setup(item, MsgKey.MODE_EPELER_EMOJI)
 
             # Priorité 3 : dictionnaire d'épellation absent.
             epel_dict = _get_epel_dict(item.lang)
             if epel_dict is None:
-                message = get_mode_message(
-                    "Mode epeler non implemente", item.lang,
-                )
                 logger.warning(
                     "Mode épeler : Aucun dictionnaire d'épellation "
                     "disponible pour la langue '%s'.",
                     _normalize_lang_key(item.lang),
                 )
-                return TtsSetup(
-                    item=item,
-                    mode=item.mode,
-                    lang=resolved_lang,
-                    to_pronounce=(),
-                    to_show=message,
-                )
+                return self._fallback_setup(item, MsgKey.MODE_EPELER_NON_IMPLEMENTE)
 
             # Priorité 4 : épellation nominale.
             return TtsSetup(
                 item=item,
-                mode=item.mode,
+                mode=Mode(item.mode),
                 lang=resolved_lang,
                 to_pronounce=_spell(item.text, epel_dict),
-                to_show=get_mode_message("Mode Epeler", item.lang),
+                to_show=get_mode_message(MsgKey.MODE_EPELER, item.lang),
             )
 
         # ------------------------------------------------------------------
@@ -554,18 +512,18 @@ class TtsSetupBuilder:
             ``get_mode_message`` se charge du repli vers le français
             si la langue n'est pas connue.
             """
-            return get_mode_message("Mode cacher", _item.lang)
+            return get_mode_message(MsgKey.MODE_CACHER, item.lang)
 
         _MODE_SHOW_BUILDERS = {
             MODE_LIRE: _show_lire,
-            MODE_CACHER: _show_cacher,
+            Mode.CACHER: _show_cacher,
         }
 
         show_builder = _MODE_SHOW_BUILDERS.get(item.mode)
         if show_builder is not None:
             return TtsSetup(
                 item=item,
-                mode=item.mode,
+                mode=Mode(item.mode),
                 lang=resolved_lang,
                 to_pronounce=(item.text,),
                 to_show=show_builder(item, resolved_lang),
@@ -575,10 +533,4 @@ class TtsSetupBuilder:
         logger.warning(
             "Mode '%s' non géré par TtsSetupBuilder.", item.mode,
         )
-        return TtsSetup(
-            item=item,
-            mode=item.mode,
-            lang=resolved_lang,
-            to_pronounce=(),
-            to_show=MSG_MODE_NON_GERE,
-        )
+        return self._fallback_setup(item, MsgKey.MODE_INCONNU)

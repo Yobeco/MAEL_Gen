@@ -24,6 +24,25 @@ Conventions
 
 from __future__ import annotations
 
+from enum import StrEnum
+
+
+FALLBACK_LANG = "fr"
+
+
+class MsgKey(StrEnum):
+    """Clés d'affichage. Les valeurs historiques restent inchangées."""
+
+    MODE_CACHER = "Mode cacher"
+    MODE_DICTER = "Mode dicter"
+    MODE_EPELER = "Mode Epeler"
+    MODE_EPELER_NON_IMPLEMENTE = "Mode epeler non implemente"
+    MODE_EPELER_EMOJI = "Mode epeler emoji"
+    MODE_MP3_TELECHARGEMENT = "Mode mp3 telechargement "
+    MODE_MP3_ERREUR = "Mode mp3 erreur "
+    LANGUE_INCONNUE = "Langue inconnue"
+    MODE_INCONNU = "Mode non géré"
+
 # ----------------------------------------------------------------------
 # Mapping des noms de langue « humain » -> code court 2 lettres.
 # Utile pour rebrancher facilement un texte d'origine en clair.
@@ -290,6 +309,8 @@ traductions = {
             "Audio downloading...",
         "Mode mp3 erreur ":
             "Download Error...",
+        "Langue inconnue": "Unknown language",
+        "Mode non géré": "Unsupported mode",
     },
     # Estonien
     "et": {
@@ -335,17 +356,19 @@ traductions = {
     },
     # Français
     "fr": {
-        "Mode cacher": "Écoute bien.",
-        "Mode dicter": "Écris la dictée.",
-        "Mode Epeler": "Écoute les lettres.",
+        "Mode cacher": "👂Écoute bien.",
+        "Mode dicter": "🖉Écris la dictée.",
+        "Mode Epeler": "👂Écoute les lettres.",
         "Mode epeler non implemente":
-            "Mode épeler pas encore implémenté dans cette langue",
+            "⚙ Mode épeler pas encore implémenté dans cette langue",
         "Mode epeler emoji":
-            "MAEL ne traite pas les émojis",
+            "⚠ MAEL ne traite pas les émojis",
         "Mode mp3 telechargement ":
-            "Téléchargement de l'audio...",
+            "🡇 Téléchargement de l'audio...",
         "Mode mp3 erreur ":
-            "Erreur de téléchargement...",
+            "⚠ Erreur de téléchargement...",
+        "Langue inconnue": "⚠ Langue inconnue",
+        "Mode non géré": "⚠ Mode non géré",
     },
     # Galicien
     "gl": {
@@ -966,16 +989,27 @@ traductions = {
 }
 
 
-def get_mode_message(mode_key: str, lang: str | None) -> str:
+def has_message(key: MsgKey, lang: str) -> bool:
+    """Indique si une traduction existe explicitement pour la clé et langue."""
+    try:
+        mode_key = MsgKey(key).value
+    except ValueError:
+        mode_key = str(key)
+    if not lang:
+        return False
+    lang_short = lang[:2].lower() if len(lang) >= 2 else lang.lower()
+    return mode_key in traductions.get(lang_short, {})
+
+
+def get_mode_message(key: MsgKey, lang: str) -> str:
     """
-    Retourne le message localisé associé à ``mode_key`` pour la langue ``lang``.
+    Retourne le message localisé associé à ``key`` pour la langue ``lang``.
 
     Paramètres
     ----------
-    mode_key : str
-        Clé interne du message, par ex. ``"Mode cacher"``,
-        ``"Mode dicter"``, ``"Mode Epeler"``, ``"Mode epeler non
-        implemente"`` ou ``"Mode epeler emoji"``.
+    key : MsgKey
+        Clé interne du message. Les chaînes historiques restent acceptées
+        pour compatibilité avec les appels existants.
     lang : str | None
         Code langue ou variante (par ex. ``"fr"``, ``"frCH"``,
         ``"es"``). La fonction normalise en extrayant les deux
@@ -987,20 +1021,26 @@ def get_mode_message(mode_key: str, lang: str | None) -> str:
         Le texte traduit. Si la langue ou la clé est absente du
         dictionnaire, repli sur le français (``"fr"``).
     """
-    # Langue absente ou None : repli direct.
+    # Normaliser la clé sans changer les libellés historiques.
+    try:
+        mode_key = MsgKey(key).value
+    except ValueError:
+        mode_key = str(key)
+
+    # Langue absente : repli direct.
     if not lang:
-        lang_short = "fr"
+        lang_short = FALLBACK_LANG
     else:
         # ``"frCH"`` -> ``"fr"``, ``"EN"`` -> ``"en"``, ``"es"`` -> ``"es"``.
         lang_short = lang[:2].lower() if len(lang) >= 2 else lang.lower()
 
     # Recherche dans la langue demandée, sinon repli français.
-    table = traductions.get(lang_short, traductions.get("fr", {}))
+    table = traductions.get(lang_short, traductions.get(FALLBACK_LANG, {}))
     if mode_key in table:
         return table[mode_key]
 
     # Repli français global.
-    fallback = traductions.get("fr", {})
+    fallback = traductions.get(FALLBACK_LANG, {})
     if mode_key in fallback:
         return fallback[mode_key]
 
