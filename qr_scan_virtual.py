@@ -11,8 +11,17 @@ from qr_scan import QrScanner, ScanError
 from qr_dto import RawQr
 
 _obfusor = MAEL_obfus.Obfus()
+
+
+def _prepare_text(text: str) -> str:
+    """Laisse les QR Wi-Fi en clair et obfusque les autres textes."""
+    if text.startswith(("WIFI:", "wifi:")):
+        return text
+    return _obfusor.enobfus(text)
+
+
 _DEFAULT_OBFUSCATED_TEXTS: list[str] = [
-    _obfusor.enobfus(s) for s in test_list.strings_to_obfus
+    _prepare_text(s) for s in test_list.strings_to_obfus
 ]
 
 

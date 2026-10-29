@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 class MaelScan:
     """Coordonne scanner, parsing, synthèse et lecture séquentielle."""
 
-    SPEED_NORMAL = 100
-    SPEED_SLOW = 80
+    SPEED_PCT_NORMAL = 100
+    SPEED_PCT_SLOW = 80
     PAUSE_NORMAL = 0.05
     PAUSE_SLOW = 0.3
     PAUSE_FACT_NORMAL = 0.3
@@ -170,7 +170,8 @@ class MaelScan:
         for text in setup.to_pronounce:
             if not self._current(generation, event):
                 return
-            path = self.tts_player.synthesize(text, setup.lang, slow=slow)
+            speed = self.SPEED_PCT_SLOW if slow else self.SPEED_PCT_NORMAL
+            path = self.tts_player.synthesize(text, setup.lang, speed=speed)
             if not self._current(generation, event):
                 return
             if not self._play_if_current(path, generation, event):
@@ -191,7 +192,7 @@ class MaelScan:
         for index, text in enumerate(setup.to_pronounce):
             if not self._current(generation, event):
                 return
-            path = self.tts_player.synthesize(text, setup.lang, slow=False)
+            path = self.tts_player.synthesize(text, setup.lang, speed=self.SPEED_PCT_NORMAL)
             if not self._current(generation, event):
                 return
             if not self._play_if_current(path, generation, event):
@@ -201,7 +202,7 @@ class MaelScan:
             if slow:
                 if event.wait(self.PAUSE_REPEAT) or not self._current(generation, event):
                     return
-                path = self.tts_player.synthesize(text, setup.lang, slow=True)
+                path = self.tts_player.synthesize(text, setup.lang, speed=self.SPEED_PCT_SLOW)
                 if not self._current(generation, event):
                     return
                 if not self._play_if_current(path, generation, event):
@@ -226,9 +227,15 @@ class MaelScan:
             waiter = getattr(self.reader, "wait", None)
             if waiter is not None:
                 try:
-                    return bool(waiter(timeout=0.05)) and self._current(generation, event)
+                    finished = waiter(timeout=0.05)
                 except TypeError:
-                    return bool(waiter(0.05)) and self._current(generation, event)
+                    finished = waiter(0.05)
+                # False signifie seulement que le délai de polling a expiré,
+                # pas que le segment audio est terminé. Continuer à attendre
+                # en vérifiant entre-temps le jeton d'annulation.
+                if finished:
+                    return self._current(generation, event)
+                continue
             if not getattr(self.reader, "is_playing", False):
                 return True
             if event.wait(0.05):
