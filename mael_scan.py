@@ -10,7 +10,6 @@ from typing import Any
 from qr_dto import CloudItem, TtsItem, TtsSetup, WifiItem
 from wifi_setup import WifiSetup
 from tts_setup import TtsSetupBuilder
-from mael_modes import Mode
 
 logger = logging.getLogger(__name__)
 
@@ -87,11 +86,11 @@ class MaelScan:
             elif isinstance(item, WifiItem):
                 wifi_tts_item = TtsItem(
                     raw=item.raw, original=item.raw.text, text="Code QR Wifi",
-                    lang="fr", mode=Mode.LIRE,
+                    lang="fr", mode=MODE_LIRE,
                 )
                 setup = replace(
                     self.tts_setup_builder.build(wifi_tts_item),
-                    mode=Mode.LIRE, lang="fr", list_gds=("Code QR Wifi",),
+                    mode=MODE_LIRE, lang="fr", list_gds=("Code QR Wifi",),
                     to_pronounce=("Code QR Wifi",), to_show="Code QR Wifi",
                 )
                 self.last_tts_setup = setup
@@ -123,7 +122,7 @@ class MaelScan:
     def _play_cloud(self, item: CloudItem, generation: int, event: threading.Event) -> None:
         """Télécharge un MP3 cloud, puis en confie la lecture au lecteur."""
         base_setup = self.tts_setup_builder.build(TtsItem(
-            raw=item.raw, original=item.text, text=item.text, lang="fr", mode=Mode.LIRE
+            raw=item.raw, original=item.text, text=item.text, lang="fr", mode="lire"
         ))
         def download_start() -> None:
             if self.on_audio_status and self._current(generation, event):
@@ -164,7 +163,7 @@ class MaelScan:
                     event: threading.Event) -> None:
         if setup.lang is None or not self._current(generation, event):
             return
-        if setup.mode == Mode.DICTER:
+        if setup.mode == "dicter":
             self._play_dicter(setup, slow, generation, event)
             return
         pause = self.PAUSE_SLOW if slow else self.PAUSE_NORMAL
@@ -172,6 +171,8 @@ class MaelScan:
             if not self._current(generation, event):
                 return
             speed = self.SPEED_PCT_SLOW if slow else self.SPEED_PCT_NORMAL
+            if not text or not text.strip():
+                continue
             path = self.tts_player.synthesize(text, setup.lang, speed=speed)
             if not self._current(generation, event):
                 return
