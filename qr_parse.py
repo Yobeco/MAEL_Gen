@@ -80,9 +80,9 @@ MODES_CLOUD = (MODE_GD, MODE_NC, MODE_LS)
 # Préfixe Google Drive
 GD_PREFIX = "/gd/"
 CLOUD_PREFIXES = {
-    "gd": (MODE_GD, "♫ Google Drive"),
-    "nc": (MODE_NC, "♫ NextCloud"),
-    "ls": (MODE_LS, "♫ La Suite"),
+    "gd": (MODE_GD, "♫ Écoute l'audio"),
+    "nc": (MODE_NC, "♫ Écoute l'audio"),
+    "ls": (MODE_LS, "♫ Écoute l'audio"),
 }
 
 # Suffixes de mode
