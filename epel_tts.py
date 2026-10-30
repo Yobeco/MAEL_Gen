@@ -21,6 +21,7 @@ epel_tts_fr = {
     "\u00e0": "a accent grave",                   # [à]
     "\u00c0": "a majuscule accent grave",         # [À]
     "\u00e8": "e accent grave",                   # [è]
+    "\u00E9": "e accent aigü",                    # [é]
     "\u00c8": "e majuscule accent grave",         # [È]
     "\u00f9": "u accent grave",                   # [ù]
     "\u00d9": "u majuscule accent grave",         # [Ù]

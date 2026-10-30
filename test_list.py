@@ -19,7 +19,7 @@ strings_to_obfus : tuple[str, ...]
 
 strings_to_obfus = (
     # "C'est ce que l'on dit...#d",
-    # "/gd/1IHf9ayDGjCthJhKmzstr0ZUUvZVcJH8P",
+    "/gd/1IHf9ayDGjCthJhKmzstr0ZUUvZVcJH8P",
     # "WIFI:T:WPA;S:CLARO1_F53E79;P:c024ZwRKpG;H:;;",
     # "C'est ce que l'on dit…#d",
     # "Ils aiment ça parce que c'est bon !#d",
@@ -34,7 +34,7 @@ strings_to_obfus = (
     # "<frCA>El niño est fort à Managua.",
     # "Du maïs à Noël !",
     # "<es>« Qué lindo »",
-    "<en>She says: “That's nice!”",
+    # "<en>She says: “That's nice!”",
     # "<ko>안녕하세요! 제 이름은... 입니다. 만나서 반갑습니다.",
     # "<ko>입니다. 만나서  반갑습니다.#e",
     # "<ja>クレジットカードではらいます。",
