@@ -10,6 +10,7 @@ from typing import Any
 from qr_dto import CloudItem, TtsItem, TtsSetup, WifiItem
 from wifi_setup import WifiSetup
 from tts_setup import TtsSetupBuilder
+from mode_msg import MsgKey, get_mode_message
 
 logger = logging.getLogger(__name__)
 
@@ -127,7 +128,9 @@ class MaelScan:
         def download_start() -> None:
             if self.on_audio_status and self._current(generation, event):
                 self.on_audio_status(replace(
-                    base_setup, to_pronounce=(), to_show="Audio en téléchargement..."
+                    base_setup,
+                    to_pronounce=(),
+                    to_show=get_mode_message(MsgKey.MODE_MP3_TELECHARGEMENT, base_setup.lang)
                 ))
 
         def download_end() -> None:
@@ -144,7 +147,18 @@ class MaelScan:
                 self.mp3_fetch.on_download_start = download_start
             if hasattr(self.mp3_fetch, "on_download_end"):
                 self.mp3_fetch.on_download_end = download_end
-        path = self.mp3_fetch.fetch(item)
+
+        try:
+            path = self.mp3_fetch.fetch(item)
+        except Exception:
+            if self.on_audio_status and self._current(generation, event):
+                self.on_audio_status(replace(
+                    base_setup,
+                    to_pronounce=(),
+                    to_show=get_mode_message(MsgKey.MODE_MP3_ERREUR, base_setup.lang),
+                ))
+            raise
+
         if not self._current(generation, event):
             try:
                 os.unlink(path)

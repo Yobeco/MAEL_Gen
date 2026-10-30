@@ -585,17 +585,17 @@ traductions = {
     },
     # Coréen
     "ko": {
-        "Mode cacher": "👂 👂 잘 들어보세요.",
-        "Mode dicter": "🖉 🖉 받아쓰기를 쓰세요.",
-        "Mode Epeler": "👂 👂 글자를 들어보세요.",
+        "Mode cacher": "👂 잘 들어보세요.",
+        "Mode dicter": "🖉 받아쓰기를 쓰세요.",
+        "Mode Epeler": "👂 글자를 들어보세요.",
         "Mode epeler non implemente":
             "⚠ 이 언어에서는 철자 모드가 아직 구현되지 않았습니다",
         "Mode epeler emoji":
-            "⚠ ⚠ MAEL은 이모지를 처리하지 않습니다",
+            "⚠ MAEL은 이모지를 처리하지 않습니다",
         "Mode mp3 telechargement ":
-            "🡇 🡇 오디오 다운로드 중...",
+            "🡇 오디오 다운로드 중...",
         "Mode mp3 erreur ":
-            "⚠ ⚠ 다운로드 오류...",
+            "⚠ 다운로드 오류...",
     },
     # Letton
     "lv": {
