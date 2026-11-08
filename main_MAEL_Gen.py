@@ -116,13 +116,14 @@ from MAEL_obfus import Obfus
 # Import conditionnel du traitement PDF (peut échouer si les dépendances ne sont pas installées).
 # Un flag et un message d'erreur permettent de dégrader proprement l'application au lieu de planter au démarrage.
 try:
-    from MAEL_Verif_PDF import QrPdfProcessor
+    from MAEL_Verif_PDF import VerifPdf, ProcessingConfig
     PDF_VERIF_AVAILABLE = True
     PDF_VERIF_ERROR = ""
 except ImportError as exc:
     PDF_VERIF_AVAILABLE = False
     PDF_VERIF_ERROR = str(exc)
-    QrPdfProcessor = None   # Placeholder pour éviter un NameError si l'entrée de menu est appelée
+    VerifPdf = None   # Placeholder pour éviter un NameError si l'entrée de menu est appelée
+    ProcessingConfig = None
 
 ############## PARAMÈTRES SELON LA VERSION et l'OS #####################
 # ---------------------------
@@ -859,12 +860,7 @@ def application(disp):
 
         def worker():
             try:
-                processor = QrPdfProcessor(
-                    dpi=250,
-                    fallback_dpi=400,
-                    verbose=True,
-                )
-                processor.run(input_pdf, output_pdf)
+                VerifPdf(ProcessingConfig(dpi=250, fallback_dpi=400, verbose=True)).run(input_pdf, output_pdf)
                 done_flag["success"] = True
             except Exception as exc:
                 done_flag["error"] = str(exc)
