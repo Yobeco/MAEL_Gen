@@ -7,8 +7,8 @@ from typing import Iterable
 
 import MAEL_obfus
 import test_list
-from qr_scan import QrScanner, ScanError
-from qr_dto import RawQr
+from verif_pdf.qr_scan import QrScanner, ScanError
+from verif_pdf.qr_dto import RawQr
 
 _obfusor = MAEL_obfus.Obfus()
 

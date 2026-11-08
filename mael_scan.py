@@ -7,7 +7,7 @@ import threading
 from dataclasses import replace
 from typing import Any
 
-from qr_dto import CloudItem, TtsItem, TtsSetup, WifiItem
+from verif_pdf.qr_dto import CloudItem, TtsItem, TtsSetup, WifiItem
 from wifi_setup import WifiSetup
 from tts_setup import TtsSetupBuilder
 from mode_msg import MsgKey, get_mode_message
@@ -75,7 +75,7 @@ class MaelScan:
             from scanner_factory import create_scanner
             self.scanner = create_scanner("pc_pdf" if source is not None else None)
         raws = self.scanner.scan(source)
-        from qr_parse import MODE_LIRE, parse_all
+        from verif_pdf.qr_parse import MODE_LIRE, parse_all
         items = parse_all(raws)
         actions: list[tuple[str, Any]] = []
         for item in items:

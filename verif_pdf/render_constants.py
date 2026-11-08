@@ -1,7 +1,7 @@
 """Constantes de présentation du pipeline PDF."""
 from __future__ import annotations
 
-from qr_parse import (
+from .qr_parse import (
     MODE_LIRE, MODE_DICTER, MODE_EPELER, MODE_GD, MODE_NC, MODE_LS,
     MODE_WIFI, MODES_CLOUD,
 )

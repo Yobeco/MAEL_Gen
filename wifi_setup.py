@@ -5,7 +5,7 @@ from __future__ import annotations
 import platform
 from pathlib import Path
 
-from qr_dto import WifiItem
+from verif_pdf.qr_dto import WifiItem
 
 
 class WifiSetup:

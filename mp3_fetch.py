@@ -9,7 +9,7 @@ from typing import Any, Callable
 from urllib.request import Request, urlopen
 
 import dico_url
-from qr_dto import CloudItem
+from verif_pdf.qr_dto import CloudItem
 
 logger = logging.getLogger(__name__)
 

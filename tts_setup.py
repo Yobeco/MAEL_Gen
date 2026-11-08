@@ -52,7 +52,7 @@ from typing import Optional
 
 from lang_tts import lang_tts
 
-from qr_dto import TtsItem, TtsSetup
+from verif_pdf.qr_dto import TtsItem, TtsSetup
 
 from mode_msg import FALLBACK_LANG, MsgKey, get_mode_message, has_message
 from mael_modes import Mode

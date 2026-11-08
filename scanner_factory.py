@@ -5,14 +5,14 @@ import os
 from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
-    from qr_scan import QrScanner
+    from verif_pdf.qr_scan import QrScanner
 
 
 def create_scanner(hw: str | None = None, **kwargs: Any) -> "QrScanner":
     """Crée le scanner demandé; les modules matériels sont importés au besoin."""
     selected = hw if hw is not None else (os.environ.get("MAEL_HW") or "pc_virtual")
     if selected == "pc_pdf":
-        from qr_scan import ImageScanner
+        from verif_pdf.qr_scan import ImageScanner
         return ImageScanner(**kwargs)
     if selected == "pc_virtual":
         from qr_scan_virtual import VirtualScanner

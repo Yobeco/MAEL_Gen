@@ -3,10 +3,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
-from qr_dto import TtsItem, CloudItem, WifiItem, RawQr
+from .qr_dto import TtsItem, CloudItem, WifiItem, RawQr
 from .render_constants import *
-from qr_scan import ImageScanner, ScanError
-from qr_parse import parse_all
+from .qr_scan import ImageScanner, ScanError
+from .qr_parse import parse_all
 
 
 
