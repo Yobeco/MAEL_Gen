@@ -52,6 +52,11 @@ class ColoredTtsItem:
     def text(self) -> str:
         return self.item.text
 
+    @property
+    def lang(self) -> str | None:
+        """Langue TTS ; None pour les QR cloud et Wifi."""
+        return self.item.lang if isinstance(self.item, TtsItem) else None
+
 def color_choose(item: TtsItem | CloudItem | WifiItem) -> ColoredTtsItem:
     """
     Enrichit un `TtsItem` avec les couleurs de rendu correspondant à son

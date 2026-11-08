@@ -25,10 +25,12 @@ def _display_text_for(qr: ColoredTtsItem) -> str:
     Retourne le texte à afficher pour un QR donné.
 
     - modes cloud et Wifi : on affiche le libellé de LABELS_TEXT.
-    - autres : on affiche `text` tel quel.
+    - QR TTS : 'lang → payload' (payload seul si langue absente).
     """
     if qr.mode in MODES_CLOUD or qr.mode == MODE_WIFI:
         return LABELS_TEXT[qr.mode]
+    if qr.lang:
+        return f"{qr.lang} {LANG_ARROW} {qr.text}"
     return qr.text
 
 def generate_pdf_from_annotated_image(

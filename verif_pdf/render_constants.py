@@ -16,6 +16,7 @@ LABELS_TEXT: dict[str, str] = {
     MODE_WIFI: "Wifi",
 }
 LEGEND_ARROW = "►"               # sépare le n° du contenu : "01 ► Bonjour"
+LANG_ARROW = "→"                 # sépare la langue du payload : "fr → Bonjour"
 
 # --- Couleurs (BGR pour OpenCV, RGB pour fpdf2) -----------------------
 # Indexées par mode : "lire", "dicter", "epeler", cloud et wifi
