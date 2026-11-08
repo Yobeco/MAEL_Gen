@@ -1,24 +1,27 @@
 """Orchestration du traitement PDF multi-page."""
 from __future__ import annotations
-import shutil
 import tempfile
 from pathlib import Path
 from typing import Any
 from pypdf import PdfWriter
 from .config import ProcessingConfig
 from .pdf_renderer import PdfRenderer
-from .qr_detector import QrDetector, ScanError
+from .qr_detector import QrDetector
 from .qr_annotator import QrAnnotator
 from .pdf_writer import PDFWriter
+from .two_pass_scanner import TwoPassQrScanner
 
 class VerifPdf:
     """Orchestre le rendu, la détection, l’annotation et la fusion."""
-    def __init__(self, config: ProcessingConfig, renderer: PdfRenderer | None = None, detector: QrDetector | None = None, annotator: QrAnnotator | None = None, pdf_writer: PDFWriter | None = None) -> None:
+    def __init__(self, config: ProcessingConfig, renderer: PdfRenderer | None = None, detector: QrDetector | None = None, annotator: QrAnnotator | None = None, pdf_writer: PDFWriter | None = None, two_pass_scanner: TwoPassQrScanner | None = None) -> None:
         self.config=config
         self.renderer=renderer or PdfRenderer()
         self.detector=detector or QrDetector()
         self.annotator=annotator or QrAnnotator()
         self.pdf_writer=pdf_writer or PDFWriter()
+        self.two_pass_scanner=two_pass_scanner or TwoPassQrScanner(
+            self.renderer, self.detector, config.dpi, config.fallback_dpi
+        )
     def _log(self, msg: str) -> None:
         if self.config.verbose: print(msg)
     def process_single_page(self, png_path: Path, work_dir: Path, page_number: int | None = None) -> Path:
@@ -46,28 +49,14 @@ class VerifPdf:
         self._log(f"  DPI           : {self.config.dpi} (fallback: {self.config.fallback_dpi})"); self._log("=" * 60)
         with tempfile.TemporaryDirectory(prefix="qr_pdf_") as tmp:
             tmp_dir=Path(tmp); png_dir=tmp_dir / "png"; work_dir=tmp_dir / "work"; png_dir.mkdir(); work_dir.mkdir()
-            png_paths=self.renderer.convert_pdf_to_pngs(input_pdf, png_dir, self.config.dpi, self._log)
+            nominal_dir=png_dir / f"dpi_{self.config.dpi}"
+            png_paths=self.renderer.convert_pdf_to_pngs(input_pdf, nominal_dir, self.config.dpi, self._log)
             final_pngs=[]
             for i, png_path in enumerate(png_paths):
-                try: raws=self.detector.scan(png_path)
-                except ScanError as exc:
-                    self._log(f"[error] page {i + 1}: échec du scan ({exc}) — page incluse brute"); final_pngs.append(png_path); continue
-                if raws:
-                    self._log(f"[info] page {i + 1}: {len(raws)} QR détecté(s)"); final_pngs.append(png_path); continue
-                if self.config.fallback_dpi <= self.config.dpi:
-                    self._log(f"[info] page {i + 1}: aucun QR détecté"); final_pngs.append(png_path); continue
-                self._log(f"[warn] page {i + 1}: aucun QR à {self.config.dpi} DPI, reconversion à {self.config.fallback_dpi} DPI")
-                fallback_dir=png_dir / "fallback"
-                fallback_dir.mkdir(exist_ok=True)
-                fallback_png=self.renderer.render_page(input_pdf, i, self.config.fallback_dpi, fallback_dir, pad=len(str(len(png_paths))))
-                final_png=png_dir / f"page_{i + 1:04d}_hi.png"; shutil.move(str(fallback_png), str(final_png))
-                try: raws_hi=self.detector.scan(final_png)
-                except ScanError as exc:
-                    self._log(f"[error] page {i + 1}: échec du scan à {self.config.fallback_dpi} DPI ({exc}) — page incluse à {self.config.dpi} DPI"); final_pngs.append(png_path); continue
-                if raws_hi:
-                    self._log(f"[ok]   page {i + 1}: {len(raws_hi)} QR détecté(s) à {self.config.fallback_dpi} DPI"); final_pngs.append(final_png)
-                else:
-                    self._log(f"[warn] page {i + 1}: toujours aucun QR à {self.config.fallback_dpi} DPI — page incluse à {self.config.dpi} DPI"); final_pngs.append(png_path)
+                result=self.two_pass_scanner.scan_page(
+                    input_pdf, i, png_path, png_dir, len(png_paths), self._log
+                )
+                final_pngs.append(result.png_path)
             page_pdfs=[]
             for i, png_path in enumerate(final_pngs):
                 self._log(f"[page] traitement de la page {i + 1}…")
