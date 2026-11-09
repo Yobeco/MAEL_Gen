@@ -2,6 +2,7 @@
 from __future__ import annotations
 import base64
 import logging
+from dataclasses import replace
 from pathlib import Path
 from pypdf import PdfReader
 from .avif_encoder import AvifEncoder
@@ -39,7 +40,27 @@ class Pdf2App:
             try:
                 png=self.renderer.render_page(source,i,self.config.dpi,nominal_dir,pad=len(str(count)))
                 scan=self.scanner.scan_page(source,i,png,work,count,self._log)
-                zones=[quad_to_square(q.position,scan.width,scan.height) for q in scan.items]
+                zones=[]
+                for qr_index, qr in enumerate(scan.items, start=1):
+                    tts=None
+                    try:
+                        # Imports différés afin que les erreurs d'analyse / TTS
+                        # restent localisées à ce QR, sans interrompre le rendu.
+                        from verif_pdf.qr_parse import parse_all
+                        from verif_pdf.qr_dto import TtsItem
+                        from tts_setup import TtsSetupBuilder
+
+                        parsed=parse_all([qr])
+                        if len(parsed) != 1 or not isinstance(parsed[0], TtsItem):
+                            raise ValueError("le QR ne contient pas un élément TTS exploitable")
+                        tts=TtsSetupBuilder().build(parsed[0]).to_dict()
+                    except Exception as exc:
+                        logging.getLogger(__name__).warning(
+                            "TtsSetup ignoré pour le QR %s de la page %s : %s: %s",
+                            qr_index, i+1, type(exc).__name__, exc,
+                        )
+                    zone=quad_to_square(qr.position,scan.width,scan.height)
+                    zones.append(replace(zone,tts=tts))
             except Exception as exc:
                 page_error=f"{type(exc).__name__}: {exc}"; self._log(f"[error] page {i+1}: {page_error}")
             try:
