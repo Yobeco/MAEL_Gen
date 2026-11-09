@@ -153,7 +153,10 @@ def _parse_qr_payload(qr):
         # The missing TTS import was already reported once; keep scanning.
         return None, None
     if hasattr(item, "text") and hasattr(item, "mode"):
-        return tts_builder().build(item).to_dict(), None
+        setup = tts_builder().build(item)
+        data = setup.to_dict()
+        data["mode"] = getattr(setup, "mode", None)
+        return data, None
     raise ValueError("le QR ne contient ni élément CloudItem ni élément TTS exploitable")
 
 
