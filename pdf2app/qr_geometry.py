@@ -11,9 +11,10 @@ class QrZone:
     width: float
     height: float
     tts: dict[str, Any] | None = None
+    cloud: dict[str, Any] | None = None
 
     def as_dict(self) -> dict[str, Any]:
-        return {"x": self.x, "y": self.y, "width": self.width, "height": self.height, "tts": self.tts}
+        return {"x": self.x, "y": self.y, "width": self.width, "height": self.height, "tts": self.tts, "cloud": self.cloud}
 
 def quad_to_square(position: Any, page_width: int | float, page_height: int | float) -> QrZone:
     """Englobe un quad par un carré centré et le normalise en 0..1."""
