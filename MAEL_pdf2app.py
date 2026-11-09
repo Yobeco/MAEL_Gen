@@ -12,7 +12,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("html",type=Path,nargs="?",default=None,help="Fichier HTML de sortie (par défaut : même nom que le PDF avec l’extension .html)")
     parser.add_argument("--dpi",type=int,default=250,help="DPI du scan QR (défaut : 250)")
     parser.add_argument("--fallback-dpi",type=int,default=400,help="DPI de la seconde passe (défaut : 400)")
-    parser.add_argument("--display-dpi",type=int,default=96,help="DPI du rendu AVIF d'affichage (défaut : 96)")
+    parser.add_argument("--display-dpi",type=int,default=170,help="DPI du rendu AVIF d'affichage (défaut : 170)")
     parser.add_argument("--quality",type=int,default=30,help="Qualité AVIF 0..100 (défaut : 30)")
     parser.add_argument("--speed",type=int,default=6,help="Vitesse AVIF 0..10 (défaut : 6)")
     parser.add_argument("--max-width",type=int,default=None,help="Largeur maximale optionnelle en pixels")

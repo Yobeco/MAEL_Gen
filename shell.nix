@@ -85,8 +85,10 @@ pkgs.mkShell {
     echo "🔊 Audio          : alsa-lib, libpulseaudio, pipewire"
     echo ""
     echo "Pour lancer les applications :"
-    echo "  python MAEL_V6.0.py"
+    echo "  python main_MAEL_Gen.py"
     echo "  python MAEL_Verif_PDF.py <fichier.pdf>"
+    echo "  python MAEL_pdf2app.py <fichier.pdf>"
+    echo "  python MAEL_pdf2app.py <fichier.pdf> --display-dpi=96 --quality=30"
     echo ""
 
     # Rendre les modules du dossier courant importables
